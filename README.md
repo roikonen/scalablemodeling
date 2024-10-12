@@ -1,9 +1,60 @@
+# Scalable Modeling – Growth Should Be an Advantage, Not a Challenge
 
-# Components of Distributed Systems Modeling (EDA & CQRS)
+This repository introduces a toolbox for modeling scalable systems. I believe that every new system should be designed 
+with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a challenge.
 
-![6_components_of_modeling.png](6_components_of_modeling.png)
+![0_scalable_modeling_components.png](0_scalable_modeling_components.png)
 
-# Justification - Why to Concentrate Domain Knowledge & Scalability
+Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. In 
+software engineering, three things matter: the **conceptual solution** (designing the _what_), _why_ it is needed 
+(understanding the **purpose** and the **problem** it addresses), and how it is **implemented** (developing the _how_).
+
+Domain knowledge should be the starting point in building the conceptual model:
+
+> "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
+> _**Alberto Brandolini**_
+
+Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects 
+it. Effective collaboration with domain experts is essential to bridge this gap. **Events** are key in discovering the 
+domain and forming a shared understanding and language around it. **Therefore, we take an event-centric approach**.
+
+## Event Centrism
+
+In **Event Centrism**, everything we experience is either an event or a trace of one. Reality is not made up of *static 
+objects* but a continuous flow of occurrences, where everything, from a falling leaf to a mountain, is part of an 
+ongoing process. Even seemingly **permanent things** are *temporary outcomes* of past events, always subject to change.
+
+Our lives are **driven by events** — every thought, action, and emotion is triggered by something, and memories are a 
+collection of past events that define *who we are*. Traces of past events — like an old building or a weathered book — 
+remind us of what once occurred, continuing to shape the present.
+
+Events can also be *potential*, waiting to happen, or *hidden*, unfolding beyond our perception, like biological 
+processes or distant cosmic phenomena. Every event is part of a **cause-and-effect continuum**, influencing future 
+occurrences. **Time**, in this view, is meaningful only as the medium through which events unfold.
+
+Even the **self** is an ongoing event, constantly shaped by experiences and interactions. In *Event Centrism*, 
+everything in life is *fluid, dynamic, and interconnected*, emphasizing that our world and our identities are in 
+constant motion, driven by the events we experience.
+
+**Event Centrism** is not an *absolute truth* but rather one way to understand the world — a very useful way to *model 
+systems*.
+
+## Event-Driven Architecture (EDA)
+
+Event-Driven Architecture (EDA) is a design pattern where systems react to events in near real-time. Components 
+communicate by producing, detecting, and responding to events, enabling asynchronous processing and loose coupling 
+between services, which allows for more scalable and resilient systems.
+
+## Command Query Responsibility Segregation (CQRS)
+
+CQRS is a pattern that separates the responsibilities of updating data (commands) and reading data (queries). By 
+dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling 
+of complex, high-demand systems.
+
+Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can also query command models for 
+improved consistency. Commands can also return simple data like sequence number of the produced events. 
+
+# More Justification - Why to Concentrate Domain Knowledge & Scalability
 
 ## Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
 
@@ -93,7 +144,22 @@ Success is not just about growing fast—it's about building the right infrastru
 
 ![7_eda_cqrs_challenges.excalidraw.png](7_eda_cqrs_challenges.excalidraw.png)
 
-# License
+## End Results
+
+![6_components_of_modeling.png](6_components_of_modeling.png)
+
+## Credits
+
+The following persons have had a lot of influence on what this repository describes:
+
+* **Alberto Brandolini**: Famous for popularizing *Event Storming*, a collaborative workshop technique used to rapidly explore complex business processes and domains. His approach emphasizes the importance of understanding domain events to create effective, scalable systems.
+
+* **Eric Evans**: Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes aligning the software model closely with the business domain. His work focuses on creating a shared understanding between technical teams and domain experts to ensure the software reflects real-world complexity.
+
+* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, and using event sourcing to maintain the history of all changes in a system, which offers resilience and insight into past system states.
+
+
+# License For Using the Pictures
 
 ![copyright.png](copyright.png)
 
