@@ -152,12 +152,11 @@ Success is not just about growing fast—it's about building the right infrastru
 
 The following persons have had a lot of influence on what this repository describes:
 
-* **Alberto Brandolini**: Famous for popularizing *Event Storming*, a collaborative workshop technique used to rapidly explore complex business processes and domains. His approach emphasizes the importance of understanding domain events to create effective, scalable systems.
+* **Alberto Brandolini**: Creator of *Event Storming*, a collaborative workshop technique used to explore and model complex business processes through domain events. His approach helps teams rapidly gain insights into business domains by focusing on key events that drive processes.
 
 * **Eric Evans**: Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes aligning the software model closely with the business domain. His work focuses on creating a shared understanding between technical teams and domain experts to ensure the software reflects real-world complexity.
 
-* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, and using event sourcing to maintain the history of all changes in a system, which offers resilience and insight into past system states.
-
+* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, and using event sourcing to maintain the history of all changes in a system, offering resilience and insights into past system states.
 
 # License For Using the Pictures
 
