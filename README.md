@@ -174,7 +174,7 @@ The following persons have had a lot of influence on what this repository descri
   aligning the software model closely with the business domain. His work focuses on creating a shared understanding 
   between technical teams and domain experts to ensure the software reflects real-world complexity.
 
-* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and 
+* **Gregory Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and 
   *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, 
   and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
   into past system states.
