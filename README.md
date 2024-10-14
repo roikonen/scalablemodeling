@@ -62,8 +62,8 @@ CQRS is a pattern that separates the responsibilities of updating data (commands
 dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling 
 of complex, high-demand systems.
 
-Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can also query command models for 
-improved consistency. Commands can also return simple data like sequence number of the produced events. 
+Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query command models for 
+improved consistency where it does not jeopardise the scalability. Commands can also return simple data like sequence number of the produced events. 
 
 # More Justification - Why to Concentrate Domain Knowledge & Scalability
 
