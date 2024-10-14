@@ -1,7 +1,18 @@
 # Scalable Modeling – Growth Should Be an Advantage, Not a Challenge
 
-This repository introduces a toolbox for modeling scalable systems. I believe that every new system should be designed 
-with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a challenge.
+This repository introduces a pragmatic toolbox for modeling scalable systems. I believe that every new system should be 
+designed with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a 
+challenge. Strong influences have been taken from Domain-Driven Design, EventStorming & CQRS but the end result does 
+not purely follow either of those.
+
+I understand that **querying the command model** (red arrow in the picture below) is a topic that often sparks strong 
+opinions. In my view, the command model serves as a special type of model that validates commands, and 
+while it is not designed for querying, there are cases where it can be read from if necessary. For example, in 
+in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve 
+querying the state of an entity immediately after its creation or update. Since the entity is already in memory, 
+fetching it quickly from there can be justified. However, querying the command model should be avoided wherever 
+possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or 
+inconsistencies. For this reason, querying the command model requires strong justification.
 
 ![0_scalable_modeling_components.png](0_scalable_modeling_components.png)
 
@@ -65,7 +76,7 @@ improved consistency. Commands can also return simple data like sequence number 
 
 Design flaws in the simple system tend to compound and lead to exponentially increasing complexity in the complex system.
 
-> "It's not the domain expert's knowledge that is released to production; it's the programmer's knowledge."
+> "It's developer (mis)understanding that's released in production, not the experts' knowledge."
 > _**Alberto Brandolini**_
 
 Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects it. Effective collaboration with domain experts is essential to bridge this gap.
@@ -116,7 +127,10 @@ Success is not just about growing fast—it's about building the right infrastru
 
 ## The Three Dimensions to Scalability
 
-![5_three_dimensions_scalability.excalidraw.png](5_three_dimensions_scalability.excalidraw.png)
+In this chapter we are in the context of:
+* Event-Driven Architecture (EDA)
+* Command Query Separation (CQS)
+* Command Query Responsibility Segregation (CQRS)
 
 ### Scale Cube
 
@@ -134,29 +148,36 @@ Success is not just about growing fast—it's about building the right infrastru
 
 ![5_3_partition.png](5_3_partition.png)
 
-# Modeling EDA & CQRS Systems
+# Scalable Modeling
 
 ## Components
 
-![6_eda_cqrs_modeling.excalidraw.png](6_eda_cqrs_modeling.excalidraw.png)
+![6_scalable_modeling.excalidraw.png](6_scalable_modeling.excalidraw.png)
 
 ## Challenges
 
-![7_eda_cqrs_challenges.excalidraw.png](7_eda_cqrs_challenges.excalidraw.png)
+![7_scalable_modeling_challenges.excalidraw.png](7_scalable_modeling_challenges.excalidraw.png)
 
 ## End Results
 
-![6_components_of_modeling.png](6_components_of_modeling.png)
+![6_components_of_scalable_modeling.png](6_components_of_scalable_modeling.png)
 
 ## Credits
 
 The following persons have had a lot of influence on what this repository describes:
 
-* **Alberto Brandolini**: Creator of *Event Storming*, a collaborative workshop technique used to explore and model complex business processes through domain events. His approach helps teams rapidly gain insights into business domains by focusing on key events that drive processes.
+* **Alberto Brandolini**: Creator of *Event Storming*, a collaborative workshop technique used to explore and model 
+  complex business processes through domain events. His approach helps teams rapidly gain insights into business 
+  domains by focusing on key events that drive processes.
 
-* **Eric Evans**: Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes aligning the software model closely with the business domain. His work focuses on creating a shared understanding between technical teams and domain experts to ensure the software reflects real-world complexity.
+* **Eric Evans**: Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes 
+  aligning the software model closely with the business domain. His work focuses on creating a shared understanding 
+  between technical teams and domain experts to ensure the software reflects real-world complexity.
 
-* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, and using event sourcing to maintain the history of all changes in a system, offering resilience and insights into past system states.
+* **Greg Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and 
+  *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, 
+  and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
+  into past system states.
 
 # License For Using the Pictures
 
