@@ -5,29 +5,52 @@ designed with scalability in mind, as scalability is a prerequisite for success 
 challenge. Strong influences have been taken from Domain-Driven Design, EventStorming & CQRS but the end result does 
 not purely follow either of those.
 
-I understand that **querying the command model** (red arrow in the picture below) is a topic that often sparks strong 
-opinions. In my view, the command model serves as a special type of model that validates commands, and 
-while it is not designed for querying, there are cases where it can be read from if necessary. For example, in 
-in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve 
-querying the state of an entity immediately after its creation or update. Since the entity is already in memory, 
-fetching it quickly from there can be justified. However, querying the command model should be avoided wherever 
-possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or 
-inconsistencies. For this reason, querying the command model requires strong justification.
+There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already. 
+Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for modeling
+scalable systems.
 
-![0_scalable_modeling_components.png](0_scalable_modeling_components.png)
+### Opportunities
 
-Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. In 
-software engineering, three things matter: the **conceptual solution** (designing the _what_), _why_ it is needed 
-(understanding the **purpose** and the **problem** it addresses), and how it is **implemented** (developing the _how_).
+1. **[Decomposition](#decomposition)** - scale by splitting different things
+1. **[Duplication](#duplication)** - scale by cloning
+1. **[Partition](#partition)** - scale by splitting similar things
 
-Domain knowledge should be the starting point in building the conceptual model:
+**Immutability** plays key role in each aspect. 
+
+### Challenges
+
+1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
+1. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
+1. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
+
+### The Upfront Modeling Technique
+
+Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. In
+software engineering, three things matter: 
+1. Understanding: **WHY** software is needed (understanding the **purpose** and the **problem** it should address)
+2. Designing: **WHAT** is the **conceptual model** for the solution **<- HERE WE CONCENTRATE TO THIS**
+3. Developing: **HOW** it is **implemented**
+
+Domain knowledge should be the starting point in building the **conceptual model**:
 
 > "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
 > _**Alberto Brandolini**_
 
-Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects 
-it. Effective collaboration with domain experts is essential to bridge this gap. **Events** are key in discovering the 
-domain and forming a shared understanding and language around it. **Therefore, we take an event-centric approach**.
+Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects
+it. Effective collaboration with domain experts is essential to bridge this gap. **Events** are key in discovering the
+domain and forming a shared understanding and language around it. 
+**Therefore, we take an [event-centric](#event-centrism) approach**.
+
+![0_scalable_modeling_components.png](0_scalable_modeling_components.png)
+
+I understand that **querying the command model** (red arrow in the picture below) is a topic that often sparks strong
+opinions. In my view, the command model serves as a special type of model that validates commands, and
+while it is not designed for querying, there are cases where it can be read from if necessary. For example, in
+in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve
+querying the state of an entity immediately after its creation or update. Since the entity is already in memory,
+fetching it quickly from there can be justified. However, querying the command model should be avoided wherever
+possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or
+inconsistencies. For this reason, querying the command model requires strong justification.
 
 ## Event Centrism
 
@@ -156,7 +179,17 @@ In this chapter we are in the context of:
 
 ## Challenges
 
-![7_scalable_modeling_challenges.excalidraw.png](7_scalable_modeling_challenges.excalidraw.png)
+### Deduplication
+
+![7_1_deduplication.png](7_1_deduplication.png)
+
+### Tailoring Consistency
+
+![7_2_tailoring_consistency.png](7_2_tailoring_consistency.png)
+
+### Time Travel
+
+![7_3_time_travel.png](7_3_time_travel.png)
 
 ## End Results
 
