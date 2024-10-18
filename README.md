@@ -5,33 +5,30 @@ designed with scalability in mind, as scalability is a prerequisite for success 
 challenge. Strong influences have been taken from Domain-Driven Design, EventStorming & CQRS but the end result does 
 not purely follow either of those.
 
-There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already. 
-Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for modeling
-scalable systems.
-
 ## Table of Content
 
 <!-- TOC -->
 * [Scalable Modeling – Growth Should Be an Advantage, Not a Challenge](#scalable-modeling--growth-should-be-an-advantage-not-a-challenge)
   * [Table of Content](#table-of-content)
+  * [High Level Overview](#high-level-overview)
     * [Opportunities](#opportunities)
+    * [The Method](#the-method)
     * [Challenges](#challenges)
-    * [The Upfront Modeling Technique](#the-upfront-modeling-technique)
-  * [Event Centrism](#event-centrism)
-  * [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
-  * [Command Query Responsibility Segregation (CQRS)](#command-query-responsibility-segregation-cqrs)
-* [More Justification - Why to Concentrate Domain Knowledge & Scalability](#more-justification---why-to-concentrate-domain-knowledge--scalability)
-  * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
-  * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
-* [Theory](#theory)
-  * [Vertical & Horizontal Scalability](#vertical--horizontal-scalability)
-  * [Event Sourcing](#event-sourcing)
-  * [The Three Dimensions to Scalability](#the-three-dimensions-to-scalability)
-    * [Scale Cube](#scale-cube)
-    * [Decomposition](#decomposition)
-    * [Duplication](#duplication)
-    * [Partition](#partition)
-* [Scalable Modeling](#scalable-modeling)
+  * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
+    * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
+    * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
+* [The Upfront Modeling Technique](#the-upfront-modeling-technique)
+  * [Theory](#theory)
+    * [Event Centrism](#event-centrism)
+    * [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
+    * [Command Query Responsibility Segregation (CQRS)](#command-query-responsibility-segregation-cqrs)
+    * [Vertical & Horizontal Scalability](#vertical--horizontal-scalability)
+    * [Event Sourcing](#event-sourcing)
+    * [The Three Dimensions to Scalability](#the-three-dimensions-to-scalability)
+      * [Scale Cube](#scale-cube)
+      * [Decomposition](#decomposition)
+      * [Duplication](#duplication)
+      * [Partition](#partition)
   * [Components](#components)
     * [Events](#events)
     * [Ubiquitous Language](#ubiquitous-language)
@@ -49,6 +46,12 @@ scalable systems.
 * [License For Using the Pictures](#license-for-using-the-pictures)
 <!-- TOC -->
 
+## High Level Overview
+
+There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already.
+Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for 
+modeling scalable systems.
+
 ### Opportunities
 
 1. **[Decomposition](#decomposition)** - scale by splitting different things
@@ -57,18 +60,12 @@ scalable systems.
 
 **Immutability** plays key role in each aspect. 
 
-### Challenges
-
-1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
-1. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
-1. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
-
-### The Upfront Modeling Technique
+### The Method
 
 Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. In
-software engineering, three things matter: 
+software engineering, three things matter:
 1. Understanding: **WHY** software is needed (understanding the **purpose** and the **problem** it should address)
-2. Designing: **WHAT** is the **conceptual model** for the solution **<- HERE WE CONCENTRATE TO THIS**
+2. Designing: **WHAT** is the **conceptual model** for the solution **<- WE CONCENTRATE TO THIS**
 3. Developing: **HOW** it is **implemented**
 
 Domain knowledge should be the starting point in building the **conceptual model**:
@@ -77,62 +74,27 @@ Domain knowledge should be the starting point in building the **conceptual model
 > _**Alberto Brandolini**_
 
 Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects
-it. Effective collaboration with domain experts is essential to bridge this gap. **Events** are key in discovering the
-domain and forming a shared understanding and language around it. 
-**Therefore, we take an [event-centric](#event-centrism) approach**.
+it. Effective collaboration with domain experts is essential to bridge this gap. **Events** play a central role in
+uncovering domain insights and fostering a shared language. The **immutability of events** contributes significantly
+to scalability, particularly in event-driven architectures.
+**Thus, we adopt an [event-centric](#event-centrism) approach**.
 
-![0_scalable_modeling_components.png](0_scalable_modeling_components.png)
+![0_scalable_modeling_components.png](pictures/0_scalable_modeling_components.png)
+_Justification for the red arrow in [section: Queries](#queries)._
 
-I understand that **querying the command model** (red arrow in the picture below) is a topic that often sparks strong
-opinions. In my view, the command model serves as a special type of model that validates commands, and
-while it is not designed for querying, there are cases where it can be read from if necessary. For example, in
-in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve
-querying the state of an entity immediately after its creation or update. Since the entity is already in memory,
-fetching it quickly from there can be justified. However, querying the command model should be avoided wherever
-possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or
-inconsistencies. For this reason, querying the command model requires strong justification.
+More about the method in chapter: [The Upfront Modeling Technique](#the-upfront-modeling-technique).
 
-## Event Centrism
+### Challenges
 
-In **Event Centrism**, everything we experience is either an event or a trace of one. Reality is not made up of *static 
-objects* but a continuous flow of occurrences, where everything, from a falling leaf to a mountain, is part of an 
-ongoing process. Even seemingly **permanent things** are *temporary outcomes* of past events, always subject to change.
+1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
+1. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
+1. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
 
-Our lives are **driven by events** — every thought, action, and emotion is triggered by something, and memories are a 
-collection of past events that define *who we are*. Traces of past events — like an old building or a weathered book — 
-remind us of what once occurred, continuing to shape the present.
+## Why to Concentrate Domain Knowledge & Scalability
 
-Events can also be *potential*, waiting to happen, or *hidden*, unfolding beyond our perception, like biological 
-processes or distant cosmic phenomena. Every event is part of a **cause-and-effect continuum**, influencing future 
-occurrences. **Time**, in this view, is meaningful only as the medium through which events unfold.
+### Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
 
-Even the **self** is an ongoing event, constantly shaped by experiences and interactions. In *Event Centrism*, 
-everything in life is *fluid, dynamic, and interconnected*, emphasizing that our world and our identities are in 
-constant motion, driven by the events we experience.
-
-**Event Centrism** is not an *absolute truth* but rather one way to understand the world — a very useful way to *model 
-systems*.
-
-## Event-Driven Architecture (EDA)
-
-Event-Driven Architecture (EDA) is a design pattern where systems react to events in near real-time. Components 
-communicate by producing, detecting, and responding to events, enabling asynchronous processing and loose coupling 
-between services, which allows for more scalable and resilient systems.
-
-## Command Query Responsibility Segregation (CQRS)
-
-CQRS is a pattern that separates the responsibilities of updating data (commands) and reading data (queries). By 
-dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling 
-of complex, high-demand systems.
-
-Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query command models for 
-improved consistency where it does not jeopardise the scalability. Commands can also return simple data like sequence number of the produced events. 
-
-# More Justification - Why to Concentrate Domain Knowledge & Scalability
-
-## Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
-
-![1_domain_knowledge_is_key.excalidraw.png](1_domain_knowledge_is_key.excalidraw.png)
+![1_domain_knowledge_is_key.excalidraw.png](pictures/1_domain_knowledge_is_key.excalidraw.png)
 
 > "A complex system that works is invariably found to have evolved from a simple system that worked."
 > _**John Gall**_
@@ -159,9 +121,9 @@ Conceptual models derived from the domain often lead to software structures that
 
 When we can focus solely on implementing conceptual models from the domain without worrying about the technical details we can abstract away, we achieve the highest velocity.
 
-## Scalability is Prerequisite of Success
+### Scalability is Prerequisite of Success
 
-![2_need_for_scalability.excalidraw.png](2_need_for_scalability.excalidraw.png)
+![2_need_for_scalability.excalidraw.png](pictures/2_need_for_scalability.excalidraw.png)
 
 Building a scalable foundation allows businesses to adapt to increasing demands and capitalize on opportunities without being limited by technical constraints. As these influential leaders have noted, scalability is not an afterthought; it is integral to achieving sustainable success.
 
@@ -178,40 +140,76 @@ Without a scalable system from day one, even the best ideas can be slowed down b
 
 Success is not just about growing fast—it's about building the right infrastructure from the outset, so that growth becomes an advantage, not a challenge.
 
-# Theory
+# The Upfront Modeling Technique
 
-## Vertical & Horizontal Scalability
+## Theory
 
-![3_vertical_horozontal_scalability.excalidraw.png](3_vertical_horozontal_scalability.excalidraw.png)
+### Event Centrism
 
-## Event Sourcing
+In **Event Centrism**, everything we experience is either an event or a trace of one. Reality is not made up of *static
+objects* but a continuous flow of occurrences, where everything, from a falling leaf to a mountain, is part of an
+ongoing process. Even seemingly **permanent things** are *temporary outcomes* of past events, always subject to change.
 
-![4_event_sourcing.excalidraw.png](4_event_sourcing.excalidraw.png)
+Our lives are **driven by events** — every thought, action, and emotion is triggered by something, and memories are a
+collection of past events that define *who we are*. Traces of past events — like an old building or a weathered book —
+remind us of what once occurred, continuing to shape the present.
 
-## The Three Dimensions to Scalability
+Events can also be *potential*, waiting to happen, or *hidden*, unfolding beyond our perception, like biological
+processes or distant cosmic phenomena. Every event is part of a **cause-and-effect continuum**, influencing future
+occurrences. **Time**, in this view, is meaningful only as the medium through which events unfold.
+
+Even the **self** is an ongoing event, constantly shaped by experiences and interactions. In *Event Centrism*,
+everything in life is *fluid, dynamic, and interconnected*, emphasizing that our world and our identities are in
+constant motion, driven by the events we experience.
+
+**Event Centrism** is not an *absolute truth* but rather one way to understand the world — a very useful way to *model
+systems*.
+
+### Event-Driven Architecture (EDA)
+
+Event-Driven Architecture (EDA) is a design pattern where systems react to events in near real-time. Components
+communicate by producing, detecting, and responding to events, enabling asynchronous processing and loose coupling
+between services, which allows for more scalable and resilient systems.
+
+### Command Query Responsibility Segregation (CQRS)
+
+CQRS is a pattern that separates the responsibilities of updating data (commands) and reading data (queries). By
+dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling
+of complex, high-demand systems.
+
+Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query command models for
+improved consistency where it does not jeopardise the scalability. Commands can also return simple data like sequence number of the produced events.
+
+### Vertical & Horizontal Scalability
+
+![3_vertical_horozontal_scalability.excalidraw.png](pictures/3_vertical_horozontal_scalability.excalidraw.png)
+
+### Event Sourcing
+
+![4_event_sourcing.excalidraw.png](pictures/4_event_sourcing.excalidraw.png)
+
+### The Three Dimensions to Scalability
 
 In this chapter we are in the context of:
 * Event-Driven Architecture (EDA)
 * Command Query Separation (CQS)
 * Command Query Responsibility Segregation (CQRS)
 
-### Scale Cube
+#### Scale Cube
 
-![5_0_scale_cube.png](5_0_scale_cube.png)
+![5_0_scale_cube.png](pictures/5_0_scale_cube.png)
 
-### Decomposition
+#### Decomposition
 
-![5_1_decomposition.png](5_1_decomposition.png)
+![5_1_decomposition.png](pictures/5_1_decomposition.png)
 
-### Duplication
+#### Duplication
 
-![5_2_duplication.png](5_2_duplication.png)
+![5_2_duplication.png](pictures/5_2_duplication.png)
 
-### Partition
+#### Partition
 
-![5_3_partition.png](5_3_partition.png)
-
-# Scalable Modeling
+![5_3_partition.png](pictures/5_3_partition.png)
 
 ## Components
 
@@ -225,55 +223,64 @@ In this chapter we are in the context of:
 
 ### Events
 
-![6_1_events_1.png](6_1_events_1.png)
+![6_1_events_1.png](pictures/6_1_events_1.png)
 
-![6_1_events_2.png](6_1_events_2.png)
+![6_1_events_2.png](pictures/6_1_events_2.png)
 
 ### Ubiquitous Language
 
-![](6_2_ubiquitous_language.png)
+![](pictures/6_2_ubiquitous_language.png)
 
 ### Commands & State
 
-![](6_3_commands.png)
+![](pictures/6_3_commands.png)
 
 ### Queries
 
-![](6_4_queries_1.png)
+![](pictures/6_4_queries_1.png)
 
-![](6_4_queries_2.png)
+I understand that **querying the command model** (red arrow in the picture above) is a topic that often sparks strong
+opinions. In my view, the command model serves as a special type of model that validates commands, and
+while it is not designed for querying, there are cases where it can be read from if necessary. For example, in
+in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve
+querying the state of an entity immediately after its creation or update. Since the entity is already in memory,
+fetching it quickly from there can be justified. However, querying the command model should be avoided wherever
+possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or
+inconsistencies. For this reason, querying the command model requires strong justification.
+
+![](pictures/6_4_queries_2.png)
 
 ### Policies
 
-![](6_5_policies_1.png)
+![](pictures/6_5_policies_1.png)
 
-![](6_5_policies_2.png)
+![](pictures/6_5_policies_2.png)
 
 ### Hotspots & Descriptions
 
-![](6_6_hotsposts_descriptions.png)
+![](pictures/6_6_hotsposts_descriptions.png)
 
 ### Consistency Boundaries
 
-![](6_7_consistency_boundaries.png)
+![](pictures/6_7_consistency_boundaries.png)
 
 ## Challenges
 
 ### Deduplication
 
-![7_1_deduplication.png](7_1_deduplication.png)
+![7_1_deduplication.png](pictures/7_1_deduplication.png)
 
 ### Tailoring Consistency
 
-![7_2_tailoring_consistency.png](7_2_tailoring_consistency.png)
+![7_2_tailoring_consistency.png](pictures/7_2_tailoring_consistency.png)
 
 ### Time Travel
 
-![7_3_time_travel.png](7_3_time_travel.png)
+![7_3_time_travel.png](pictures/7_3_time_travel.png)
 
 ## End Results
 
-![6_components_of_scalable_modeling.png](6_components_of_scalable_modeling.png)
+![6_components_of_scalable_modeling.png](pictures/6_components_of_scalable_modeling.png)
 
 ## Credits
 
@@ -294,6 +301,6 @@ The following persons have had a lot of influence on what this repository descri
 
 # License For Using the Pictures
 
-![copyright.png](copyright.png)
+![copyright.png](pictures/copyright.png)
 
 See [License](LICENSE.md).
