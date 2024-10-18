@@ -9,6 +9,46 @@ There are **three opportunities** and **three challenges** in scalability and un
 Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for modeling
 scalable systems.
 
+## Table of Content
+
+<!-- TOC -->
+* [Scalable Modeling – Growth Should Be an Advantage, Not a Challenge](#scalable-modeling--growth-should-be-an-advantage-not-a-challenge)
+  * [Table of Content](#table-of-content)
+    * [Opportunities](#opportunities)
+    * [Challenges](#challenges)
+    * [The Upfront Modeling Technique](#the-upfront-modeling-technique)
+  * [Event Centrism](#event-centrism)
+  * [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
+  * [Command Query Responsibility Segregation (CQRS)](#command-query-responsibility-segregation-cqrs)
+* [More Justification - Why to Concentrate Domain Knowledge & Scalability](#more-justification---why-to-concentrate-domain-knowledge--scalability)
+  * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
+  * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
+* [Theory](#theory)
+  * [Vertical & Horizontal Scalability](#vertical--horizontal-scalability)
+  * [Event Sourcing](#event-sourcing)
+  * [The Three Dimensions to Scalability](#the-three-dimensions-to-scalability)
+    * [Scale Cube](#scale-cube)
+    * [Decomposition](#decomposition)
+    * [Duplication](#duplication)
+    * [Partition](#partition)
+* [Scalable Modeling](#scalable-modeling)
+  * [Components](#components)
+    * [Events](#events)
+    * [Ubiquitous Language](#ubiquitous-language)
+    * [Commands & State](#commands--state)
+    * [Queries](#queries)
+    * [Policies](#policies)
+    * [Hotspots & Descriptions](#hotspots--descriptions)
+    * [Consistency Boundaries](#consistency-boundaries)
+  * [Challenges](#challenges-1)
+    * [Deduplication](#deduplication)
+    * [Tailoring Consistency](#tailoring-consistency)
+    * [Time Travel](#time-travel)
+  * [End Results](#end-results)
+  * [Credits](#credits)
+* [License For Using the Pictures](#license-for-using-the-pictures)
+<!-- TOC -->
+
 ### Opportunities
 
 1. **[Decomposition](#decomposition)** - scale by splitting different things
@@ -175,7 +215,47 @@ In this chapter we are in the context of:
 
 ## Components
 
-![6_scalable_modeling.excalidraw.png](6_scalable_modeling.excalidraw.png)
+1. [Events](#events)
+2. [Ubiquitous Language](#ubiquitous-language)
+3. [Commands & State](#commands--state)
+4. [Queries](#queries)
+5. [Policies](#policies)
+6. [Hotspots & Descriptions](#hotspots--descriptions)
+7. [Consistency Boundaries](#consistency-boundaries)
+
+### Events
+
+![6_1_events_1.png](6_1_events_1.png)
+
+![6_1_events_2.png](6_1_events_2.png)
+
+### Ubiquitous Language
+
+![](6_2_ubiquitous_language.png)
+
+### Commands & State
+
+![](6_3_commands.png)
+
+### Queries
+
+![](6_4_queries_1.png)
+
+![](6_4_queries_2.png)
+
+### Policies
+
+![](6_5_policies_1.png)
+
+![](6_5_policies_2.png)
+
+### Hotspots & Descriptions
+
+![](6_6_hotsposts_descriptions.png)
+
+### Consistency Boundaries
+
+![](6_7_consistency_boundaries.png)
 
 ## Challenges
 
