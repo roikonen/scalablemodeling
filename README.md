@@ -2,8 +2,9 @@
 
 This repository introduces a pragmatic toolbox for modeling scalable systems. I believe that every new system should be 
 designed with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a 
-challenge. Strong influences have been taken from Domain-Driven Design, EventStorming & CQRS but the end result does 
-not purely follow either of those.
+challenge. This approach is strongly influenced by Domain-Driven Design, EventStorming, and CQRS, but the end result 
+does not strictly adhere to any of these methodologies.
+
 
 ## Table of Content
 
@@ -13,11 +14,13 @@ not purely follow either of those.
   * [High Level Overview](#high-level-overview)
     * [Opportunities](#opportunities)
     * [The Method](#the-method)
+      * [Shift Left](#shift-left)
+      * [Start From Events](#start-from-events)
     * [Challenges](#challenges)
   * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
     * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
     * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
-* [The Upfront Modeling Technique](#the-upfront-modeling-technique)
+* [Scalable Modeling – The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique)
   * [Theory](#theory)
     * [Event Centrism](#event-centrism)
     * [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
@@ -68,6 +71,20 @@ software engineering, three things matter:
 2. Designing: **WHAT** is the **conceptual model** for the solution **<- WE CONCENTRATE TO THIS**
 3. Developing: **HOW** it is **implemented**
 
+#### Shift Left
+
+> "The earlier you make an error, the cheaper it is to fix."  
+> _**Don Norman**_
+
+> "There is nothing so useless as doing efficiently that which should not be done at all."  
+> _**Peter Drucker**_
+
+![](pictures/0_shift_left.png)
+Scalable Modeling is a method for shifting left in the software engineering process. It helps crystallize the **'why'** 
+by focusing on the **'what,'** allowing the creation of a result that serves as an opinionated bridge to the **'how.'**
+
+#### Start From Events
+
 Domain knowledge should be the starting point in building the **conceptual model**:
 
 > "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
@@ -82,7 +99,7 @@ to scalability, particularly in event-driven architectures.
 ![0_scalable_modeling_components.png](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrow in [section: Queries](#queries)._
 
-More about the method in chapter: [The Upfront Modeling Technique](#the-upfront-modeling-technique).
+More about the method in chapter: [The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique).
 
 ### Challenges
 
@@ -140,7 +157,7 @@ Without a scalable system from day one, even the best ideas can be slowed down b
 
 Success is not just about growing fast—it's about building the right infrastructure from the outset, so that growth becomes an advantage, not a challenge.
 
-# The Upfront Modeling Technique
+# Scalable Modeling – The Upfront Modeling Technique
 
 ## Theory
 
@@ -182,7 +199,8 @@ improved consistency where it does not jeopardise the scalability. Commands can 
 
 ### Vertical & Horizontal Scalability
 
-![3_vertical_horozontal_scalability.excalidraw.png](pictures/3_vertical_horozontal_scalability.excalidraw.png)
+![3_vertical_horizontal_scalability.excalidraw.png](pictures/3_vertical_horizontal_scalability.excalidraw.png)
+[Universal Scalability Law, Wikipedia](https://en.wikipedia.org/wiki/Neil_J._Gunther#Universal_Scalability_Law)
 
 ### Event Sourcing
 
@@ -190,7 +208,7 @@ improved consistency where it does not jeopardise the scalability. Commands can 
 
 ### The Three Dimensions to Scalability
 
-In this chapter we are in the context of:
+In this section we are in the context of:
 * Event-Driven Architecture (EDA)
 * Command Query Separation (CQS)
 * Command Query Responsibility Segregation (CQRS)
