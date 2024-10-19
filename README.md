@@ -1,15 +1,16 @@
-# Scalable Modeling – Growth Should Be an Advantage, Not a Challenge
+# Scalable Modeling – Turning Growth from Challenge to Advantage
 
-This repository introduces a pragmatic toolbox for modeling **scalable systems**. I believe that every new system should be 
-designed with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a 
-challenge. This approach is strongly influenced by Domain-Driven Design, EventStorming, and CQRS, but the end result 
-does not strictly adhere to any of these methodologies.
+This repository offers a **pragmatic toolbox** for designing **scalable systems**. Every new system should be built with 
+scalability in mind—**scalability is essential for success**. Growth should be an opportunity for enhancement, though it 
+comes with complexities that need to be strategically managed. With **Scalable Modeling**, you can embed scalability in 
+your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, EventStorming, and CQRS, this 
+approach remains flexible and doesn't rigidly adhere to any single methodology.
 
 
 ## Table of Content
 
 <!-- TOC -->
-* [Scalable Modeling – Growth Should Be an Advantage, Not a Challenge](#scalable-modeling--growth-should-be-an-advantage-not-a-challenge)
+* [Scalable Modeling – Turning Growth from Challenge to Advantage](#scalable-modeling--turning-growth-from-challenge-to-advantage)
   * [Table of Content](#table-of-content)
   * [High Level Overview](#high-level-overview)
     * [Opportunities](#opportunities)
@@ -58,8 +59,8 @@ modeling scalable systems.
 ### Opportunities
 
 1. **[Decomposition](#decomposition)** - scale by splitting different things
-1. **[Duplication](#duplication)** - scale by cloning
-1. **[Partition](#partition)** - scale by splitting similar things
+2. **[Duplication](#duplication)** - scale by cloning
+3. **[Partition](#partition)** - scale by splitting similar things
 
 **Immutability** plays key role in each aspect. 
 
@@ -107,8 +108,8 @@ More about the method in chapter: [The Upfront Modeling Technique](#scalable-mod
 ### Challenges
 
 1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
-1. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
-1. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
+2. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
+3. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
 
 ## Why to Concentrate Domain Knowledge & Scalability
 
@@ -285,6 +286,10 @@ inconsistencies. For this reason, querying the command model requires strong jus
 
 ![](pictures/6_7_consistency_boundaries.png)
 
+Interestingly, even if this is done as a last step in the Scalable Modeling, this often requires **business-driven 
+decisions**. For instance, while financial transactions demand strict consistency, less critical processes like 
+reporting can tolerate delays.
+
 ## Challenges
 
 ### Deduplication
@@ -293,11 +298,35 @@ inconsistencies. For this reason, querying the command model requires strong jus
 
 ### Tailoring Consistency
 
+In distributed systems, **defining consistency boundaries** is crucial for balancing performance and correctness. These
+boundaries determine where strong consistency is enforced and where eventual consistency is acceptable. Interestingly,
+tailoring these boundaries often requires **business-driven decisions**. For instance, while financial transactions
+demand strict consistency, less critical processes like reporting can tolerate delays.
+
+By explicitly defining consistency boundaries, you ensure the system aligns with business needs while optimizing
+scalability. This approach prevents over-engineering and allows the system to scale efficiently without unnecessary
+constraints.
+
 ![7_2_tailoring_consistency.png](pictures/7_2_tailoring_consistency.png)
 
 ### Time Travel
 
 ![7_3_time_travel.png](pictures/7_3_time_travel.png)
+
+When using **CQRS** with eventually consistent read models, the system's read models may reflect different points in 
+time due to the delay in propagating updates. This allows for a form of "time travel," where users can observe data at 
+various stages of consistency. As new events are processed, the read model gradually "catches up" with the latest state. 
+However, during this period, the system might expose outdated or future-looking states, effectively letting users or 
+systems "travel" between these states.
+
+This is particularly significant when querying or presenting data that spans multiple sources or services across 
+consistency boundaries. For example, one source might reflect an older version of the data, while another presents the 
+most recent state.
+
+As a result, combining data from these sources may yield conflicting or incoherent views of the overall system. This 
+inconsistency poses a challenge when trying to form a unified or accurate perspective of the current state. To mitigate 
+these issues, designers need to carefully consider the timing and aggregation of data to avoid misleading or 
+inconsistent results, especially in cases where decisions are being made based on these read models.
 
 ## End Results
 
