@@ -1,6 +1,6 @@
 # Scalable Modeling – Growth Should Be an Advantage, Not a Challenge
 
-This repository introduces a pragmatic toolbox for modeling scalable systems. I believe that every new system should be 
+This repository introduces a pragmatic toolbox for modeling **scalable systems**. I believe that every new system should be 
 designed with scalability in mind, as scalability is a prerequisite for success — growth should be an advantage, not a 
 challenge. This approach is strongly influenced by Domain-Driven Design, EventStorming, and CQRS, but the end result 
 does not strictly adhere to any of these methodologies.
@@ -65,11 +65,14 @@ modeling scalable systems.
 
 ### The Method
 
-Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. In
-software engineering, three things matter:
-1. Understanding: **WHY** software is needed (understanding the **purpose** and the **problem** it should address)
-2. Designing: **WHAT** is the **conceptual model** for the solution **<- WE CONCENTRATE TO THIS**
-3. Developing: **HOW** it is **implemented**
+Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. 
+In software engineering, three aspects are critical:
+
+1. **Understanding**: **WHY** the software is needed (understanding the **purpose** and the **problem** it should address).
+2. **Designing**: **WHAT** is the **conceptual model** for the solution.
+3. **Developing**: **HOW** the solution is **implemented**.
+
+Scalable Modeling serves as an opinionated bridge from **WHY** to **HOW**, with a primary focus on the **WHAT**.
 
 #### Shift Left
 
