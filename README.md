@@ -77,9 +77,6 @@ Scalable Modeling serves as an opinionated bridge from **WHY** to **HOW**, with 
 
 #### Shift Left
 
-> "The earlier you make an error, the cheaper it is to fix."  
-> _**Don Norman**_
-
 > "There is nothing so useless as doing efficiently that which should not be done at all."  
 > _**Peter Drucker**_
 
