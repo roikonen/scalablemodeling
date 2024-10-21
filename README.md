@@ -207,6 +207,8 @@ improved consistency where it does not jeopardise the scalability. Commands can 
 ![3_vertical_horizontal_scalability.excalidraw.png](pictures/3_vertical_horizontal_scalability.excalidraw.png)
 [Universal Scalability Law, Wikipedia](https://en.wikipedia.org/wiki/Neil_J._Gunther#Universal_Scalability_Law)
 
+Limiting contention is the key for higher scalability.
+
 ### Event Sourcing
 
 ![4_event_sourcing.excalidraw.png](pictures/4_event_sourcing.excalidraw.png)
