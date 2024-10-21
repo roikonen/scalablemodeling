@@ -73,7 +73,11 @@ In software engineering, three aspects are critical:
 2. **Designing**: **WHAT** is the **conceptual model** for the solution.
 3. **Developing**: **HOW** the solution is **implemented**.
 
+![](pictures/0_why_what_how.png)
+
 Scalable Modeling serves as an opinionated bridge from **WHY** to **HOW**, with a primary focus on the **WHAT**.
+
+Iteration is naturally much cheaper when it is done on the conceptual model rather than on the implementation level.
 
 #### Shift Left
 
