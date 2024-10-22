@@ -1,11 +1,11 @@
 # Scalable Modeling – Turning Growth from Challenge to Advantage
 
 This repository offers a **pragmatic toolbox** for designing **scalable systems**. Every new system should be built with 
-scalability in mind—**scalability is essential for success**. Growth should be an opportunity for enhancement, though it 
+scalability in mind — **scalability is essential for success**. Growth should be an opportunity for enhancement, though it 
 comes with complexities that need to be strategically managed. With **Scalable Modeling**, you can embed scalability in 
 your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, EventStorming, and CQRS, this 
-approach remains flexible and doesn't rigidly adhere to any single methodology. This is why I call it with different name: 
-[CEQS - Command-Event-Query Separation](#ceqs-command-event-query-separation).
+approach remains flexible and doesn't rigidly adhere to any single methodology. This is why I call this architectural 
+approach with different name: [CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
 
 
 ## Table of Content
@@ -34,7 +34,7 @@ approach remains flexible and doesn't rigidly adhere to any single methodology. 
       * [Decomposition](#decomposition)
       * [Duplication](#duplication)
       * [Partition](#partition)
-  * [CEQS: Command-Event-Query Separation](#ceqs-command-event-query-separation)
+  * [CEQS: Command Event Query Separation](#ceqs-command-event-query-separation)
   * [Components](#components)
       * [Key Components](#key-components)
       * [Architectural Benefits](#architectural-benefits)
@@ -246,9 +246,9 @@ In this section we are in the context of:
 
 ![5_3_partition.png](pictures/5_3_partition.png)
 
-## CEQS: Command-Event-Query Separation
+## CEQS: Command Event Query Separation
 
-The diagram below illustrates a software architecture concept called **CEQS** — **Command-Event-Query Separation**.
+The diagram below illustrates a software architecture concept called **CEQS** — **Command Event Query Separation**.
 It is an enhancement of the traditional **CQS** (Command Query Separation) pattern.
 
 ![](pictures/6_0_ceqs.png)
