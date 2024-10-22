@@ -401,11 +401,13 @@ The following persons have had a lot of influence on what this repository descri
   and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
   into past system states.
 
-The trigger that led to the creation of this page came from LinkedIn [post](https://www.linkedin.com/posts/abuijze_the-aggregate-is-great-but-its-time-to-activity-7226485148630843392-gJ_w?utm_source=share&utm_medium=member_desktop) from Allard Buijze.
-Post was about aggregates and their necessity. I studied the post and ended up into Sara Pellegrini's & Milan Savic's talk:
-[The Aggregate is dead. Long live the Aggregate!](https://www.youtube.com/watch?v=IgigmuHHchI). After getting over my
-cognitive dissonance I needed to try out the new ideas by drawing them with [Excalidraw](https://excalidraw.com/) and
-that led new ideas that I have collected to this repository.
+The trigger that led to the creation of this page came from a LinkedIn [post](https://www.linkedin.com/posts/abuijze_the-aggregate-is-great-but-its-time-to-activity-7226485148630843392-gJ_w?utm_source=share&utm_medium=member_desktop) by Allard Buijze.  
+The post was about aggregates and their necessity. I studied the post and ended up watching Sara Pellegrini's and Milan 
+Savic's talk: [The Aggregate is dead. Long live the Aggregate!](https://www.youtube.com/watch?v=IgigmuHHchI).
+After overcoming my cognitive dissonance, I needed to try out the new ideas by drawing them with
+[Excalidraw](https://excalidraw.com/), which led to new ideas that I have collected in this repository.
+
+Thanks for triggering the ideas!
 
 # License For Using the Pictures
 
