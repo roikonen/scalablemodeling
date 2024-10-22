@@ -305,6 +305,14 @@ It is an enhancement of the traditional **CQS** (Command Query Separation) patte
 
 ![](pictures/6_2_ubiquitous_language.png)
 
+Ubiquitous language is more than connections and stickies in the picture above. At best, it is a shared conceptual 
+framework that allows both technical and non-technical stakeholders to collaborate effectively, ensuring that all 
+parties have a common understanding of the domain and its logic. It helps avoid ambiguity, enabling precise 
+communication and design decisions, fostering a deep connection between the code and the business model it represents.
+
+This language allows everyone involved to speak the same language, preventing misunderstandings and ensuring that the 
+system's design remains consistent with the business goals and domain requirements.
+
 ### Commands & State
 
 ![](pictures/6_3_commands.png)
