@@ -4,7 +4,8 @@ This repository offers a **pragmatic toolbox** for designing **scalable systems*
 scalability in mind—**scalability is essential for success**. Growth should be an opportunity for enhancement, though it 
 comes with complexities that need to be strategically managed. With **Scalable Modeling**, you can embed scalability in 
 your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, EventStorming, and CQRS, this 
-approach remains flexible and doesn't rigidly adhere to any single methodology.
+approach remains flexible and doesn't rigidly adhere to any single methodology. This is why I call it with different name: 
+[CEQS - Command-Event-Query Separation](#ceqs-command-event-query-separation).
 
 
 ## Table of Content
@@ -33,7 +34,10 @@ approach remains flexible and doesn't rigidly adhere to any single methodology.
       * [Decomposition](#decomposition)
       * [Duplication](#duplication)
       * [Partition](#partition)
+  * [CEQS: Command-Event-Query Separation](#ceqs-command-event-query-separation)
   * [Components](#components)
+      * [Key Components](#key-components)
+      * [Architectural Benefits](#architectural-benefits)
     * [Events](#events)
     * [Ubiquitous Language](#ubiquitous-language)
     * [Commands & State](#commands--state)
@@ -147,9 +151,13 @@ When we can focus solely on implementing conceptual models from the domain witho
 
 ![2_need_for_scalability.excalidraw.png](pictures/2_need_for_scalability.excalidraw.png)
 
-Building a scalable foundation allows businesses to adapt to increasing demands and capitalize on opportunities without being limited by technical constraints. As these influential leaders have noted, scalability is not an afterthought; it is integral to achieving sustainable success.
+Building a scalable foundation allows businesses to adapt to increasing demands and capitalize on opportunities without 
+being limited by technical constraints. As these influential leaders have noted, scalability is not an afterthought; it 
+is integral to achieve sustainable success.
 
-Without a scalable system from day one, even the best ideas can be slowed down by bottlenecks and inefficiencies as they grow. Designing with scalability in mind ensures that as demand increases, systems can grow exponentially to meet those demands without sacrificing performance or creating technical debt.
+Without a scalable system from day one, even the best ideas can be slowed down by bottlenecks and inefficiencies as 
+they grow. Designing with scalability in mind ensures that as demand increases, systems can grow exponentially to meet 
+those demands without sacrificing performance or creating technical debt.
 
 > "The faster you scale, the more wealth you create."
 > _**Reid Hoffman** (Co-founder of LinkedIn)_
@@ -160,7 +168,8 @@ Without a scalable system from day one, even the best ideas can be slowed down b
 > "The most scalable businesses in the world are software businesses."
 > _**Bill Gates** (Founder of Microsoft)_
 
-Success is not just about growing fast—it's about building the right infrastructure from the outset, so that growth becomes an advantage, not a challenge.
+Success is not just about growing fast — it's about building the right infrastructure from the outset, so that growth 
+becomes an advantage, not a challenge.
 
 # Scalable Modeling – The Upfront Modeling Technique
 
@@ -199,8 +208,9 @@ CQRS is a pattern that separates the responsibilities of updating data (commands
 dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling
 of complex, high-demand systems.
 
-Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query command models for
-improved consistency where it does not jeopardise the scalability. Commands can also return simple data like sequence number of the produced events.
+Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query 
+command models for improved consistency where it does not jeopardise the scalability. Commands can also return simple 
+data like sequence number of the produced events.
 
 ### Vertical & Horizontal Scalability
 
@@ -236,6 +246,13 @@ In this section we are in the context of:
 
 ![5_3_partition.png](pictures/5_3_partition.png)
 
+## CEQS: Command-Event-Query Separation
+
+The diagram below illustrates a software architecture concept called **CEQS** — **Command-Event-Query Separation**.
+It is an enhancement of the traditional **CQS** (Command Query Separation) pattern.
+
+![](pictures/6_0_ceqs.png)
+
 ## Components
 
 1. [Events](#events)
@@ -245,6 +262,38 @@ In this section we are in the context of:
 5. [Policies](#policies)
 6. [Hotspots & Descriptions](#hotspots--descriptions)
 7. [Consistency Boundaries](#consistency-boundaries)
+
+#### Key Components
+
+1. **Command**
+   - Represents a request to change the state of the system.
+   - Commands are responsible for state mutation and are isolated from queries.
+2. **Query**
+   - Refers to a request to retrieve or read data from the system.
+   - Queries do not modify the state; they simply return data based on the current system state.
+3. **Event (Public Event)**
+   - Represents events triggered after the state has been modified by a command.
+   - Events can be published to external systems or services to notify them of state changes.
+4. **Bounded Context**
+   - A concept from **Domain-Driven Design (DDD)**, representing a logical boundary around a specific domain of the system.
+   - Commands, queries, and events interact within the **Bounded Context** to maintain consistency.
+
+#### Architectural Benefits
+
+- **Clean Domain Logic**: Separating commands and queries leads to clearer, more focused business logic for handling 
+  either state changes or data retrieval.
+- **Separation of Concerns**: Commands are responsible for writing data (changing state), and queries are responsible 
+  for reading data. This leads to better maintainability and clearer code.
+- **Low Latency at Any Scale**: This design supports scalability. For instance, queries can be optimized or cached 
+  without affecting command operations.
+- **Loose Coupling**: Commands, queries, and events are decoupled, allowing each to evolve independently. This is 
+  useful in microservices, where services can operate and scale independently.
+- **Near-Realtime Integrations**: Events allow for almost real-time communication between services, enabling fast 
+  integration and responsiveness.
+- **High Availability**: By separating read and write responsibilities, the system can improve availability and handle 
+  large-scale read operations (e.g., using replicas).
+- **Resiliency**: The system is more resilient, as failures in one component (e.g., command processing) do not 
+  necessarily affect others (e.g., queries).
 
 ### Events
 
@@ -351,6 +400,12 @@ The following persons have had a lot of influence on what this repository descri
   *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, 
   and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
   into past system states.
+
+The trigger that led to the creation of this page came from LinkedIn [post](https://www.linkedin.com/posts/abuijze_the-aggregate-is-great-but-its-time-to-activity-7226485148630843392-gJ_w?utm_source=share&utm_medium=member_desktop) from Allard Buijze.
+Post was about aggregates and their necessity. I studied the post and ended up into Sara Pellegrini's & Milan Savic's talk:
+[The Aggregate is dead. Long live the Aggregate!](https://www.youtube.com/watch?v=IgigmuHHchI). After getting over my
+cognitive dissonance I needed to try out the new ideas by drawing them with [Excalidraw](https://excalidraw.com/) and
+that led new ideas that I have collected to this repository.
 
 # License For Using the Pictures
 
