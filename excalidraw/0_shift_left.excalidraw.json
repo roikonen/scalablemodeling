@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 2503,
-      "versionNonce": 1078893184,
+      "version": 2504,
+      "versionNonce": 1266271622,
       "isDeleted": false,
       "id": "EkevZKRbd7b2B8HL9pIis",
       "fillStyle": "solid",
@@ -28,7 +28,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488779,
+      "updated": 1730093485244,
       "link": null,
       "locked": false,
       "fontSize": 44.158137523571824,
@@ -39,12 +39,12 @@
       "containerId": null,
       "originalText": "Russell L. Ackoff",
       "lineHeight": 1.25,
-      "baseline": 39
+      "baseline": 38
     },
     {
       "type": "text",
-      "version": 2466,
-      "versionNonce": 626937216,
+      "version": 2467,
+      "versionNonce": 370392538,
       "isDeleted": false,
       "id": "9nf3PPqnLSbcznVpjVXgk",
       "fillStyle": "solid",
@@ -67,7 +67,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488779,
+      "updated": 1730093485244,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -82,8 +82,8 @@
     },
     {
       "type": "text",
-      "version": 2447,
-      "versionNonce": 546785920,
+      "version": 2448,
+      "versionNonce": 1416832198,
       "isDeleted": false,
       "id": "xtHnW4TCq6gCzQQja_rgD",
       "fillStyle": "solid",
@@ -106,7 +106,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488779,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -117,12 +117,12 @@
       "containerId": null,
       "originalText": "wrong",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 2367,
-      "versionNonce": 1329110400,
+      "version": 2368,
+      "versionNonce": 995291802,
       "isDeleted": false,
       "id": "LKPpwluUacnxs_LzbhWe7",
       "fillStyle": "solid",
@@ -145,7 +145,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488779,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.5415268025513,
@@ -156,12 +156,12 @@
       "containerId": null,
       "originalText": "right",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 2350,
-      "versionNonce": 1414134400,
+      "version": 2351,
+      "versionNonce": 226401286,
       "isDeleted": false,
       "id": "TVqlarRjNvVgJux2J2anm",
       "fillStyle": "solid",
@@ -184,7 +184,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -195,12 +195,12 @@
       "containerId": null,
       "originalText": "thing",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 2454,
-      "versionNonce": 1766387072,
+      "version": 2455,
+      "versionNonce": 72191834,
       "isDeleted": false,
       "id": "B--sHQl9MLQycbOzS2hM_",
       "fillStyle": "solid",
@@ -223,7 +223,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -234,12 +234,12 @@
       "containerId": null,
       "originalText": "wrong",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 2324,
-      "versionNonce": 1579592320,
+      "version": 2325,
+      "versionNonce": 1553541958,
       "isDeleted": false,
       "id": "7pGhcaYE-2hG0Nc32qB3n",
       "fillStyle": "solid",
@@ -262,7 +262,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.5415268025513,
@@ -273,12 +273,12 @@
       "containerId": null,
       "originalText": "right",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 2337,
-      "versionNonce": 2093956480,
+      "version": 2338,
+      "versionNonce": 894866458,
       "isDeleted": false,
       "id": "v_XxJueDZKJ85zi09Tl_v",
       "fillStyle": "solid",
@@ -301,7 +301,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -312,7 +312,7 @@
       "containerId": null,
       "originalText": "thing",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "image",
@@ -351,8 +351,8 @@
     },
     {
       "type": "text",
-      "version": 983,
-      "versionNonce": 1760385664,
+      "version": 984,
+      "versionNonce": 1612698246,
       "isDeleted": false,
       "id": "HMtN-nIQfi3vFsJ1p2kZQ",
       "fillStyle": "solid",
@@ -374,7 +374,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -385,12 +385,12 @@
       "containerId": null,
       "originalText": "Simo Roikonen\ngithub.com/roikonen/scalablemodeling",
       "lineHeight": 1.25,
-      "baseline": 60
+      "baseline": 59
     },
     {
       "type": "text",
-      "version": 3040,
-      "versionNonce": 1795919232,
+      "version": 3041,
+      "versionNonce": 274792666,
       "isDeleted": false,
       "id": "_blFI1TyAQcDwpLkv17db",
       "fillStyle": "solid",
@@ -414,7 +414,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 44.158137523571824,
@@ -425,12 +425,12 @@
       "containerId": null,
       "originalText": "John Gall",
       "lineHeight": 1.25,
-      "baseline": 39
+      "baseline": 38
     },
     {
       "type": "text",
-      "version": 895,
-      "versionNonce": 1197345408,
+      "version": 896,
+      "versionNonce": 1657770438,
       "isDeleted": false,
       "id": "MJLw4kYrZKsihkAqujCGo",
       "fillStyle": "solid",
@@ -453,7 +453,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -468,8 +468,8 @@
     },
     {
       "type": "text",
-      "version": 1020,
-      "versionNonce": 1832770944,
+      "version": 1021,
+      "versionNonce": 553637274,
       "isDeleted": false,
       "id": "Hlqxr0fddtAKJGMjexNbi",
       "fillStyle": "solid",
@@ -492,7 +492,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -503,12 +503,12 @@
       "containerId": null,
       "originalText": "complex system",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 1164,
-      "versionNonce": 1949874816,
+      "version": 1165,
+      "versionNonce": 1338337542,
       "isDeleted": false,
       "id": "6aWThNA2UVBbAJRCkLZft",
       "fillStyle": "solid",
@@ -531,7 +531,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 31.541526802551303,
@@ -542,12 +542,12 @@
       "containerId": null,
       "originalText": "simple system",
       "lineHeight": 1.25,
-      "baseline": 28
+      "baseline": 27
     },
     {
       "type": "text",
-      "version": 695,
-      "versionNonce": 346434944,
+      "version": 696,
+      "versionNonce": 140907098,
       "isDeleted": false,
       "id": "kr2Qpy8ooMkLDikAl2os4",
       "fillStyle": "solid",
@@ -574,7 +574,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488780,
+      "updated": 1730093485245,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -585,7 +585,7 @@
       "containerId": null,
       "originalText": "Continuous Integration (CI)\nTest-Driven Development (TDD)\nRefactoring\nAutomated Testing\nPair Programming\nContinuous Delivery/Deployment (CD)\nIncremental Development\nBacklog Grooming and Prioritization\nModular Design and Microservices\nFrequent Feedback Loop (from Stakeholders and Users)",
       "lineHeight": 1.25,
-      "baseline": 243
+      "baseline": 242
     },
     {
       "type": "arrow",
@@ -647,8 +647,8 @@
     },
     {
       "type": "text",
-      "version": 433,
-      "versionNonce": 306014848,
+      "version": 434,
+      "versionNonce": 645814342,
       "isDeleted": false,
       "id": "LAj28noD-07Y6gdtfTjTp",
       "fillStyle": "solid",
@@ -675,7 +675,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488780,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -686,7 +686,7 @@
       "containerId": null,
       "originalText": "Systems Thinking\nEventStorming\nDomain-Driven Design (DDD)\nImpact Mapping\nDesign Thinking\nTheory of Constraints (TOC)\nResiduality Theory\nEvent Modeling\nBehavior-Driven Development (BDD)\nJourney Mapping\nContext Mapping\nPrototyping and Wireframing Tools (e.g., Figma, Sketch)",
       "lineHeight": 1.25,
-      "baseline": 293
+      "baseline": 292
     },
     {
       "type": "arrow",
@@ -748,8 +748,8 @@
     },
     {
       "type": "text",
-      "version": 413,
-      "versionNonce": 1250196864,
+      "version": 414,
+      "versionNonce": 1231468314,
       "isDeleted": false,
       "id": "LKjL_vVGh0LzvPxLwQbme",
       "fillStyle": "solid",
@@ -776,7 +776,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488780,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -787,12 +787,12 @@
       "containerId": null,
       "originalText": "Separation of Concerns\nBusiness Logic Independence of Frameworks\nTestability\nFlexibility in Implementation\nDependency Inversion\nDomain-Centric Design\nMaintainability",
       "lineHeight": 1.25,
-      "baseline": 168
+      "baseline": 167
     },
     {
       "type": "text",
-      "version": 292,
-      "versionNonce": 1814829696,
+      "version": 293,
+      "versionNonce": 1859608454,
       "isDeleted": false,
       "id": "Nlf87GxikzVOshUGLzEDV",
       "fillStyle": "solid",
@@ -819,7 +819,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -830,7 +830,7 @@
       "containerId": null,
       "originalText": "Tightly-Coupled Components\nSingle Codebase\nLimited Modularity\nChallenging Scalability\nDifficult to Test\nHigh Cost of Change\nSlow Development Cycle\nInflexibility\nProne to Technical Debt",
       "lineHeight": 1.25,
-      "baseline": 218
+      "baseline": 217
     },
     {
       "type": "arrow",
@@ -952,8 +952,8 @@
     },
     {
       "type": "text",
-      "version": 460,
-      "versionNonce": 1343802752,
+      "version": 461,
+      "versionNonce": 343196634,
       "isDeleted": false,
       "id": "a-HPJTWSl4Fu_-gaoVFr0",
       "fillStyle": "solid",
@@ -976,7 +976,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -987,12 +987,12 @@
       "containerId": null,
       "originalText": "System Evolution",
       "lineHeight": 1.25,
-      "baseline": 25
+      "baseline": 24
     },
     {
       "type": "text",
-      "version": 572,
-      "versionNonce": 1959053952,
+      "version": 573,
+      "versionNonce": 755859142,
       "isDeleted": false,
       "id": "aPOPrlP_7HTTfF8tfQqLh",
       "fillStyle": "solid",
@@ -1015,7 +1015,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -1026,7 +1026,7 @@
       "containerId": null,
       "originalText": "Cost of\nChange",
       "lineHeight": 1.25,
-      "baseline": 60
+      "baseline": 59
     },
     {
       "type": "arrow",
@@ -1101,8 +1101,8 @@
     },
     {
       "type": "text",
-      "version": 491,
-      "versionNonce": 1050877312,
+      "version": 492,
+      "versionNonce": 329463962,
       "isDeleted": false,
       "id": "t-OemdIPxsJ8SW5XmSwvQ",
       "fillStyle": "solid",
@@ -1125,7 +1125,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -1136,7 +1136,7 @@
       "containerId": null,
       "originalText": "The Increasing Cost of Change with Growing Complexity",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "arrow",
@@ -1278,8 +1278,8 @@
     },
     {
       "type": "text",
-      "version": 527,
-      "versionNonce": 1187478144,
+      "version": 528,
+      "versionNonce": 1438496262,
       "isDeleted": false,
       "id": "TujlOwbr01JQCAWqoKPyS",
       "fillStyle": "solid",
@@ -1311,7 +1311,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1322,12 +1322,12 @@
       "containerId": null,
       "originalText": "Monoblock",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 1012,
-      "versionNonce": 123956608,
+      "version": 1013,
+      "versionNonce": 916788570,
       "isDeleted": false,
       "id": "qnYAKK3jfbLRbzqRzTHke",
       "fillStyle": "solid",
@@ -1355,7 +1355,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1366,12 +1366,12 @@
       "containerId": null,
       "originalText": "Lean and Agile\nPrinciples",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "text",
-      "version": 648,
-      "versionNonce": 619981440,
+      "version": 649,
+      "versionNonce": 1105528134,
       "isDeleted": false,
       "id": "WJ-7u2jDLRsB1NjpH3eOX",
       "fillStyle": "solid",
@@ -1403,7 +1403,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1414,7 +1414,7 @@
       "containerId": null,
       "originalText": "Modular and Clean\nArchitecture",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "arrow",
@@ -1489,8 +1489,8 @@
     },
     {
       "type": "text",
-      "version": 849,
-      "versionNonce": 1939455360,
+      "version": 850,
+      "versionNonce": 2127387162,
       "isDeleted": false,
       "id": "EoT2TVbx3bMjr7yOR6dM6",
       "fillStyle": "solid",
@@ -1522,7 +1522,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1533,7 +1533,7 @@
       "containerId": null,
       "originalText": "Shift Left",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -1631,8 +1631,8 @@
     },
     {
       "type": "text",
-      "version": 367,
-      "versionNonce": 2047531648,
+      "version": 368,
+      "versionNonce": 585133190,
       "isDeleted": false,
       "id": "8FOd6RHF9H03jDo89JPCe",
       "fillStyle": "solid",
@@ -1655,7 +1655,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1666,12 +1666,12 @@
       "containerId": null,
       "originalText": "HOW it is\nimplemented?",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "text",
-      "version": 366,
-      "versionNonce": 612765056,
+      "version": 367,
+      "versionNonce": 1259275994,
       "isDeleted": false,
       "id": "jjtkcvH8Rp5woJI0TXYYW",
       "fillStyle": "solid",
@@ -1694,7 +1694,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1705,12 +1705,12 @@
       "containerId": null,
       "originalText": "WHAT is the conceptual \nmodel for the solution?",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "text",
-      "version": 319,
-      "versionNonce": 1489734272,
+      "version": 320,
+      "versionNonce": 1986849734,
       "isDeleted": false,
       "id": "wmAIuXkpQKmB_aLtEslJV",
       "fillStyle": "solid",
@@ -1733,7 +1733,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1744,12 +1744,12 @@
       "containerId": null,
       "originalText": "WHY software is needed?\n(understanding the \npurpose and the problem \nit should address)",
       "lineHeight": 1.25,
-      "baseline": 93
+      "baseline": 92
     },
     {
       "type": "text",
-      "version": 1105,
-      "versionNonce": 325606784,
+      "version": 1106,
+      "versionNonce": 603790234,
       "isDeleted": false,
       "id": "PFxpvUR7zz6yAENMfr6Ne",
       "fillStyle": "solid",
@@ -1778,7 +1778,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -1789,7 +1789,7 @@
       "containerId": null,
       "originalText": "Shift Left",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "arrow",
@@ -1886,12 +1886,12 @@
       "containerId": "azvnAcJx8zadreV7P0w0g",
       "originalText": "cheaper",
       "lineHeight": 1.25,
-      "baseline": 27
+      "baseline": 26
     },
     {
       "type": "text",
-      "version": 231,
-      "versionNonce": 2079734400,
+      "version": 232,
+      "versionNonce": 2057798406,
       "isDeleted": false,
       "id": "GSZGa97Rz3BscUFKHo2RR",
       "fillStyle": "solid",
@@ -1914,7 +1914,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485246,
       "link": null,
       "locked": false,
       "fontSize": 62.890888458084326,
@@ -1929,8 +1929,8 @@
     },
     {
       "type": "text",
-      "version": 258,
-      "versionNonce": 293645696,
+      "version": 259,
+      "versionNonce": 130717786,
       "isDeleted": false,
       "id": "vvUOjA4ImM6N9zECkUeiz",
       "fillStyle": "solid",
@@ -1962,7 +1962,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488781,
+      "updated": 1730093485247,
       "link": null,
       "locked": false,
       "fontSize": 62.890888458084326,
@@ -1977,8 +1977,8 @@
     },
     {
       "type": "text",
-      "version": 676,
-      "versionNonce": 1179314816,
+      "version": 677,
+      "versionNonce": 571290182,
       "isDeleted": false,
       "id": "5uIsTm3xIF90SBZe6cYQz",
       "fillStyle": "solid",
@@ -2003,7 +2003,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485247,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2014,12 +2014,12 @@
       "containerId": null,
       "originalText": "Exponential Growth, Mitigated by Best Practices",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 75,
-      "versionNonce": 1208941952,
+      "version": 76,
+      "versionNonce": 910851354,
       "isDeleted": false,
       "id": "ucMfU2-CHyuX8wnmyX_16",
       "fillStyle": "solid",
@@ -2039,7 +2039,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485247,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -2050,12 +2050,12 @@
       "containerId": null,
       "originalText": "Scalable Modeling",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "text",
-      "version": 187,
-      "versionNonce": 1116314240,
+      "version": 188,
+      "versionNonce": 125499782,
       "isDeleted": false,
       "id": "vsRfdD-g6cax1Uv0d6ikg",
       "fillStyle": "solid",
@@ -2077,7 +2077,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485247,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -2088,12 +2088,12 @@
       "containerId": null,
       "originalText": "\"There is nothing so useless as doing efficiently\nthat which should not be done at all.\"",
       "lineHeight": 1.25,
-      "baseline": 60
+      "baseline": 59
     },
     {
       "type": "text",
-      "version": 103,
-      "versionNonce": 944983424,
+      "version": 104,
+      "versionNonce": 2096089562,
       "isDeleted": false,
       "id": "tJ2zbKp51751pv7-KVR9W",
       "fillStyle": "solid",
@@ -2115,7 +2115,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488781,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -2126,12 +2126,12 @@
       "containerId": null,
       "originalText": "Peter Drucker – \"The Effective Executive\"",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "text",
-      "version": 93,
-      "versionNonce": 594692736,
+      "version": 94,
+      "versionNonce": 1647171782,
       "isDeleted": false,
       "id": "DP3cUpeGZ51Hq0os2PONg",
       "fillStyle": "solid",
@@ -2153,7 +2153,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -2164,12 +2164,12 @@
       "containerId": null,
       "originalText": "\"The earlier you make an error, the cheaper it is to fix.\"",
       "lineHeight": 1.25,
-      "baseline": 25
+      "baseline": 24
     },
     {
       "type": "text",
-      "version": 127,
-      "versionNonce": 999136640,
+      "version": 128,
+      "versionNonce": 47021722,
       "isDeleted": false,
       "id": "VEqJMwfhsXXF4507fghAO",
       "fillStyle": "solid",
@@ -2191,7 +2191,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -2202,12 +2202,12 @@
       "containerId": null,
       "originalText": "Don Norman – \"The Design of Everyday Things\"",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "text",
-      "version": 134,
-      "versionNonce": 1136982656,
+      "version": 135,
+      "versionNonce": 2042810374,
       "isDeleted": false,
       "id": "KN3uKCmFYBFDs4y6GJinR",
       "fillStyle": "solid",
@@ -2229,7 +2229,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -2240,12 +2240,12 @@
       "containerId": null,
       "originalText": "Fail Early, Fail Often, Fail Fast",
       "lineHeight": 1.25,
-      "baseline": 25
+      "baseline": 24
     },
     {
       "type": "text",
-      "version": 150,
-      "versionNonce": 50195840,
+      "version": 151,
+      "versionNonce": 345414490,
       "isDeleted": false,
       "id": "ZGyPtKlSXzUaxyEE7jGSe",
       "fillStyle": "solid",
@@ -2268,7 +2268,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -2279,12 +2279,12 @@
       "containerId": null,
       "originalText": "Agile Principle",
       "lineHeight": 1.25,
-      "baseline": 32
+      "baseline": 31
     },
     {
       "type": "text",
-      "version": 430,
-      "versionNonce": 641837696,
+      "version": 431,
+      "versionNonce": 439803718,
       "isDeleted": false,
       "id": "FH1IslCn5IVnbk0q0j8IA",
       "fillStyle": "solid",
@@ -2306,7 +2306,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2317,12 +2317,12 @@
       "containerId": null,
       "originalText": "HOW it is\nimplemented?",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "text",
-      "version": 428,
-      "versionNonce": 400833920,
+      "version": 429,
+      "versionNonce": 1889411098,
       "isDeleted": false,
       "id": "pN3-6GsfI_Yg8imb32hLz",
       "fillStyle": "solid",
@@ -2344,7 +2344,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2355,12 +2355,12 @@
       "containerId": null,
       "originalText": "WHAT is the conceptual \nmodel for the solution?",
       "lineHeight": 1.25,
-      "baseline": 43
+      "baseline": 42
     },
     {
       "type": "text",
-      "version": 383,
-      "versionNonce": 1973967488,
+      "version": 384,
+      "versionNonce": 132580998,
       "isDeleted": false,
       "id": "ZcYvLWNOLySZMIOttzPtE",
       "fillStyle": "solid",
@@ -2382,7 +2382,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2393,12 +2393,12 @@
       "containerId": null,
       "originalText": "WHY software is needed?\n(understanding the \npurpose and the problem \nit should address)",
       "lineHeight": 1.25,
-      "baseline": 93
+      "baseline": 92
     },
     {
       "type": "text",
-      "version": 573,
-      "versionNonce": 1535151488,
+      "version": 574,
+      "versionNonce": 316083418,
       "isDeleted": false,
       "id": "LVr6-pRS0HJ-7c5EvmR7R",
       "fillStyle": "solid",
@@ -2425,7 +2425,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 42.908060029920364,
@@ -2440,8 +2440,8 @@
     },
     {
       "type": "text",
-      "version": 626,
-      "versionNonce": 79235712,
+      "version": 627,
+      "versionNonce": 1938834886,
       "isDeleted": false,
       "id": "f9DiuJfEUQ_C75povwHvN",
       "fillStyle": "solid",
@@ -2472,7 +2472,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 42.908060029920364,
@@ -2487,8 +2487,8 @@
     },
     {
       "type": "text",
-      "version": 700,
-      "versionNonce": 118676864,
+      "version": 701,
+      "versionNonce": 13918618,
       "isDeleted": false,
       "id": "ZgNQyuKgrfeRxNJFxvy5a",
       "fillStyle": "solid",
@@ -2515,7 +2515,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 42.908060029920364,
@@ -2530,8 +2530,8 @@
     },
     {
       "type": "text",
-      "version": 889,
-      "versionNonce": 1312012928,
+      "version": 890,
+      "versionNonce": 1850711302,
       "isDeleted": false,
       "id": "iT0WJ9TKtxFSDFUNOMYzN",
       "fillStyle": "solid",
@@ -2562,7 +2562,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 27.45085691552287,
@@ -2577,8 +2577,8 @@
     },
     {
       "type": "text",
-      "version": 893,
-      "versionNonce": 735784320,
+      "version": 894,
+      "versionNonce": 365502042,
       "isDeleted": false,
       "id": "9aJ4avNtjSh6151Se8zBs",
       "fillStyle": "solid",
@@ -2605,7 +2605,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 27.45085691552287,
@@ -2620,8 +2620,8 @@
     },
     {
       "type": "text",
-      "version": 893,
-      "versionNonce": 1960340096,
+      "version": 894,
+      "versionNonce": 1570901062,
       "isDeleted": false,
       "id": "rWKuwt73Xg2yINSZyn_78",
       "fillStyle": "solid",
@@ -2648,7 +2648,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1729618488782,
+      "updated": 1730093485248,
       "link": null,
       "locked": false,
       "fontSize": 27.45085691552287,
@@ -2895,8 +2895,8 @@
     },
     {
       "type": "text",
-      "version": 113,
-      "versionNonce": 857308544,
+      "version": 114,
+      "versionNonce": 1317552922,
       "isDeleted": false,
       "id": "yyLI75LTi69IEO0p0591U",
       "fillStyle": "solid",
@@ -2918,7 +2918,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618488782,
+      "updated": 1730093485249,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2929,12 +2929,12 @@
       "containerId": null,
       "originalText": "Low iteration Cost",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
-      "version": 287,
-      "versionNonce": 1497730432,
+      "version": 288,
+      "versionNonce": 1868862342,
       "isDeleted": false,
       "id": "CXQYBfswId7v9qIRgU4TW",
       "fillStyle": "solid",
@@ -2956,7 +2956,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729618499656,
+      "updated": 1730093485249,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2967,7 +2967,7 @@
       "containerId": null,
       "originalText": "High iteration Cost",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     }
   ],
   "appState": {

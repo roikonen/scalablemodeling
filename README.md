@@ -9,6 +9,7 @@ EventStorming, and CQRS, this approach remains flexible and doesn't rigidly adhe
 why I call this architectural approach with different name: 
 [CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
 
+![](pictures/0_scalable_modeling_components.png)
 
 ## Table of Content
 
