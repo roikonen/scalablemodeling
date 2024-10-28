@@ -1,11 +1,13 @@
 # Scalable Modeling – Turning Growth from Challenge to Advantage
 
-This repository offers a **pragmatic toolbox** for designing **scalable systems**. Every new system should be built with 
-scalability in mind — **scalability is essential for success**. Growth should be an opportunity for enhancement, though it 
-comes with complexities that need to be strategically managed. With **Scalable Modeling**, you can embed scalability in 
-your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, EventStorming, and CQRS, this 
-approach remains flexible and doesn't rigidly adhere to any single methodology. This is why I call this architectural 
-approach with different name: [CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
+This [repository](https://github.com/roikonen/scalablemodeling) offers a **pragmatic toolbox** for designing 
+**scalable systems**. Every new system should be built with scalability in mind — **scalability is essential for 
+success**. Growth should be an opportunity for enhancement, though it comes with complexities that need to be 
+strategically managed. With **[Scalable Modeling](https://roikonen.github.io/scalablemodeling/)**, you can embed 
+scalability in your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, 
+EventStorming, and CQRS, this approach remains flexible and doesn't rigidly adhere to any single methodology. This is 
+why I call this architectural approach with different name: 
+[CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
 
 
 ## Table of Content
@@ -79,7 +81,8 @@ In software engineering, three aspects are critical:
 
 ![](pictures/0_why_what_how.png)
 
-Scalable Modeling serves as an opinionated bridge from **WHY** to **HOW**, with a primary focus on the **WHAT**.
+[Scalable Modeling](https://roikonen.github.io/scalablemodeling/) serves as an opinionated bridge from **WHY** to
+**HOW**, with a primary focus on the **WHAT**.
 
 Iteration is naturally much cheaper when it is done on the conceptual model rather than on the implementation level.
 
@@ -89,8 +92,9 @@ Iteration is naturally much cheaper when it is done on the conceptual model rath
 > _**Peter Drucker**_
 
 ![](pictures/0_shift_left.png)
-Scalable Modeling is a method for shifting left in the software engineering process. It helps crystallize the **'why'** 
-by focusing on the **'what,'** allowing the creation of a result that serves as an opinionated bridge to the **'how.'**
+[Scalable Modeling](https://roikonen.github.io/scalablemodeling/) is a method for shifting left in the software 
+engineering process. It helps crystallize the **'why'** by focusing on the **'what,'** allowing the creation of a 
+result that serves as an opinionated bridge to the **'how.'**
 
 #### Start From Events
 
@@ -212,7 +216,8 @@ of complex, high-demand systems.
 
 ![](pictures/0_cqrs.png)
 
-Scalable Modeling does not go into purism in CQRS - in Scalable Modeling queries can (when well justified) also query 
+[Scalable Modeling](https://roikonen.github.io/scalablemodeling/) does not go into purism in CQRS - 
+in [Scalable Modeling](https://roikonen.github.io/scalablemodeling/) queries can (when well justified) also query 
 command models for improved consistency where it does not jeopardise the scalability. Commands can also return simple 
 data like sequence number of the produced events.
 
@@ -350,7 +355,8 @@ inconsistencies. For this reason, querying the command model requires strong jus
 
 ![](pictures/6_7_consistency_boundaries.png)
 
-Interestingly, even if this is done as a last step in the Scalable Modeling, this often requires **business-driven 
+Interestingly, even if this is done as a last step in the 
+[Scalable Modeling](https://roikonen.github.io/scalablemodeling/), this often requires **business-driven 
 decisions**. For instance, while financial transactions demand strict consistency, less critical processes like 
 reporting can tolerate delays.
 
@@ -427,7 +433,7 @@ The trigger that led to the creation of this page came from a LinkedIn [post](ht
 The post was about aggregates and their necessity. I studied the post and ended up watching Sara Pellegrini's and Milan 
 Savic's talk: [The Aggregate is dead. Long live the Aggregate!](https://www.youtube.com/watch?v=IgigmuHHchI).
 After overcoming my cognitive dissonance, I needed to try out the new ideas by drawing them with
-[Excalidraw](https://excalidraw.com/), which led to new ideas that I have collected in this repository.
+[Excalidraw](https://excalidraw.com/), which led to new ideas that I have collected in this [repository](https://github.com/roikonen/scalablemodeling).
 
 Thanks for triggering the ideas!
 
