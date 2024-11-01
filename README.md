@@ -15,7 +15,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 ## Table of Content
 
 <!-- TOC -->
-* [Scalable Modeling – Turning Growth from Challenge to Advantage](#scalable-modeling--turning-growth-from-challenge-to-advantage)
+* [Scalable Modeling – An Event-centric Approach](#scalable-modeling--an-event-centric-approach)
   * [Table of Content](#table-of-content)
   * [High Level Overview](#high-level-overview)
     * [Opportunities](#opportunities)
