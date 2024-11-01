@@ -1,4 +1,4 @@
-# Scalable Modeling – Turning Growth from Challenge to Advantage
+# Scalable Modeling – An Event-centric Approach
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
 **scalable systems**. Every new system should be built with scalability in mind — **scalability is essential for 
