@@ -1,6 +1,6 @@
 # Scalable Modeling – Turning Growth from Challenge to Advantage
 
-This [repository](https://github.com/roikonen/scalablemodeling) offers a **pragmatic toolbox** for designing 
+This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
 **scalable systems**. Every new system should be built with scalability in mind — **scalability is essential for 
 success**. Growth should be an opportunity for enhancement, though it comes with complexities that need to be 
 strategically managed. With **[Scalable Modeling](https://roikonen.github.io/scalablemodeling/)**, you can embed 
@@ -369,6 +369,9 @@ step we make Scalable Modeling compatible with DCBs.
 ### Deduplication
 
 ![7_1_deduplication.png](pictures/7_1_deduplication.png)
+
+Since exactly-once delivery is impossible in distributed systems, we use effectively-once or idempotent processing to 
+ensure duplicate messages don’t affect the outcome.
 
 ### Tailoring Consistency
 
