@@ -10,6 +10,7 @@ why I call this architectural approach with different name:
 [CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
 
 ![](pictures/0_scalable_modeling_components.png)
+_Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
 
 ## Table of Content
 
@@ -111,7 +112,6 @@ to scalability, particularly in event-driven architectures.
 **Thus, we adopt an [event-centric](#event-centrism) approach**.
 
 ![0_scalable_modeling_components.png](pictures/0_scalable_modeling_components.png)
-_Justification for the red arrow in [section: Queries](#queries)._
 
 More about the method in chapter: [The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique).
 
