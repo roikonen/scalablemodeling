@@ -451,7 +451,7 @@ ensuring longevity and adaptability in software design.
 
 ![](pictures/8_me.png)
 
-[LinkedIn](https://www.linkedin.com/in/roikonen/) | [X](https://x.com/simoroikonen)
+[LinkedIn](https://www.linkedin.com/in/roikonen/) | [Bluesky](https://bsky.app/profile/roikonen.bsky.social) | [X](https://x.com/simoroikonen)
 
 Simo is a seasoned software crafter, solution architect, and communicator, with a deep commitment to building evolvable, 
 long-lasting backends. With over a decade of experience in [Domain-Driven Design](#eric-evans), Simo excels at transforming complex 
