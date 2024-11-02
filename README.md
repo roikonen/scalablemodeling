@@ -2,11 +2,12 @@
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
 **scalable systems**. Every new system should be built with scalability in mind — **scalability is essential for 
-success**. Growth should be an opportunity for enhancement, though it comes with complexities that need to be 
-strategically managed. With **[Scalable Modeling](https://roikonen.github.io/scalablemodeling/)**, you can embed 
-scalability in your system design from the start. Influenced by Clean Architecture, Domain-Driven Design, 
-EventStorming, and CQRS, this approach remains flexible and doesn't rigidly adhere to any single methodology. This is 
-why I call this architectural approach with different name: 
+success**. With **Scalable Modeling**, you can embed 
+scalability in your system design from the start. Influenced by [Clean Architecture](#robert-c-martin), 
+[Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
+[Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
+[CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and doesn't rigidly adhere to 
+any single methodology. That is why this **event-centric architectural approach** has different name: 
 [CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
 
 ![](pictures/0_scalable_modeling_components.png)
@@ -55,6 +56,15 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Time Travel](#time-travel)
   * [End Results](#end-results)
   * [Credits](#credits)
+    * [Alberto Brandolini](#alberto-brandolini)
+    * [Eric Evans](#eric-evans)
+    * [Gregory Young](#gregory-young)
+    * [Robert C. Martin](#robert-c-martin)
+  * [About Simo Roikonen](#about-simo-roikonen)
+    * [System Modernization](#system-modernization)
+    * [Removing Bottlenecks](#removing-bottlenecks)
+    * [Domain-Driven Design](#domain-driven-design)
+    * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
 <!-- TOC -->
 
@@ -70,7 +80,7 @@ modeling scalable systems.
 2. **[Duplication](#duplication)** - scale by cloning
 3. **[Partition](#partition)** - scale by splitting similar things
 
-**Immutability** plays key role in each aspect. 
+**Immutability** (of messages/events) plays key role in each aspect. 
 
 ### The Method
 
@@ -413,25 +423,63 @@ inconsistent results, especially in cases where decisions are being made based o
 
 The following persons have had a lot of influence on what this repository describes:
 
-* **Alberto Brandolini**: Creator of *Event Storming*, a collaborative workshop technique used to explore and model 
-  complex business processes through domain events. His approach helps teams rapidly gain insights into business 
-  domains by focusing on key events that drive processes.
+### Alberto Brandolini
+Creator of *Event Storming*, a collaborative workshop technique used to explore and model 
+complex business processes through domain events. His approach helps teams rapidly gain insights into business 
+domains by focusing on key events that drive processes.
 
-* **Eric Evans**: Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes 
-  aligning the software model closely with the business domain. His work focuses on creating a shared understanding 
-  between technical teams and domain experts to ensure the software reflects real-world complexity.
+### Eric Evans
+Known for pioneering *Domain-Driven Design (DDD)*, a software development philosophy that emphasizes 
+aligning the software model closely with the business domain. His work focuses on creating a shared understanding 
+between technical teams and domain experts to ensure the software reflects real-world complexity.
 
-* **Gregory Young**: Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and 
-  *Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, 
-  and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
-  into past system states.
+### Gregory Young
+Renowned for developing and promoting *Command Query Responsibility Segregation (CQRS)* and 
+*Event Sourcing*. His work centers on separating read and write operations in systems, improving scalability, 
+and using event sourcing to maintain the history of all changes in a system, offering resilience and insights 
+into past system states.
 
-* **Robert C. Martin**: Author of *Clean Architecture* and a key figure in the promotion of software craftsmanship. His 
-  principles focus on building flexible, maintainable, and scalable systems by adhering to the separation of concerns 
-  and reducing dependencies between different layers of the system. Martin advocates for architecture that allows 
-  software to evolve over time, ensuring it remains easy to understand, extend, and refactor, even as requirements 
-  change. His work is centered on creating systems that prioritize independence from frameworks, databases, and UI, 
-  ensuring longevity and adaptability in software design.
+### Robert C. Martin
+Author of *Clean Architecture* and a key figure in the promotion of software craftsmanship. His 
+principles focus on building flexible, maintainable, and scalable systems by adhering to the separation of concerns 
+and reducing dependencies between different layers of the system. Martin advocates for architecture that allows 
+software to evolve over time, ensuring it remains easy to understand, extend, and refactor, even as requirements 
+change. His work is centered on creating systems that prioritize independence from frameworks, databases, and UI, 
+ensuring longevity and adaptability in software design.
+
+## About Simo Roikonen
+
+![](pictures/8_me.png)
+
+[LinkedIn](https://www.linkedin.com/in/roikonen/) | [X](https://x.com/simoroikonen)
+
+Simo is a seasoned software crafter, solution architect, and communicator, with a deep commitment to building evolvable, 
+long-lasting backends. With over a decade of experience in [Domain-Driven Design](#eric-evans), Simo excels at transforming complex 
+problems into clear, actionable solutions. When systems require scaling and resilience, he brings a proven track record 
+in **distributed architectures and scalability**, delivering low-latency at any scale.
+
+Beyond the technical aspects, Simo understands that successful software development & high development velocity thrives 
+in a balanced sociotechnical environment. He values collaboration and brings stakeholders together to ensure smooth 
+progress, whether it's a modernization effort, greenfield project, or eliminating bottlenecks in existing systems. 
+Simo is adept at crafting solutions that meet both technical and organizational needs, ensuring systems that are robust, 
+scalable, and future-ready.
+
+### System Modernization
+Simo has extensive experience in modernizing complex, large-scale systems — a process that involves not only 
+experimenting, organizing, and communicating, but also leveraging modern technologies and architectures. Modernization, 
+in Simo’s view, is a sociotechnical exercise where he has consistently served as a hands-on technical leader.
+
+### Removing Bottlenecks
+Bottlenecks should only exist for a purpose. While unwanted bottlenecks can often be addressed through optimization, 
+he recognizes that more robust solutions, like horizontal scalability and distribution, are frequently necessary to 
+achieve sustainable growth and performance.
+
+### Domain-Driven Design
+In complex domains achieving both high quality and development velocity depends on creating a shared language that 
+everyone — from developers to stakeholders — can understand. This alignment is the secret sauce of success, as building 
+complex systems is, at its core, a process of communication.
+
+### The Trigger that Led to This
 
 The trigger that led to the creation of this page came from a LinkedIn [post](https://www.linkedin.com/posts/abuijze_the-aggregate-is-great-but-its-time-to-activity-7226485148630843392-gJ_w?utm_source=share&utm_medium=member_desktop) by Allard Buijze.  
 The post was about aggregates and their necessity. I studied the post and ended up watching Sara Pellegrini's and Milan 
@@ -446,3 +494,21 @@ Thanks for triggering the ideas!
 ![copyright.png](pictures/copyright.png)
 
 See [License](LICENSE.md).
+
+---
+
+<script src="https://giscus.app/client.js"
+        data-repo="roikonen/scalablemodeling"
+        data-repo-id="R_kgDOM8SonQ"
+        data-category="General"
+        data-category-id="DIC_kwDOM8Sonc4Cj6Rl"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
