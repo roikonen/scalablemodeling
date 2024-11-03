@@ -13,6 +13,8 @@ any single methodology. That is why this **event-centric architectural approach*
 ![](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
 
+**Don't miss the webinar on November 26, 2024: [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/).**
+
 ## Table of Content
 
 <!-- TOC -->
@@ -66,6 +68,8 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Domain-Driven Design](#domain-driven-design)
     * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
+* [News](#news)
+  * [Scalable Modeling Featured in a Webinar on November 26, 2024:  Software engineering for the future: Fast, scalable and built to last](#scalable-modeling-featured-in-a-webinar-on-november-26-2024-software-engineering-for-the-future--fast-scalable-and-built-to-last)
 <!-- TOC -->
 
 ## High Level Overview
@@ -306,8 +310,8 @@ It is an enhancement of the traditional **CQS** (Command Query Separation) patte
   for reading data. This leads to better maintainability and clearer code.
 - **Low Latency at Any Scale**: This design supports scalability. For instance, queries can be optimized or cached 
   without affecting command operations.
-- **Loose Coupling**: Commands, queries, and events are decoupled, allowing each to evolve independently. This is 
-  useful in microservices, where services can operate and scale independently.
+- **Loose Coupling**: Commands and queries are decoupled via immutable private events, allowing each to evolve independently. 
+  Public events are decoupling the microservices allowing services to operate and scale independently.
 - **Near-Realtime Integrations**: Events allow for almost real-time communication between services, enabling fast 
   integration and responsiveness.
 - **High Availability**: By separating read and write responsibilities, the system can improve availability and handle 
@@ -494,6 +498,10 @@ Thanks for triggering the ideas!
 ![copyright.png](pictures/copyright.png)
 
 See [License](LICENSE.md).
+
+# News
+
+## Scalable Modeling Featured in a Webinar on November 26, 2024:  [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/)
 
 ---
 
