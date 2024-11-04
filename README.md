@@ -1,7 +1,7 @@
 # Scalable Modeling – An Event-centric Approach
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
-**scalable systems**. Every new system should be built with scalability in mind — **scalability is essential for 
+**scalable systems**. Every new system should be designed with scalability in mind — **scalability is essential for 
 success**. With **Scalable Modeling**, you can embed 
 scalability in your system design from the start. Influenced by [Clean Architecture](#robert-c-martin), 
 [Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
