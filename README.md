@@ -21,11 +21,11 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 * [Scalable Modeling – An Event-centric Approach](#scalable-modeling--an-event-centric-approach)
   * [Table of Content](#table-of-content)
   * [High Level Overview](#high-level-overview)
-    * [Opportunities](#opportunities)
-    * [The Method](#the-method)
+    * [Three Opportunities](#three-opportunities)
+    * [Software Engineering Flow](#software-engineering-flow)
       * [Shift Left](#shift-left)
       * [Start From Events](#start-from-events)
-    * [Challenges](#challenges)
+    * [Three Challenges](#three-challenges)
   * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
     * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
     * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
@@ -42,9 +42,8 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
       * [Duplication](#duplication)
       * [Partition](#partition)
   * [CEQS: Command-Event-Query Separation](#ceqs-command-event-query-separation)
+    * [Architectural Benefits](#architectural-benefits)
   * [Components](#components)
-      * [Key Components](#key-components)
-      * [Architectural Benefits](#architectural-benefits)
     * [Events](#events)
     * [Ubiquitous Language](#ubiquitous-language)
     * [Commands & State](#commands--state)
@@ -52,11 +51,11 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Policies](#policies)
     * [Hotspots & Descriptions](#hotspots--descriptions)
     * [Consistency Boundaries](#consistency-boundaries)
-  * [Challenges](#challenges-1)
+  * [Challenges](#challenges)
     * [Deduplication](#deduplication)
     * [Tailoring Consistency](#tailoring-consistency)
     * [Time Travel](#time-travel)
-  * [End Results](#end-results)
+  * [Summary of Components](#summary-of-components)
   * [Credits](#credits)
     * [Alberto Brandolini](#alberto-brandolini)
     * [Eric Evans](#eric-evans)
@@ -76,7 +75,7 @@ There are **three opportunities** and **three challenges** in scalability and un
 Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for 
 modeling scalable systems.
 
-### Opportunities
+### Three Opportunities
 
 1. **[Decomposition](#decomposition)** - scale by splitting different things
 2. **[Duplication](#duplication)** - scale by cloning
@@ -84,7 +83,7 @@ modeling scalable systems.
 
 **Immutability** (of messages/events) plays key role in each aspect. 
 
-### The Method
+### Software Engineering Flow
 
 Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. 
 In software engineering, three aspects are critical:
@@ -127,7 +126,7 @@ to scalability, particularly in event-driven architectures.
 
 More about the method in chapter: [The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique).
 
-### Challenges
+### Three Challenges
 
 1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
 2. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
@@ -296,6 +295,31 @@ Additionally, a **Bounded Context** defines the boundaries within which a specif
 and enforcing the separation of responsibilities across the system. Each Bounded Context encapsulates its own Commands, 
 Events, and Queries, ensuring that interfaces remain consistent and reducing the risk of cross-domain coupling.
 
+### Architectural Benefits
+
+1. **Clean Domain Logic**
+   * Separating commands and queries results in clearer, more focused domain logic. Commands handle state changes, 
+     while queries handle data retrieval, ensuring that business logic remains concise and purpose-driven.
+2. **Separation of Concerns**
+   * Commands are responsible for writing data (changing state), while queries are responsible for reading data. This 
+     distinction enhances maintainability by providing cleaner code and reducing the risk of unintended side effects.
+3. **Loose Coupling**
+   * **Within Services:** Commands and queries are decoupled through immutable, private events, allowing each to evolve 
+     independently without interference.
+   * **Between Services:** Public events decouple microservices, enabling them to operate and scale independently, 
+     reducing dependencies between service boundaries.
+4. **Resiliency**
+   * The system is more resilient because failures in one component (e.g. command processing) do not cascade to others 
+     (e.g. queries). This design ensures fault isolation and minimizes downtime.
+5. **Near-Real-Time Integrations**
+   * Events enable near-real-time communication between services, allowing for fast and seamless integration. This 
+     improves responsiveness to changes in the system and facilitates use cases like live updates.
+6. **Low Latency at Any Scale**
+   * By separating read and write responsibilities, the system can optimize availability and scalability. For example:
+     * **High Availability:** Read-heavy workloads can be handled by scaling replicas.
+     * **Scalability:** This architecture supports all [three dimensions of scalability](#the-three-dimensions-to-scalability), 
+       ensuring low latency even under high demand.
+
 ## Components
 
 1. [Events](#events)
@@ -305,38 +329,6 @@ Events, and Queries, ensuring that interfaces remain consistent and reducing the
 5. [Policies](#policies)
 6. [Hotspots & Descriptions](#hotspots--descriptions)
 7. [Consistency Boundaries](#consistency-boundaries)
-
-#### Key Components
-
-1. **Command**
-   - Represents a request to change the state of the system.
-   - Commands are responsible for state mutation and are isolated from queries.
-2. **Query**
-   - Refers to a request to retrieve or read data from the system.
-   - Queries do not modify the state; they simply return data based on the current system state.
-3. **Event (Public Event)**
-   - Represents events triggered after the state has been modified by a command.
-   - Events can be published to external systems or services to notify them of state changes.
-4. **Bounded Context**
-   - A concept from **Domain-Driven Design (DDD)**, representing a logical boundary around a specific domain of the system.
-   - Commands, queries, and events interact within the **Bounded Context** to maintain consistency.
-
-#### Architectural Benefits
-
-- **Clean Domain Logic**: Separating commands and queries leads to clearer, more focused business logic for handling 
-  either state changes or data retrieval.
-- **Separation of Concerns**: Commands are responsible for writing data (changing state), and queries are responsible 
-  for reading data. This leads to better maintainability and clearer code.
-- **Low Latency at Any Scale**: This design supports scalability. For instance, queries can be optimized or cached 
-  without affecting command operations.
-- **Loose Coupling**: Commands and queries are decoupled via immutable private events, allowing each to evolve independently. 
-  Public events are decoupling the microservices allowing services to operate and scale independently.
-- **Near-Realtime Integrations**: Events allow for almost real-time communication between services, enabling fast 
-  integration and responsiveness.
-- **High Availability**: By separating read and write responsibilities, the system can improve availability and handle 
-  large-scale read operations (e.g., using replicas).
-- **Resiliency**: The system is more resilient, as failures in one component (e.g., command processing) do not 
-  necessarily affect others (e.g., queries).
 
 ### Events
 
@@ -438,7 +430,7 @@ inconsistency poses a challenge when trying to form a unified or accurate perspe
 these issues, designers need to carefully consider the timing and aggregation of data to avoid misleading or 
 inconsistent results, especially in cases where decisions are being made based on these read models.
 
-## End Results
+## Summary of Components
 
 ![6_components_of_scalable_modeling.png](pictures/6_components_of_scalable_modeling.png)
 
