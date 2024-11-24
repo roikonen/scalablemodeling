@@ -8,7 +8,7 @@ scalability in your system design from the start. Influenced by [Clean Architect
 [Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
 [CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and doesn't rigidly adhere to 
 any single methodology. That is why this **event-centric architectural approach** has different name: 
-[CEQS - Command Event Query Separation](#ceqs-command-event-query-separation).
+[CEQS - Command-Event-Query Separation](#ceqs-command-event-query-separation).
 
 ![](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
@@ -41,7 +41,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
       * [Decomposition](#decomposition)
       * [Duplication](#duplication)
       * [Partition](#partition)
-  * [CEQS: Command Event Query Separation](#ceqs-command-event-query-separation)
+  * [CEQS: Command-Event-Query Separation](#ceqs-command-event-query-separation)
   * [Components](#components)
       * [Key Components](#key-components)
       * [Architectural Benefits](#architectural-benefits)
@@ -62,10 +62,8 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Eric Evans](#eric-evans)
     * [Gregory Young](#gregory-young)
     * [Robert C. Martin](#robert-c-martin)
-  * [About Simo Roikonen](#about-simo-roikonen)
-    * [System Modernization](#system-modernization)
-    * [Removing Bottlenecks](#removing-bottlenecks)
-    * [Domain-Driven Design](#domain-driven-design)
+  * [Background](#background)
+    * [About Simo Roikonen](#about-simo-roikonen)
     * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
 * [News](#news)
@@ -270,12 +268,33 @@ In this section we are in the context of:
 
 ![5_3_partition.png](pictures/5_3_partition.png)
 
-## CEQS: Command Event Query Separation
+## CEQS: Command-Event-Query Separation
 
-The diagram below illustrates a software architecture concept called **CEQS** — **Command Event Query Separation**.
-It is an enhancement of the traditional **CQS** (Command Query Separation) pattern.
+The diagram below illustrates a novel software architecture concept called **CEQS** — **Command-Event-Query Separation**.
+It is an enhancement of the traditional **CQS** (Command Query Separation) pattern highlighting the importance of events
+in scalable systems.
 
 ![](pictures/6_0_ceqs.png)
+
+In scalable systems, events should be treated as first-class citizens, as their immutability is fundamental to achieving 
+scalability. Their asynchronous nature enables loose coupling between services, while their immutability allows events 
+to be queried or streamed as an accurate record of what has occurred within the system.
+
+Immutability ensures that events are append-only, allowing distributed systems to replicate and process data 
+consistently across services without conflicts.
+
+Commands, Events and Queries each serve as distinct interfaces to a service:
+
+* **Commands** initiate state changes, resulting in the creation of Events.
+* **Events** represent the immutable outcomes of those state changes, facilitating asynchronous communication and 
+  providing a historical log.
+* **Queries** retrieve current or historical data without causing side effects.
+
+This clear separation of concerns ensures that systems remain scalable, decoupled, and maintainable.
+
+Additionally, a **Bounded Context** defines the boundaries within which a specific domain model applies, promoting clarity 
+and enforcing the separation of responsibilities across the system. Each Bounded Context encapsulates its own Commands, 
+Events, and Queries, ensuring that interfaces remain consistent and reducing the risk of cross-domain coupling.
 
 ## Components
 
@@ -451,40 +470,11 @@ software to evolve over time, ensuring it remains easy to understand, extend, an
 change. His work is centered on creating systems that prioritize independence from frameworks, databases, and UI, 
 ensuring longevity and adaptability in software design.
 
-## About Simo Roikonen
+## Background
 
-![](pictures/8_me.png)
-
-[LinkedIn](https://www.linkedin.com/in/roikonen/) | [Bluesky](https://bsky.app/profile/roikonen.bsky.social) | [X](https://x.com/simoroikonen)
-
-Simo is a seasoned software crafter, solution architect, and communicator, with a deep commitment to building evolvable, 
-long-lasting backends. With over a decade of experience in [Domain-Driven Design](#eric-evans), Simo excels at transforming complex 
-problems into clear, actionable solutions. When systems require scaling and resilience, he brings a proven track record 
-in **distributed architectures and scalability**, delivering low-latency at any scale.
-
-Beyond the technical aspects, Simo understands that successful software development & high development velocity thrives 
-in a balanced sociotechnical environment. He values collaboration and brings stakeholders together to ensure smooth 
-progress, whether it's a modernization effort, greenfield project, or eliminating bottlenecks in existing systems. 
-Simo is adept at crafting solutions that meet both technical and organizational needs, ensuring systems that are robust, 
-scalable, and future-ready.
-
-### System Modernization
-Simo has extensive experience in modernizing complex, large-scale systems — a process that involves not only 
-experimenting, organizing, and communicating, but also leveraging modern technologies and architectures. Modernization, 
-in Simo’s view, is a sociotechnical exercise where he has consistently served as a hands-on technical leader.
-
-### Removing Bottlenecks
-Bottlenecks should only exist for a purpose. While unwanted bottlenecks can often be addressed through optimization, 
-he recognizes that more robust solutions, like horizontal scalability and distribution, are frequently necessary to 
-achieve sustainable growth and performance.
-
-### Domain-Driven Design
-In complex domains achieving both high quality and development velocity depends on creating a shared language that 
-everyone — from developers to stakeholders — can understand. This alignment is the secret sauce of success, as building 
-complex systems is, at its core, a process of communication.
+### [About Simo Roikonen](about_me.md)
 
 ### The Trigger that Led to This
-
 The trigger that led to the creation of this page came from a LinkedIn [post](https://www.linkedin.com/posts/abuijze_the-aggregate-is-great-but-its-time-to-activity-7226485148630843392-gJ_w?utm_source=share&utm_medium=member_desktop) by Allard Buijze.  
 The post was about aggregates and their necessity. I studied the post and ended up watching Sara Pellegrini's and Milan 
 Savic's talk: [The Aggregate is dead. Long live the Aggregate!](https://www.youtube.com/watch?v=IgigmuHHchI).
