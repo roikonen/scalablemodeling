@@ -67,7 +67,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
 * [News](#news)
-  * [Scalable Modeling Featured in a Webinar on November 26, 2024:  Software engineering for the future: Fast, scalable and built to last](#scalable-modeling-featured-in-a-webinar-on-november-26-2024-software-engineering-for-the-future--fast-scalable-and-built-to-last)
+  * [Upcoming Webinar](#upcoming-webinar)
 <!-- TOC -->
 
 ## High Level Overview
@@ -491,7 +491,9 @@ See [License](LICENSE.md).
 
 # News
 
-## Scalable Modeling Featured in a Webinar on November 26, 2024:  [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/)
+## Upcoming Webinar
+
+Scalable Modeling Featured in a Webinar on November 26, 2024:  [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/)
 
 ---
 
