@@ -13,7 +13,7 @@ any single methodology. That is why this **event-centric architectural approach*
 ![](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
 
-**Don't miss the webinar on November 26, 2024: [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/).**
+**Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
 
 ## Table of Content
 
@@ -65,8 +65,6 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [About Simo Roikonen](#about-simo-roikonen)
     * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
-* [News](#news)
-  * [Upcoming Webinar](#upcoming-webinar)
 <!-- TOC -->
 
 ## High Level Overview
@@ -480,12 +478,6 @@ Thanks for triggering the ideas!
 ![copyright.png](pictures/copyright.png)
 
 See [License](LICENSE.md).
-
-# News
-
-## Upcoming Webinar
-
-Scalable Modeling Featured in a Webinar on November 26, 2024:  [Software engineering for the future: Fast, scalable and built to last](https://www.linkedin.com/events/softwareengineeringforthefuture7256967693281476610/about/)
 
 ---
 
