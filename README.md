@@ -29,7 +29,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
   * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
     * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
     * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
-* [Scalable Modeling – The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique)
+* [Scalable Modeling](#scalable-modeling)
   * [Theory](#theory)
     * [Event Centrism](#event-centrism)
     * [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
@@ -109,20 +109,25 @@ result that serves as an opinionated bridge to the **'how.'**
 
 #### Start From Events
 
-Domain knowledge should be the starting point in building the **conceptual model**:
+To design reliable scalable systems, we need to start from **temporal** thinking (the **flow of time** and how 
+things evolve) and gradually move into **spatial** thinking (the **arrangement** of things). In essence, we design 
+spatial systems to handle temporal matters – **events**.
 
-> "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
-> _**Alberto Brandolini**_
+**Services are anchored in space but act in time** – At any given moment, a service's location is tied to a physical or 
+virtual environment (e.g. a server, container or cluster). Over time, services evolve as they process events, make 
+decisions and produce outputs.
 
-Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects
-it. Effective collaboration with domain experts is essential to bridge this gap. **Events** play a central role in
-uncovering domain insights and fostering a shared language. The **immutability of events** contributes significantly
-to scalability, particularly in event-driven architectures.
+**Events are anchored in time but act in space** – Events are fixed to the moment they are created, carrying an 
+immutable snapshot of information. As they traverse the system, they move between services and may even be replicated.
+
+{% include youtube.html id="eThvtU0S7kE" %}
+
+So, instead of focusing too much on the **space** between services, consider the **flow of events** and how they
+evolve over **time**.
+
+The **immutability of events** contributes significantly to scalability, particularly in event-driven architectures.
+Additionally, **events** play a central role in uncovering domain insights and fostering a shared language.
 **Thus, we adopt an [event-centric](#event-centrism) approach**.
-
-![0_scalable_modeling_components.png](pictures/0_scalable_modeling_components.png)
-
-More about the method in chapter: [The Upfront Modeling Technique](#scalable-modeling--the-upfront-modeling-technique).
 
 ### Three Challenges
 
@@ -134,17 +139,20 @@ More about the method in chapter: [The Upfront Modeling Technique](#scalable-mod
 
 ### Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
 
+> "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
+> _**Alberto Brandolini**_
+
+Without a proper understanding of the domain, it's impossible to implement a **conceptual model** that accurately 
+reflects it. Effective collaboration with domain experts is essential to bridge this gap. **Events** play a central 
+role in uncovering domain insights and fostering a shared language. Additionally, the **immutability of events** 
+contributes significantly to scalability, particularly in event-driven architectures.
+
 ![1_domain_knowledge_is_key.excalidraw.png](pictures/1_domain_knowledge_is_key.excalidraw.png)
 
 > "A complex system that works is invariably found to have evolved from a simple system that worked."
 > _**John Gall**_
 
 Design flaws in the simple system tend to compound and lead to exponentially increasing complexity in the complex system.
-
-> "It's developer (mis)understanding that's released in production, not the experts' knowledge."
-> _**Alberto Brandolini**_
-
-Without a proper understanding of the domain, it's impossible to implement a conceptual model that accurately reflects it. Effective collaboration with domain experts is essential to bridge this gap.
 
 > "Doing the wrong thing right is not nearly as good as doing the right thing wrong."
 > _**Russel L. Ackoff**_
@@ -185,7 +193,9 @@ those demands without sacrificing performance or creating technical debt.
 Success is not just about growing fast — it's about building the right infrastructure from the outset, so that growth 
 becomes an advantage, not a challenge.
 
-# Scalable Modeling – The Upfront Modeling Technique
+# Scalable Modeling
+
+![0_scalable_modeling_components.png](pictures/0_scalable_modeling_components.png)
 
 ## Theory
 
