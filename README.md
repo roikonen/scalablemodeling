@@ -120,7 +120,7 @@ decisions and produce outputs.
 **Events are anchored in time but act in space** – Events are fixed to the moment they are created, carrying an 
 immutable snapshot of information. As they traverse the system, they move between services and may even be replicated.
 
-{% include youtube.html id="eThvtU0S7kE" %}
+https://www.youtube.com/watch?v=eThvtU0S7kE
 
 So, instead of focusing too much on the **space** between services, consider the **flow of events** and how they
 evolve over **time**.
