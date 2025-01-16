@@ -24,7 +24,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Three Opportunities](#three-opportunities)
     * [Software Engineering Flow](#software-engineering-flow)
       * [Shift Left](#shift-left)
-      * [Start From Events](#start-from-events)
+      * [Start From Events (...after you think you understand the 'why')](#start-from-events-after-you-think-you-understand-the-why)
     * [Three Challenges](#three-challenges)
   * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
     * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
@@ -70,8 +70,8 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 ## High Level Overview
 
 There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already.
-Combining the opportunities & challenges with an **upfront modeling technique** provides a solid foundations for 
-modeling scalable systems.
+Combining the opportunities & challenges with an **upfront and iterative modeling technique** provides a solid 
+foundations for modeling reliable and scalable systems.
 
 ### Three Opportunities
 
@@ -86,7 +86,8 @@ modeling scalable systems.
 Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. 
 In software engineering, three aspects are critical:
 
-1. **Understanding**: **WHY** the software is needed (understanding the **purpose** and the **problem** it should address).
+1. **Understanding**: **WHY** the software is needed and by who (understanding the **purpose** and the **problem**
+   it should address).
 2. **Designing**: **WHAT** is the **conceptual model** for the solution.
 3. **Developing**: **HOW** the solution is **implemented**.
 
@@ -105,9 +106,9 @@ Iteration is naturally much cheaper when it is done on the conceptual model rath
 ![](pictures/0_shift_left.png)
 [Scalable Modeling](https://roikonen.github.io/scalablemodeling/) is a method for shifting left in the software 
 engineering process. It helps crystallize the **'why'** by focusing on the **'what,'** allowing the creation of a 
-result that serves as an opinionated bridge to the **'how.'**
+result (the model) that serves as an opinionated bridge to the **'how'**.
 
-#### Start From Events
+#### Start From Events (...after you think you understand the 'why')
 
 To design reliable scalable systems, we need to start from **temporal** thinking (the **flow of time** and how 
 things evolve) and gradually move into **spatial** thinking (the **arrangement** of things). In essence, we design 
@@ -157,17 +158,20 @@ Design flaws in the simple system tend to compound and lead to exponentially inc
 > "Doing the wrong thing right is not nearly as good as doing the right thing wrong."
 > _**Russel L. Ackoff**_
 
-Without a proper understanding of the domain, it's easy to prioritize technical correctness over solving the actual problem.
+Without a proper understanding of the domain, it's easy to prioritize technical correctness over solving the actual 
+problem.
 
 > "Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations."
 > _**Melvin E. Conway**_
 
-Conceptual models derived from the domain often lead to software structures that should mirror the communication patterns within the organization.
+Conceptual models derived from the domain often lead to software structures that should mirror the communication 
+patterns within the organization.
 
 > "Civilization advances by extending the number of important operations which we can perform without thinking of them."
 > _**Alfred North Whitehead**_
 
-When we can focus solely on implementing conceptual models from the domain without worrying about the technical details we can abstract away, we achieve the highest velocity.
+When we can focus solely on implementing conceptual models from the domain without worrying about the technical details 
+we can abstract away, we achieve the highest velocity.
 
 ### Scalability is Prerequisite of Success
 
