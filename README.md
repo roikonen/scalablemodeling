@@ -304,8 +304,8 @@ Commands, Events and Queries each serve as distinct interfaces to a service:
 This clear separation of concerns ensures that systems remain scalable, decoupled, and maintainable.
 
 In CEQS, the separation of models (command vs. query) is not strictly enforced. However, it very often makes sense to 
-separate these models to enhance scalability. The use of immutable private events facilitates this separation, even in 
-later stages of development, when optimization becomes necessary.
+separate these models to enhance scalability or usability. The use of immutable private events facilitates this 
+separation, even in later stages of development, when it becomes necessary.
 
 ### Architectural Benefits
 
