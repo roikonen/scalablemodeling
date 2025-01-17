@@ -303,9 +303,9 @@ Commands, Events and Queries each serve as distinct interfaces to a service:
 
 This clear separation of concerns ensures that systems remain scalable, decoupled, and maintainable.
 
-Additionally, a **Bounded Context** defines the boundaries within which a specific domain model applies, promoting clarity 
-and enforcing the separation of responsibilities across the system. Each Bounded Context encapsulates its own Commands, 
-Events, and Queries, ensuring that interfaces remain consistent and reducing the risk of cross-domain coupling.
+In CEQS, the separation of models (command vs. query) is not strictly enforced. However, it very often makes sense to 
+separate these models to enhance scalability. The use of immutable private events facilitates this separation, even in 
+later stages of development, when optimization becomes necessary.
 
 ### Architectural Benefits
 
