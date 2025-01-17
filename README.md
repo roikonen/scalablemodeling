@@ -148,7 +148,7 @@ reflects it. Effective collaboration with domain experts is essential to bridge 
 role in uncovering domain insights and fostering a shared language. Additionally, the **immutability of events** 
 contributes significantly to scalability, particularly in event-driven architectures.
 
-![1_domain_knowledge_is_key.excalidraw.png](pictures/1_domain_knowledge_is_key.excalidraw.png)
+![1_domain_knowledge_is_key.png](pictures/1_domain_knowledge_is_key.png)
 
 > "A complex system that works is invariably found to have evolved from a simple system that worked."
 > _**John Gall**_
@@ -175,7 +175,7 @@ we can abstract away, we achieve the highest velocity.
 
 ### Scalability is Prerequisite of Success
 
-![2_need_for_scalability.excalidraw.png](pictures/2_need_for_scalability.excalidraw.png)
+![2_need_for_scalability.png](pictures/2_need_for_scalability.png)
 
 Building a scalable foundation allows businesses to adapt to increasing demands and capitalize on opportunities without 
 being limited by technical constraints. As these influential leaders have noted, scalability is not an afterthought; it 
@@ -247,14 +247,14 @@ data like sequence number of the produced events.
 
 ### Vertical & Horizontal Scalability
 
-![3_vertical_horizontal_scalability.excalidraw.png](pictures/3_vertical_horizontal_scalability.excalidraw.png)
+![3_vertical_horizontal_scalability.png](pictures/3_vertical_horizontal_scalability.png)
 [Universal Scalability Law, Wikipedia](https://en.wikipedia.org/wiki/Neil_J._Gunther#Universal_Scalability_Law)
 
 Limiting contention is the key for higher scalability.
 
 ### Event Sourcing
 
-![4_event_sourcing.excalidraw.png](pictures/4_event_sourcing.excalidraw.png)
+![4_event_sourcing.png](pictures/4_event_sourcing.png)
 
 ### The Three Dimensions to Scalability
 
