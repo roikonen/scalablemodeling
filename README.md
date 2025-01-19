@@ -291,8 +291,11 @@ In scalable systems, events should be treated as first-class citizens, as their 
 scalability. Their asynchronous nature enables loose coupling between services, while their immutability allows events 
 to be queried or streamed as an accurate record of what has occurred within the system.
 
-Immutability ensures that events are append-only, allowing distributed systems to replicate and process data 
-consistently across services without conflicts.
+Immutability ensures that events are append-only, enabling distributed systems to replicate and process data 
+consistently across services without conflicts. Immutable streams of private events allow new query models to be 
+projected at any point in a system's lifespan. In CEQS, model separation (command vs. query) is not strictly enforced 
+from day one. When increased complexity, scalability, or usability demands arise, query models can be introduced as 
+needed. This flexibility means that, unlike in CQRS, in CEQS *model separation is not always necessary upfront*.
 
 Commands, Events and Queries each serve as distinct interfaces to a service:
 
@@ -302,10 +305,6 @@ Commands, Events and Queries each serve as distinct interfaces to a service:
 * **Queries** retrieve current or historical data without causing side effects.
 
 This clear separation of concerns ensures that systems remain scalable, decoupled, and maintainable.
-
-In CEQS, the separation of models (command vs. query) is not strictly enforced. However, it very often makes sense to 
-separate these models to enhance scalability or usability. The use of immutable private events facilitates this 
-separation, even in later stages of development, when it becomes necessary.
 
 ### Architectural Benefits
 
