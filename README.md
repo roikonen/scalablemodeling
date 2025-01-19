@@ -295,7 +295,7 @@ Immutability ensures that events are append-only, enabling distributed systems t
 consistently across services without conflicts. Immutable streams of private events allow new query models to be 
 projected at any point in a system's lifespan. In CEQS, model separation (command vs. query) is not strictly enforced 
 from day one. When increased complexity, scalability, or usability demands arise, query models can be introduced as 
-needed. This flexibility means that, unlike in CQRS, in CEQS *model separation is not always necessary upfront*.
+needed. This flexibility means that, unlike in CQRS, in CEQS **model separation is not always necessary upfront**.
 
 Commands, Events and Queries each serve as distinct interfaces to a service:
 
