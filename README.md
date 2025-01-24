@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Scalable Modeling – An Event-centric Approach
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
