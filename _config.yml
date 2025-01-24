@@ -1,4 +1,6 @@
+title: Scalable Modeling
+description: An Event-centric Approach
+theme: jekyll-theme-cayman
 markdown: kramdown
 kramdown:
   input: GFM
-  math_engine: mathjax
