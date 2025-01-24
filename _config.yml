@@ -1,6 +1,26 @@
+# General site settings
 title: Scalable Modeling
-description: An Event-centric Approach
+description: An Event-centric Approach.
+url: "https://roikonen.github.io/scalablemodeling"  # Your site URL
+baseurl: "/scalablemodeling"  # GitHub Pages repository path
+
+theme: jekyll-theme-minimal
+
+# Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM
-  math_engine: mathjax
+  math_engine: mathjax  # Enable MathJax for rendering LaTeX
+
+# Author information
+author:
+  name: Simo Roikonen
+  email: simo@roikonen.fi
+
+# Favicon settings (ensure the favicon files are in the /assets folder)
+favicon: /assets/favicon.ico  # Path to your favicon file
+
+# Social links (optional)
+social_links:
+  github: https://https://github.com/roikonen
+  linkedin: https://www.linkedin.com/in/roikonen/
