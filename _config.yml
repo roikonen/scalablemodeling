@@ -4,8 +4,6 @@ description: An Event-centric Approach.
 url: "https://roikonen.github.io/scalablemodeling"  # Your site URL
 baseurl: "/scalablemodeling"  # GitHub Pages repository path
 
-theme: jekyll-theme-minimal
-
 # Markdown settings
 markdown: kramdown
 kramdown:
