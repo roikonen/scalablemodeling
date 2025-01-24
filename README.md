@@ -24,7 +24,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Three Opportunities](#three-opportunities)
     * [Software Engineering Flow](#software-engineering-flow)
       * [Shift Left](#shift-left)
-      * [Start From Events (...after you think you understand the 'why')](#start-from-events-after-you-think-you-understand-the-why)
+      * [Start Modeling From Events](#start-modeling-from-events)
     * [Three Challenges](#three-challenges)
   * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
     * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
@@ -44,6 +44,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
   * [CEQS: Command-Event-Query Separation](#ceqs-command-event-query-separation)
     * [Architectural Benefits](#architectural-benefits)
   * [Components](#components)
+    * [Bounded Contexts](#bounded-contexts)
     * [Events](#events)
     * [Ubiquitous Language](#ubiquitous-language)
     * [Commands & State](#commands--state)
@@ -108,7 +109,7 @@ Iteration is naturally much cheaper when it is done on the conceptual model rath
 engineering process. It helps crystallize the **'why'** by focusing on the **'what,'** allowing the creation of a 
 result (the model) that serves as an opinionated bridge to the **'how'**.
 
-#### Start From Events (...after you think you understand the 'why')
+#### Start Modeling From Events
 
 To design reliable scalable systems, we need to start from **temporal** thinking (the **flow of time** and how 
 things evolve) and gradually move into **spatial** thinking (the **arrangement** of things). In essence, we design 
@@ -292,8 +293,8 @@ scalability. Their asynchronous nature enables loose coupling between services, 
 to be queried or streamed as an accurate record of what has occurred within the system.
 
 Immutability ensures that events are append-only, enabling distributed systems to replicate and process data 
-consistently across services without conflicts. Immutable streams of private events allow new query models to be 
-projected at any point in a system's lifespan. In CEQS, model separation (command vs. query) is not strictly enforced 
+consistently across services without conflicts. **Immutable streams of private events allow new query models to be 
+projected at any point in a system's lifespan.** In CEQS, model separation (command vs. query) is not strictly enforced 
 from day one. When increased complexity, scalability, or usability demands arise, query models can be introduced as 
 needed. This flexibility means that, unlike in CQRS, in CEQS **model separation is not always necessary upfront**.
 
@@ -333,17 +334,29 @@ This clear separation of concerns ensures that systems remain scalable, decouple
 
 ## Components
 
-1. [Events](#events)
-2. [Ubiquitous Language](#ubiquitous-language)
-3. [Commands & State](#commands--state)
-4. [Queries](#queries)
-5. [Policies](#policies)
-6. [Hotspots & Descriptions](#hotspots--descriptions)
-7. [Consistency Boundaries](#consistency-boundaries)
+1. [Bounded Contexts](#bounded-contexts)
+2. [Events](#events)
+3. [Ubiquitous Language](#ubiquitous-language)
+4. [Commands & State](#commands--state)
+5. [Queries](#queries)
+6. [Policies](#policies)
+7. [Hotspots & Descriptions](#hotspots--descriptions)
+8. [Consistency Boundaries](#consistency-boundaries)
+
+### Bounded Contexts
+
+Bounded context can be thought as one service in a larger system. It defines a clear boundary around a specific part 
+of the domain where particular terms, rules, and models are valid. It helps avoid ambiguity by isolating concepts and 
+ensuring they only apply within that boundary. Think of it as a focused "space" where a specific 
+[language](#ubiquitous-language) and logic make sense, independent of others. 
 
 ### Events
 
 ![6_1_events_1.png](pictures/6_1_events_1.png)
+
+Events are immutable, enabling [duplication](#duplication) which helps in distribution and scalability.
+- **Private Events** are specific to the [Bounded Context](#bounded-contexts).
+- **Public Events** are shared externally.
 
 ![6_1_events_2.png](pictures/6_1_events_2.png)
 
@@ -367,16 +380,22 @@ system's design remains consistent with the business goals and domain requiremen
 
 ![](pictures/6_4_queries_1.png)
 
-I understand that **querying the command model** (red arrow in the picture above) is a topic that often sparks strong
-opinions. In my view, the command model serves as a special type of model that validates commands, and
-while it is not designed for querying, there are cases where it can be read from if necessary. For example, in
-in-memory command models [Akka-style](https://akka.io/), where the model is clustered, a valid use case might involve
-querying the state of an entity immediately after its creation or update. Since the entity is already in memory,
-fetching it quickly from there can be justified. However, querying the command model should be avoided wherever
-possible, as there are many ways this can lead to misuse, such as introducing performance bottlenecks or
-inconsistencies. For this reason, querying the command model requires strong justification.
-
 ![](pictures/6_4_queries_2.png)
+
+Querying the **Command Model** (illustrated by the red arrow in the picture above) is a topic that often generates 
+strong opinions. In essence, the command model is a specialized type of model designed to validate commands. While it 
+is not intended for querying, there are certain scenarios where reading from it may be justified.
+
+For example, in **in-memory command models** (such as [Akka-style](https://akka.io/)), where the model is clustered, 
+a valid use case might involve querying the state of an entity immediately after its creation or update. Since the 
+entity resides in memory, fetching its state quickly can be reasonable and efficient.
+
+Additionally, **immutable streams of private events** allow for the projection of new query models at any point in a 
+system's lifecycle. This enables model separation to be implemented on-demand, as needed.
+
+That said, querying the command model can easily lead to misuse, such as performance bottlenecks or data 
+inconsistencies. Therefore, as a general rule, it's best to maintain model separation and use the command model for 
+queries only when there is a clear, well-justified benefit.
 
 ### Policies
 
