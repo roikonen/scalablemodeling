@@ -438,7 +438,7 @@ At a high level, systems react to **triggers** and produce **effects**. Sometime
 required (e.g. for command validation), and sometimes it is not (e.g. during event processing). Here, **state** 
 refers to the command model and/or query model. 
 
-> **Business/domain logic** represents the function \( f \) that connects the \( \text{Trigger} \) to the \( \text{Effect} \).
+> **Business/domain logic** represents the function *f* that connects the *Trigger* to the *Effect*.
 
 
 ---
