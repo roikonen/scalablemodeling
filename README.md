@@ -52,6 +52,10 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Policies](#policies)
     * [Hotspots & Descriptions](#hotspots--descriptions)
     * [Consistency Boundaries](#consistency-boundaries)
+    * [Business/Domain Logic](#businessdomain-logic)
+      * [Triggers](#triggers)
+      * [Effects](#effects)
+      * [Logic](#logic)
   * [Challenges](#challenges)
     * [Deduplication](#deduplication)
     * [Tailoring Consistency](#tailoring-consistency)
@@ -419,6 +423,92 @@ reporting can tolerate delays.
 Dynamic Consistency Boundaries (DCB) is an emerging term and as we leave defining the consistency boundaries as a last
 step we make Scalable Modeling compatible with DCBs.
 
+### Business/Domain Logic
+
+Now that we’ve learned about the various "sticky notes" that help model the system, the next question is: where should 
+we actually implement the business logic? Let’s start by framing the problem.
+
+$$
+f(\text{Trigger}, \text{State} \in \{\emptyset, \text{State}\}) \to \text{Effect}
+$$
+
+At a high level, systems react to **triggers** and produce **effects**. Sometimes, the current state of the system is 
+required (e.g. for command validation), and sometimes it is not (e.g. during event processing). Here, **state** 
+refers to the command model and/or query model. 
+
+> **Business/domain logic** represents the function $f$ that connects the $\text{Trigger}$ to the $\text{Effect}$.
+
+---
+
+#### Triggers
+
+$$
+Trigger \in \{\text{Command}, \text{Event}, \text{Query} \}
+$$
+
+Triggers (messages) in the system can be classified as:
+- **Commands**: Requests to change the system state.
+- **Events**: Facts that describe changes in the system state.
+- **Queries**: Requests to retrieve the system state.
+
+---
+
+#### Effects
+
+$$
+Effect \in \{\text{CommandDispatch}, \text{EventEmission}, \text{QueryInvocation}, \text{StateUpdate}, \text{Reply}\}
+$$
+
+The system can produce the following effects:
+- **Command dispatch**: Issuing a command to the system.
+- **Event emission**: Publishing one or more events.
+- **Query invocation**: Executing a query on the system.
+- **State update**: Modifying the current system state.
+- **Reply**: Sending a response to the trigger source.
+
+Effects can lead to **chain reactions**, meaning one effect may produce additional effects:
+
+$$
+Effect \to \{\text{Effect}\}^*
+$$
+
+---
+
+#### Logic
+
+Returning to the business logic: it can be implemented in two main places using two different types of functions. All 
+other parts of the system primarily deal with wiring, integration or visualization.
+
+![](pictures/6_8_business_logic.png)
+
+---
+
+**Command Handler**
+
+This is the core of the system where the "magic" happens. Commands are validated and applied against the model, causing 
+the model to evolve. The evolution happens either directly (by applying the command) or indirectly (via events).
+
+$$
+f(\text{Command}, \text{State}) \to
+\begin{cases}
+\text{ValidationError} & \text{if the command is invalid} \\
+\{\text{Event}\}^* & \text{if using event sourcing, outputs zero or more events} \\
+\text{State} & \text{if using state storage, returns the updated state}
+\end{cases}
+$$
+
+---
+
+**Policy**
+
+To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. Interactions 
+between these pieces are defined by **policies**, which also contain business/domain logic. Policies typically 
+implement "if-this-then-that" (IFTTT) rules.
+
+$$
+f(\text{Event}) \to \{\text{Effect}\}
+$$
+
 ## Challenges
 
 ### Deduplication
@@ -440,6 +530,13 @@ scalability. This approach prevents over-engineering and allows the system to sc
 constraints.
 
 ![7_2_tailoring_consistency.png](pictures/7_2_tailoring_consistency.png)
+
+In the context of scalability, distribution and consistency, it is also worth mentioning **conflict-free replicated data 
+types (CRDTs)**. CRDTs enable concurrent updates by multiple nodes without requiring centralized conflict resolution. 
+This reduces the need for managing atomic operations in distributed systems. By leveraging CRDTs, consistency can be 
+tailored to prioritize availability and eventual alignment, making them an effective choice for scenarios where 
+strict consistency boundaries are not critical.
+
 
 ### Time Travel
 
