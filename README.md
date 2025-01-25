@@ -498,7 +498,7 @@ other parts of the system primarily deal with wiring, integration or visualizati
 
 | Aspect               | Command Handler                            | Policy                                      |
 |----------------------|--------------------------------------------|---------------------------------------------|
-| **Trigger**          | Incoming command                           | Domain events                               |
+| **Trigger**          | Incoming command                           | Event (private or public)                   |
 | **Responsibility**   | Validation and state mutation              | Reaction and orchestration/choreography     |
 | **State Dependency** | Direct access to current state             | Relies on events as input                   |
 | **Timing**           | Synchronous                                | Asynchronous                                |
