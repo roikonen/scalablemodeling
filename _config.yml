@@ -1,2 +1,4 @@
+theme: minima
+
 plugins:
   - jekyll-mathjax
