@@ -1,4 +1,4 @@
-{% include mathjax.html %}
+{% include head.html %}
 
 # Scalable Modeling – An Event-centric Approach
 
