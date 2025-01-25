@@ -519,9 +519,9 @@ $$
 $$
 f(\text{Event}) \to
 \begin{cases}
-\text{CommandDispatch} & \text{can cause new commands to be dispatched} \\
-\text{EventEmission} & \text{can cause public events to be emitted/published} \\
-\text{QueryInvocation} \to \text{Effect} & \text{can enrich event data from queries before dispatching command or emitting event}
+\text{CommandDispatch} & \text{if it causes new commands to be dispatched} \\
+\text{EventEmission} & \text{if it causes public events to be emitted/published} \\
+\text{QueryInvocation} \to \{\text{CommandDispatch}, \text{EventEmission}\} & \text{if it enriches event data via queries before dispatch or emission}
 \end{cases}
 $$
 
