@@ -1,4 +1,4 @@
-# Scalable Modeling – An Event-centric Approach
+{% include mathjax.html %}
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
 **scalable systems**. Every new system should be designed with scalability in mind — **scalability is essential for 
@@ -15,20 +15,19 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 
 **Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
 
-## Table of Content
+# Table of Content
 
 <!-- TOC -->
-* [Scalable Modeling – An Event-centric Approach](#scalable-modeling--an-event-centric-approach)
-  * [Table of Content](#table-of-content)
-  * [High Level Overview](#high-level-overview)
-    * [Three Opportunities](#three-opportunities)
-    * [Software Engineering Flow](#software-engineering-flow)
-      * [Shift Left](#shift-left)
-      * [Start Modeling From Events](#start-modeling-from-events)
-    * [Three Challenges](#three-challenges)
-  * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
-    * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
-    * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
+* [Table of Content](#table-of-content)
+* [High Level Overview](#high-level-overview)
+  * [Three Opportunities](#three-opportunities)
+  * [Software Engineering Flow](#software-engineering-flow)
+    * [Shift Left](#shift-left)
+    * [Start Modeling From Events](#start-modeling-from-events)
+  * [Three Challenges](#three-challenges)
+* [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
+  * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
+  * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
 * [Scalable Modeling](#scalable-modeling)
   * [Theory](#theory)
     * [Event Centrism](#event-centrism)
@@ -72,13 +71,13 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 * [License For Using the Pictures](#license-for-using-the-pictures)
 <!-- TOC -->
 
-## High Level Overview
+# High Level Overview
 
 There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already.
 Combining the opportunities & challenges with an **upfront and iterative modeling technique** provides a solid 
 foundations for modeling reliable and scalable systems.
 
-### Three Opportunities
+## Three Opportunities
 
 1. **[Decomposition](#decomposition)** - scale by splitting different things
 2. **[Duplication](#duplication)** - scale by cloning
@@ -86,7 +85,7 @@ foundations for modeling reliable and scalable systems.
 
 **Immutability** (of messages/events) plays key role in each aspect. 
 
-### Software Engineering Flow
+## Software Engineering Flow
 
 Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. 
 In software engineering, three aspects are critical:
@@ -103,7 +102,7 @@ In software engineering, three aspects are critical:
 
 Iteration is naturally much cheaper when it is done on the conceptual model rather than on the implementation level.
 
-#### Shift Left
+### Shift Left
 
 > "There is nothing so useless as doing efficiently that which should not be done at all."  
 > _**Peter Drucker**_
@@ -113,7 +112,7 @@ Iteration is naturally much cheaper when it is done on the conceptual model rath
 engineering process. It helps crystallize the **'why'** by focusing on the **'what,'** allowing the creation of a 
 result (the model) that serves as an opinionated bridge to the **'how'**.
 
-#### Start Modeling From Events
+### Start Modeling From Events
 
 To design reliable scalable systems, we need to start from **temporal** thinking (the **flow of time** and how 
 things evolve) and gradually move into **spatial** thinking (the **arrangement** of things). In essence, we design 
@@ -135,15 +134,15 @@ The **immutability of events** contributes significantly to scalability, particu
 Additionally, **events** play a central role in uncovering domain insights and fostering a shared language.
 **Thus, we adopt an [event-centric](#event-centrism) approach**.
 
-### Three Challenges
+## Three Challenges
 
 1. **[Deduplication](#deduplication)** - as exactly-once delivery is impossible in distributed systems
 2. **[Tailoring Consistency](#tailoring-consistency)** - as strong consistency is the wrong default
 3. **[Time Travel](#time-travel)** - as distribution causes eventual consistency
 
-## Why to Concentrate Domain Knowledge & Scalability
+# Why to Concentrate Domain Knowledge & Scalability
 
-### Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
+## Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality
 
 > "It's developer (mis)understanding that's released in production, not the experts' knowledge."  
 > _**Alberto Brandolini**_
@@ -178,7 +177,7 @@ patterns within the organization.
 When we can focus solely on implementing conceptual models from the domain without worrying about the technical details 
 we can abstract away, we achieve the highest velocity.
 
-### Scalability is Prerequisite of Success
+## Scalability is Prerequisite of Success
 
 ![2_need_for_scalability.png](pictures/2_need_for_scalability.png)
 
