@@ -498,9 +498,9 @@ $$
 $$
 f(\text{Command}, \text{State}) \to
 \begin{cases}
-\text{Reply} & \text{if the command is invalid} \\
-\text{EventEmission} \to \text{Reply} & \text{if using event sourcing, outputs zero or more events} \\
-\text{StateUpdate} \to \text{Reply} & \text{if using state storage, updates the state}
+\text{Reply} & \text{if invalid command} \\
+\text{EventEmission} \to \text{Reply} & \text{if event sourcing} \\
+\text{StateUpdate} \to \text{Reply} & \text{if state storage}
 \end{cases}
 $$
 
@@ -519,11 +519,15 @@ $$
 $$
 f(\text{Event}) \to
 \begin{cases}
-\text{CommandDispatch} & \text{if it causes new commands to be dispatched} \\
-\text{EventEmission} & \text{if it causes public events to be emitted/published} \\
-\text{QueryInvocation} \to \{\text{CommandDispatch}, \text{EventEmission}\} & \text{if it enriches event data via queries before dispatch or emission}
+\text{CommandDispatch} \\
+\text{EventEmission} \\
+\text{QueryInvocation} \to \{\text{CommandDispatch}, \text{EventEmission}\}
 \end{cases}
 $$
+
+* **Commands** can be dispatched to cause new effects in other places of the service / bounded context.
+* Public **Events** can be emitted/published for other services / bounded contexts to consume.
+* **Queries** can be used to enrich the event data before command dispatch or public event emission.
 
 ## Challenges
 
