@@ -1,5 +1,5 @@
 theme: minima
-author:
+site.author:
   name: Simo Roikonen
   email: "simo@roikonen.fi"
 minima:
