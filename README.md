@@ -438,7 +438,7 @@ At a high level, systems react to **triggers** and produce **effects**. Sometime
 required (e.g. for command validation), and sometimes it is not (e.g. during event processing). Here, **state** 
 refers to the command model and/or query model. 
 
-> Function *f* represents the logic that connects the *Trigger* to the *Effect*. Not all ot the logic is business/domain logic though.
+> Function *f* represents the logic that connects the *Trigger* to the *Effect*. Not all logic is business/domain logic though.
 
 
 ---
@@ -446,7 +446,7 @@ refers to the command model and/or query model.
 #### Triggers
 
 $$
-Trigger \in
+\text{Trigger} \in
 \begin{cases}
 \text{Command} \\
 \text{Event} \\
@@ -464,7 +464,7 @@ Triggers (messages) in the system can be classified as:
 #### Effects
 
 $$
-Effect \in
+\text{Effect} \in
 \begin{cases}
 \text{CommandDispatch} \\
 \text{EventEmission} \\
@@ -484,7 +484,7 @@ The system can produce the following effects:
 Effects can lead to **chain reactions**, meaning one effect may produce additional effects:
 
 $$
-Effect \to \{\text{Effect}\}^*
+\text{Effect} \to \{\text{Effect}\}^*
 $$
 
 ---
@@ -495,6 +495,14 @@ Returning to the business logic: it can be implemented in two main places using 
 other parts of the system primarily deal with wiring, integration or visualization.
 
 ![](pictures/6_8_business_logic.png)
+
+| Aspect               | Command Handler                            | Policy                                      |
+|----------------------|--------------------------------------------|---------------------------------------------|
+| **Trigger**          | Incoming command                           | Domain events                               |
+| **Responsibility**   | Validation and state mutation              | Reaction and orchestration/choreography     |
+| **State Dependency** | Direct access to current state             | Relies on events as input                   |
+| **Timing**           | Synchronous                                | Asynchronous                                |
+| **Examples**         | "Approve an order if stock is sufficient." | "Send a notification after order approval." |
 
 ---
 
