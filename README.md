@@ -446,7 +446,12 @@ refers to the command model and/or query model.
 #### Triggers
 
 $$
-Trigger \in \{\text{Command}, \text{Event}, \text{Query} \}
+Trigger \in
+\begin{cases}
+\text{Command} \\
+\text{Event} \\
+\text{Query}
+\end{cases}
 $$
 
 Triggers (messages) in the system can be classified as:
@@ -459,7 +464,14 @@ Triggers (messages) in the system can be classified as:
 #### Effects
 
 $$
-Effect \in \{\text{CommandDispatch}, \text{EventEmission}, \text{QueryInvocation}, \text{StateUpdate}, \text{Reply}\}
+Effect \in
+\begin{cases}
+\text{CommandDispatch} \\
+\text{EventEmission} \\
+\text{QueryInvocation} \\ 
+\text{StateUpdate} \\
+\text{Reply}
+\end{cases}
 $$
 
 The system can produce the following effects:
