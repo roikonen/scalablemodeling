@@ -1,19 +1,18 @@
-## About Simo Roikonen
-
 ![](pictures/8_me.png)
 
 [LinkedIn](https://www.linkedin.com/in/roikonen/) | [Bluesky](https://bsky.app/profile/roikonen.bsky.social)
 
-Simo is a seasoned software crafter, solution architect, and communicator, with a deep commitment to building evolvable,
-long-lasting backends. With over a decade of experience in [Domain-Driven Design](README.md#eric-evans), Simo excels at transforming complex
-problems into clear, actionable solutions. When systems require scaling and resilience, he brings a proven track record
-in **distributed architectures and scalability**, delivering low-latency at any scale.
+Simo is a seasoned software crafter, solution architect, communicator and learner, with a deep commitment to building 
+evolvable, long-lasting backends. With over a decade of experience in [Domain-Driven Design](README.md#eric-evans), 
+Simo excels at transforming complex problems into clear, actionable solutions. When systems require scaling and 
+resilience, he brings a proven track record in **distributed architectures and scalability**, delivering low-latency at any 
+scale.
 
-Beyond the technical aspects, Simo understands that successful software development & high development velocity thrives
-in a balanced sociotechnical environment. He values collaboration and brings stakeholders together to ensure smooth
-progress, whether it's a modernization effort, greenfield project, or eliminating bottlenecks in existing systems.
-Simo is adept at crafting solutions that meet both technical and organizational needs, ensuring systems that are robust,
-scalable, and future-ready.
+Beyond the technical aspects, Simo understands that successful software development & high development velocity thrives 
+in a balanced sociotechnical environment. He values collaboration and brings stakeholders together to ensure smooth 
+progress, whether it's a modernization effort, greenfield project, or eliminating bottlenecks in existing systems. 
+Simo is adept at crafting solutions that meet both technical and organizational needs, ensuring systems that are 
+robust, scalable, and future-ready.
 
 ### System Modernization
 Simo has extensive experience in modernizing complex, large-scale systems — a process that involves not only
