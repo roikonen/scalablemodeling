@@ -54,10 +54,10 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Policies](#policies)
     * [Hotspots & Descriptions](#hotspots--descriptions)
     * [Consistency Boundaries](#consistency-boundaries)
-    * [Implementing Logic](#implementing-logic)
-      * [Triggers](#triggers)
-      * [Effects](#effects)
-      * [Business/Domain Logic](#businessdomain-logic)
+  * [Implementing Logic](#implementing-logic)
+    * [Triggers](#triggers)
+    * [Effects](#effects)
+    * [Business/Domain Logic](#businessdomain-logic)
   * [Challenges](#challenges)
     * [Deduplication](#deduplication)
     * [Tailoring Consistency](#tailoring-consistency)
@@ -425,7 +425,7 @@ reporting can tolerate delays.
 Dynamic Consistency Boundaries (DCB) is an emerging term and as we leave defining the consistency boundaries as a last
 step we make Scalable Modeling compatible with DCBs.
 
-### Implementing Logic
+## Implementing Logic
 
 Now that we’ve learned about the various "sticky notes" that help model the system, the next question is: where should 
 we actually implement the business logic? Let’s start by framing the problem.
@@ -443,7 +443,7 @@ refers to the command model and/or query model.
 
 ---
 
-#### Triggers
+### Triggers
 
 $$
 \text{Trigger} \in
@@ -461,7 +461,7 @@ Triggers (messages) in the system can be classified as:
 
 ---
 
-#### Effects
+### Effects
 
 $$
 \text{Effect} \in
@@ -489,7 +489,7 @@ $$
 
 ---
 
-#### Business/Domain Logic
+### Business/Domain Logic
 
 Returning to the business logic: it can be implemented in two main places using two different types of functions. All 
 other parts of the system primarily deal with wiring, integration or visualization.
