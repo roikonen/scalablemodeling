@@ -1,9 +1,6 @@
 theme: minima
 title: Scalable Modeling – An Event-centric Approach
 description: This repository offers a modeling technique for designing scalable systems.
-author:
-  name: Simo Roikonen
-  email: "simo@roikonen.fi"
 social:
   - platform: github
     user_url: "https://github.com/roikonen"
