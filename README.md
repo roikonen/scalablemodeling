@@ -54,10 +54,10 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Policies](#policies)
     * [Hotspots & Descriptions](#hotspots--descriptions)
     * [Consistency Boundaries](#consistency-boundaries)
-    * [Business/Domain Logic](#businessdomain-logic)
+    * [Implementing Logic](#implementing-logic)
       * [Triggers](#triggers)
       * [Effects](#effects)
-      * [Logic](#logic)
+      * [Business/Domain Logic](#businessdomain-logic)
   * [Challenges](#challenges)
     * [Deduplication](#deduplication)
     * [Tailoring Consistency](#tailoring-consistency)
@@ -425,7 +425,7 @@ reporting can tolerate delays.
 Dynamic Consistency Boundaries (DCB) is an emerging term and as we leave defining the consistency boundaries as a last
 step we make Scalable Modeling compatible with DCBs.
 
-### Business/Domain Logic
+### Implementing Logic
 
 Now that we’ve learned about the various "sticky notes" that help model the system, the next question is: where should 
 we actually implement the business logic? Let’s start by framing the problem.
@@ -438,7 +438,7 @@ At a high level, systems react to **triggers** and produce **effects**. Sometime
 required (e.g. for command validation), and sometimes it is not (e.g. during event processing). Here, **state** 
 refers to the command model and/or query model. 
 
-> **Business/domain logic** represents the function *f* that connects the *Trigger* to the *Effect*.
+> Function *f* represents the logic that connects the *Trigger* to the *Effect*. Not all ot the logic is business/domain logic though.
 
 
 ---
@@ -477,7 +477,7 @@ $$
 
 ---
 
-#### Logic
+#### Business/Domain Logic
 
 Returning to the business logic: it can be implemented in two main places using two different types of functions. All 
 other parts of the system primarily deal with wiring, integration or visualization.
@@ -492,11 +492,15 @@ This is the core of the system where the "magic" happens. Commands are validated
 the model to evolve. The evolution happens either directly (by applying the command) or indirectly (via events).
 
 $$
+f(\text{Command}, \text{State}) \to \text{Effect}
+$$
+
+$$
 f(\text{Command}, \text{State}) \to
 \begin{cases}
-\text{ValidationError} & \text{if the command is invalid} \\
-\{\text{Event}\}^* & \text{if using event sourcing, outputs zero or more events} \\
-\text{State} & \text{if using state storage, returns the updated state}
+\text{Reply} & \text{if the command is invalid} \\
+\text{EventEmission} \to \text{Reply} & \text{if using event sourcing, outputs zero or more events} \\
+\text{StateUpdate} \to \text{Reply} & \text{if using state storage, updates the state}
 \end{cases}
 $$
 
@@ -506,10 +510,19 @@ $$
 
 To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. Interactions 
 between these pieces are defined by **policies**, which also contain business/domain logic. Policies typically 
-implement "if-this-then-that" (IFTTT) rules.
+implement "if-this-then-that" -type of rules.
 
 $$
-f(\text{Event}) \to \{\text{Effect}\}
+f(\text{Event}) \to \text{Effect}
+$$
+
+$$
+f(\text{Event}) \to
+\begin{cases}
+\text{CommandDispatch} & \text{can cause new commands to be dispatched} \\
+\text{EventEmission} & \text{can cause public events to be emitted/published} \\
+\text{QueryInvocation} \to \text{Effect} & \text{can enrich event data from queries before dispatching command or emitting event}
+\end{cases}
 $$
 
 ## Challenges
