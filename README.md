@@ -36,7 +36,6 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Vertical & Horizontal Scalability](#vertical--horizontal-scalability)
     * [Event Sourcing](#event-sourcing)
     * [The Three Dimensions to Scalability](#the-three-dimensions-to-scalability)
-      * [Scale Cube](#scale-cube)
       * [Decomposition](#decomposition)
       * [Duplication](#duplication)
       * [Partition](#partition)
@@ -267,7 +266,7 @@ In this section we are in the context of:
 * Command Query Separation (CQS)
 * Command Query Responsibility Segregation (CQRS)
 
-#### Scale Cube
+**Scale Cube**
 
 ![5_0_scale_cube.png](pictures/5_0_scale_cube.png)
 
@@ -493,10 +492,10 @@ other parts of the system primarily deal with wiring, integration or visualizati
 
 ![](pictures/6_8_business_logic.png)
 
-| Aspect               | Command Handler                            | Policy                                      |
+|                      | Command Handler                            | Policy                                      |
 |----------------------|--------------------------------------------|---------------------------------------------|
 | **Trigger**          | Incoming command                           | Event (private or public)                   |
-| **Responsibility**   | Validation and state mutation              | Reaction and orchestration/choreography     |
+| **Responsibility**   | Validation and state mutation              | Reaction and orchestration / choreography   |
 | **State Dependency** | Direct access to current state             | Relies on events as input                   |
 | **Timing**           | Synchronous                                | Asynchronous                                |
 | **Examples**         | "Approve an order if stock is sufficient." | "Send a notification after order approval." |
