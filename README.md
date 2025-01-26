@@ -388,7 +388,7 @@ Querying the **Command Model** (illustrated by the red arrow in the picture abov
 strong opinions. In essence, the command model is a specialized type of model designed to validate commands. While it 
 is not intended for querying, there are certain scenarios where reading from it may be justified.
 
-For example, in **in-memory command models** (such as [Akka-style](https://akka.io/)), where the model is clustered, 
+For example, in **in-memory command models** (such as [Akka-style](https://en.wikipedia.org/wiki/Akka_(toolkit))), where the model is clustered, 
 a valid use case might involve querying the state of an entity immediately after its creation or update. Since the 
 entity resides in memory, fetching its state quickly can be reasonable and efficient.
 
@@ -537,7 +537,11 @@ f(\text{Event}) \to
 \begin{cases}
 \text{CommandDispatch} \\
 \text{EventEmission} \\
-\text{QueryInvocation} \to \{\text{CommandDispatch}, \text{EventEmission}\}
+\text{QueryInvocation} \to
+\begin{cases}
+\text{CommandDispatch} \\
+\text{EventEmission}
+\end{cases}
 \end{cases}
 $$
 
