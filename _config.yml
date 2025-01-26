@@ -1,6 +1,25 @@
-theme: minima
 title: Scalable Modeling – An Event-centric Approach
 description: This repository offers a modeling technique for designing scalable systems.
+author: Simo Roikonen
+
+baseurl: "/scalablemodeling"
+url: "https://roikonen.github.io"
+
+theme: minima
+
+header_text: "Scalable Modeling – An Event-centric Approach"
+footer_text: "2025 Simo Roikonen"
+
+plugins:
+  - jekyll-mathjax
+
+bluesky_username: roikonen.bsky.social
+bluesky_url: https://bsky.app/profile/roikonen.bsky.social
+linkedin_username: roikonen
+github_username: roikonen
+
+favicon: "/favicon.ico"
+
 social:
   - platform: github
     user_url: "https://github.com/roikonen"
@@ -10,5 +29,4 @@ social:
     user_url: "https://www.linkedin.com/in/roikonen/"
   - platform: devto
     user_url: "https://dev.to/roikonen"
-plugins:
-  - jekyll-mathjax
+

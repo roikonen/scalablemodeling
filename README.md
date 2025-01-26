@@ -487,8 +487,9 @@ $$
 
 ### Business/Domain Logic
 
-Returning to the business logic: it can be implemented in two main places using two different types of functions. All 
-other parts of the system primarily deal with wiring, integration or visualization.
+Returning to the business logic: it can be implemented in two main places using two types of functions: 
+**Command Handlers** & **Policies**. All other parts of the system primarily deal with wiring, integration or 
+visualization.
 
 ![](pictures/6_8_business_logic.png)
 
