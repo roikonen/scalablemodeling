@@ -10,6 +10,9 @@ theme: minima
 header_text: "Scalable Modeling – An Event-centric Approach"
 footer_text: "2025 Simo Roikonen"
 
+plugins:
+  - jekyll-seo-tag
+
 bluesky_username: roikonen.bsky.social
 linkedin_username: roikonen
 github_username: roikonen
