@@ -515,11 +515,16 @@ $$
 $$
 f(\text{Command}, \text{State}) \to
 \begin{cases}
-\text{Reply} & \text{if invalid command} \\
-\text{EventEmission} \to \text{Reply} & \text{if event sourcing} \\
-\text{StateUpdate} \to \text{Reply} & \text{if state storage}
+\text{Reply} \\
+\text{EventEmission} \to \text{Reply} \\
+\text{StateUpdate} \to \text{Reply}
 \end{cases}
 $$
+
+**Function returns:**
+* Only **Reply** in case of invalid command.
+* **EventEmission** in case command is approved and event sourcing is used.
+* **StateUpdate** in case command is approved and state storage is used.
 
 ---
 
