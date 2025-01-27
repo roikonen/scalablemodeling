@@ -378,6 +378,10 @@ system's design remains consistent with the business goals and domain requiremen
 
 ![](pictures/6_3_commands.png)
 
+Commands are validated against a model that frames the state.
+The model defines the logic, rules and structure of the state, which is persisted through events or direct updates.
+Commands modify the state by adhering to the rules defined by the model, ensuring business invariants are maintained.
+
 ### Queries
 
 ![](pictures/6_4_queries_1.png)
@@ -506,7 +510,7 @@ visualization.
 **Command Handler**
 
 This is the core of the system where the "magic" happens. Commands are validated and applied against the model, causing 
-the model to evolve. The evolution happens either directly (by applying the command) or indirectly (via events).
+the state to evolve. The evolution happens either directly (by applying the command) or indirectly (via events).
 
 $$
 f(\text{Command}, \text{State}) \to \text{Effect}
