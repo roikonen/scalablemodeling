@@ -2,6 +2,8 @@
 
 ![](pictures/8_me.png)
 
+{%- include social.html -%}
+
 Simo is a seasoned software crafter, solution architect, communicator and learner, with a deep commitment to building 
 evolvable, long-lasting backends. With over a decade of experience in [Domain-Driven Design](README.md#eric-evans), 
 Simo excels at transforming complex problems into clear, actionable solutions. When systems require scaling and 
