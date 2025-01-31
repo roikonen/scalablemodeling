@@ -45,7 +45,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Init
         # Outputs to the './_site' directory by default
-        run: bundle init
+        run: |
+          bundle init
+          bundle install
         env:
           JEKYLL_ENV: production
       - name: Build with Jekyll
