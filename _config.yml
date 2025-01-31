@@ -8,10 +8,6 @@ url: "https://roikonen.github.io"
 theme: minima
 
 header_text: "Scalable Modeling – An Event-centric Approach"
-header_pages:
-  - README.md
-  - about_me.md
-
 footer_text: "2025 Simo Roikonen"
 
 bluesky_username: roikonen
