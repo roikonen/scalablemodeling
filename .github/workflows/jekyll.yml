@@ -48,7 +48,7 @@ jobs:
         run: |
           bundle init
           bundle add jekyll
-          bundle add jekyll-theme-primer
+          bundle add minima
           bundle install
         env:
           JEKYLL_ENV: production
