@@ -431,7 +431,7 @@ Now that we’ve learned about the various "sticky notes" that help model the sy
 we actually implement the business logic? Let’s start by framing the problem.
 
 $$
-f(\text{Trigger}, \text{State} \in \{\emptyset, \text{State}\}) \to \text{Effect}
+f(\text{Trigger}, \text{state} \in \{\emptyset, \text{State}\}) \to \text{Effect}
 $$
 
 At a high level, systems react to **triggers** and produce **effects**. Sometimes, the current state of the system is 
