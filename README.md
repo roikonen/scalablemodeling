@@ -52,6 +52,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [Consistency Boundaries](#consistency-boundaries)
   * [Implementing Logic](#implementing-logic)
     * [Triggers](#triggers)
+    * [State and Model](#state-and-model)
     * [Effects](#effects)
     * [Business/Domain Logic](#businessdomain-logic)
   * [Challenges](#challenges)
@@ -428,18 +429,17 @@ step we make Scalable Modeling compatible with DCBs.
 ## Implementing Logic
 
 Now that we’ve learned about the various "sticky notes" that help model the system, the next question is: where should 
-we actually implement the business logic? Let’s start by framing the problem.
+we actually implement the business logic? Let’s start by framing the problem. At a high level, systems react to 
+**triggers** and produce **effects**. A system has a **state** that adheres to the rules and structures outlined by its 
+**model**. Scalable systems consist of multiple states and models, as in distributed environments, there cannot be a 
+single state.
 
+Here, function *f* represents the logic that connects the *Trigger* and *State* to the *Effect*.
 $$
-f(\text{Trigger}, \text{state} \in \{\emptyset, \text{State}\}) \to \text{Effect}
+f(\text{Trigger}, \text{State}) \to \text{Effect}
 $$
 
-At a high level, systems react to **triggers** and produce **effects**. Sometimes, the current state of the system is 
-required (e.g. for command validation), and sometimes it is not (e.g. during event processing). Here, **state** 
-refers to the command model and/or query model. 
-
-> Function *f* represents the logic that connects the *Trigger* to the *Effect*. Not all logic is business/domain logic though.
-
+...but not all logic is business/domain logic, so we need to drill deeper.
 
 ---
 
@@ -458,6 +458,23 @@ Triggers (messages) in the system can be classified as:
 - **Commands**: Requests to change the system state.
 - **Events**: Facts that describe changes in the system state.
 - **Queries**: Requests to retrieve the system state.
+
+---
+
+### State and Model
+
+A system has a **state** that adheres to the rules and structures outlined by its **model**. Scalable systems consist 
+of multiple states and models, as in distributed environments, there cannot be a single state.
+
+Sometimes, the current state of the (sub)system is required by the function that is implementing logic (e.g. for command 
+validation), and sometimes it is not (e.g. during event processing).
+
+$$
+\text{State} \in \{\emptyset, \text{state}\}
+$$
+
+* The **model** defines the structure of the **state**.
+* The **state** can only evolve along the pathways permitted by the **model**.
 
 ---
 
