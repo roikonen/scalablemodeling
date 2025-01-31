@@ -410,6 +410,8 @@ queries only when there is a clear, well-justified benefit.
 
 ![](pictures/6_5_policies_2.png)
 
+![](pictures/6_5_policies_3.png)
+
 ### Hotspots & Descriptions
 
 ![](pictures/6_6_hotsposts_descriptions.png)
@@ -508,19 +510,18 @@ $$
 
 ### Business/Domain Logic
 
-Returning to the business logic: it can be implemented in two main places using two types of functions: 
-**Command Handlers** & **Policies**. All other parts of the system primarily deal with wiring, integration or 
-visualization.
+Returning to the business logic: it can be implemented in two main places using three types of functions: 
+**Command Handlers**, **Event Handlers** & **Gatekeepers**. All other parts of the system primarily deal with wiring, 
+integration or visualization.
 
 ![](pictures/6_8_business_logic.png)
 
-|                      | Command Handler                            | Policy                                      |
-|----------------------|--------------------------------------------|---------------------------------------------|
-| **Trigger**          | Incoming command                           | Event (private or public)                   |
-| **Responsibility**   | Validation and state mutation              | Reaction and orchestration / choreography   |
-| **State Dependency** | Direct access to current state             | Relies on events as input                   |
-| **Timing**           | Synchronous                                | Asynchronous                                |
-| **Examples**         | "Approve an order if stock is sufficient." | "Send a notification after order approval." |
+| **Policy**                                     | **Trigger**                                                             | **Responsibility**                        | **State Dependency**                  | **Timing**   | **Examples**                                  |
+|------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------|---------------------------------------|--------------|-----------------------------------------------|
+| ![](pictures/6_5_policies_command_handler.png) | ![](pictures/6_3_commands_command.png)                                  | Validation and state mutation             | Direct access to current state        | Synchronous  | *"Register product if not already existing."* |
+| ![](pictures/6_5_policies_event_handler.png)   | ![](pictures/6_1_events_private.png)![](pictures/6_1_events_public.png) | Reaction and orchestration / choreography | Relies on events as input             | Asynchronous | *"Send a notification after order approval."* |
+| ![](pictures/6_5_policies_gatekeeper.png)      | ![](pictures/6_3_commands_command.png)                                  | Validation over consistency boundaries    | Access to eventually consistent state | Synchronous  | *"Register product if its category exists."*  |
+
 
 ---
 
@@ -549,11 +550,11 @@ $$
 
 ---
 
-**Policy**
+**Event Handler**
 
 To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. Interactions 
-between these pieces are defined by **policies**, which also contain business/domain logic. Policies typically 
-implement "if-this-then-that" -type of rules.
+between these pieces are defined in **event handlers**, which also contain business/domain logic. Event handlers 
+typically implement "if-this-then-that" -type of rules.
 
 $$
 f(\text{Event}) \to \text{Effect}
@@ -575,6 +576,18 @@ $$
 * **Commands** can be dispatched to cause new effects in other places of the service / bounded context.
 * Public **Events** can be emitted/published for other services / bounded contexts to consume.
 * **Queries** can be used to enrich the event data before command dispatch or public event emission.
+
+---
+
+**Gatekeepers**
+
+To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. When making 
+decisions on a larger scale, it is sometimes necessary to consult other parts of the system before a command can 
+proceed.
+
+$$
+f(\text{Command}) \to \text{QueryInvocation} \to \text{CommandDispatch}
+$$
 
 ## Challenges
 
