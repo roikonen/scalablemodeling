@@ -47,6 +47,7 @@ jobs:
         # Outputs to the './_site' directory by default
         run: |
           bundle init
+          bundle add jekyll
           bundle install
         env:
           JEKYLL_ENV: production
