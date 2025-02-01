@@ -522,7 +522,7 @@ integration or visualization.
 | **Responsibility**   | Validation and state mutation                                                   | Choreography between subsystems                                                                  | Validation over consistency boundaries                  |
 | **State Dependency** | Direct access to current state                                                  | Access to eventually consistent state                                                            | Access to eventually consistent state                   |
 | **Timing**           | Synchronous                                                                     | Asynchronous                                                                                     | Synchronous                                             |
-| **Examples**         | *"Remove **product** from **order** if not the last **product** in **order**."* | *"Send a notification after **order** approval."*                                                | *"Add **product** to **order** if **product** exists."* |
+| **Examples**         | *"Remove **product** from **order** if not the last **product** in **order**."* | *"Send a notification after **order** approval."* *"Update stock after **order** approval."*     | *"Add **product** to **order** if **product** exists."* |
 
 ---
 
