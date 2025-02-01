@@ -516,7 +516,7 @@ integration or visualization.
 
 ![](pictures/6_8_business_logic.png)
 
-| **Category**         | ![Command Handler](pictures/6_5_policies_command_handler.png)                   | ![Event Handler](pictures/6_5_policies_event_handler.png)                                        | ![Gatekeeper](pictures/6_5_policies_gatekeeper.png)     |
+|                      | ![Command Handler](pictures/6_5_policies_command_handler.png)                   | ![Event Handler](pictures/6_5_policies_event_handler.png)                                        | ![Gatekeeper](pictures/6_5_policies_gatekeeper.png)     |
 |----------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | **Trigger**          | ![Command](pictures/6_3_commands_command.png)                                   | ![Public Event](pictures/6_1_events_private.png)![Private Event](pictures/6_1_events_public.png) | ![Command](pictures/6_3_commands_command.png)           |
 | **Responsibility**   | Validation and state mutation                                                   | Choreography between subsystems                                                                  | Validation over consistency boundaries                  |
