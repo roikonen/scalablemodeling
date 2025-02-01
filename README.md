@@ -496,7 +496,7 @@ $$
 The system can produce the following effects:
 - **Command dispatch**: Issuing a command to the system.
 - **Event emission**: Publishing one or more events.
-- **Query invocation**: Executing a query on the system.
+- **Query invocation**: Executing one or more queries on the system.
 - **State update**: Modifying the current system state.
 - **Reply**: Sending a response to the trigger source.
 
@@ -516,26 +516,27 @@ integration or visualization.
 
 ![](pictures/6_8_business_logic.png)
 
-| **Policy**                                     | **Trigger**                                                             | **Responsibility**                        | **State Dependency**                  | **Timing**   | **Examples**                                  |
-|------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------|---------------------------------------|--------------|-----------------------------------------------|
-| ![](pictures/6_5_policies_command_handler.png) | ![](pictures/6_3_commands_command.png)                                  | Validation and state mutation             | Direct access to current state        | Synchronous  | *"Register product if not already existing."* |
-| ![](pictures/6_5_policies_event_handler.png)   | ![](pictures/6_1_events_private.png)![](pictures/6_1_events_public.png) | Reaction and orchestration / choreography | Relies on events as input             | Asynchronous | *"Send a notification after order approval."* |
-| ![](pictures/6_5_policies_gatekeeper.png)      | ![](pictures/6_3_commands_command.png)                                  | Validation over consistency boundaries    | Access to eventually consistent state | Synchronous  | *"Register product if its category exists."*  |
-
+| **Category**         | ![Command Handler](pictures/6_5_policies_command_handler.png)                   | ![Event Handler](pictures/6_5_policies_event_handler.png)                                        | ![Gatekeeper](pictures/6_5_policies_gatekeeper.png)     |
+|----------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| **Trigger**          | ![Command](pictures/6_3_commands_command.png)                                   | ![Public Event](pictures/6_1_events_private.png)![Private Event](pictures/6_1_events_public.png) | ![Command](pictures/6_3_commands_command.png)           |
+| **Responsibility**   | Validation and state mutation                                                   | Choreography between subsystems                                                                  | Validation over consistency boundaries                  |
+| **State Dependency** | Direct access to current state                                                  | Access to eventually consistent state                                                            | Access to eventually consistent state                   |
+| **Timing**           | Synchronous                                                                     | Asynchronous                                                                                     | Synchronous                                             |
+| **Examples**         | *"Remove **product** from **order** if not the last **product** in **order**."* | *"Send a notification after **order** approval."*                                                | *"Add **product** to **order** if **product** exists."* |
 
 ---
 
 **Command Handler**
 
 This is the core of the system where the "magic" happens. Commands are validated and applied against the model, causing 
-the state to evolve. The evolution happens either directly (by applying the command) or indirectly (via events).
+the state to evolve.
 
 $$
 f(\text{Command}, \text{State}) \to \text{Effect}
 $$
 
 $$
-f(\text{Command}, \text{State}) \to
+\text{Effect} \in
 \begin{cases}
 \text{Reply} \\
 \text{EventEmission} \to \text{Reply} \\
@@ -545,7 +546,7 @@ $$
 
 **Function returns:**
 * Only **Reply** in case of invalid command.
-* **EventEmission** in case command is approved and event sourcing is used.
+* **EventEmission** of one to many events in case command is approved and event sourcing is used.
 * **StateUpdate** in case command is approved and state storage is used.
 
 ---
@@ -561,7 +562,7 @@ f(\text{Event}) \to \text{Effect}
 $$
 
 $$
-f(\text{Event}) \to
+\text{Effect} \in
 \begin{cases}
 \text{CommandDispatch} \\
 \text{EventEmission} \\
@@ -581,13 +582,20 @@ $$
 
 **Gatekeepers**
 
-To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. When making 
-decisions on a larger scale, it is sometimes necessary to consult other parts of the system before a command can 
-proceed.
+When making large-scale decisions, it is often necessary to consult different parts of the system across consistency 
+boundaries before executing a command. The term *Gatekeeper* reflects its intended role, as eventual consistency 
+introduces risks in its application. A *Gatekeeper* should be used strictly to verify logical conditions.
 
 $$
 f(\text{Command}) \to \text{QueryInvocation} \to \text{CommandDispatch}
 $$
+
+For example, if a product has been introduced in the product management context, the *Gatekeeper* ensures it can be 
+added to an order within the order management context. However, if a product can be removed from the product management 
+context, there must be a process in place to handle open orders that include the removed product.
+
+To ensure data integrity, **Event Handlers** should be used alongside **Gatekeepers**, forming a cohesive process that 
+prevents gaps in the system.
 
 ## Challenges
 
