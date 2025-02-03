@@ -510,7 +510,7 @@ $$
 
 ### Business/Domain Logic
 
-Returning to the business logic: it can be implemented in two main places using three types of functions: 
+Returning to the business logic: it can be implemented by using three types of functions: 
 **Command Handlers**, **Event Handlers** & **Gatekeepers**. All other parts of the system primarily deal with wiring, 
 integration or visualization.
 
@@ -595,7 +595,7 @@ added to an order within the order management context. However, if a product can
 context, there must be a process in place to handle open orders that include the removed product.
 
 To ensure data integrity, **Event Handlers** should be used alongside **Gatekeepers**, forming a cohesive process that 
-prevents gaps in the system.
+prevents gaps in the eventually consistent system.
 
 ## Challenges
 
