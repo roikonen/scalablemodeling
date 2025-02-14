@@ -445,9 +445,12 @@ step we make Scalable Modeling compatible with DCBs.
 
 Now that we’ve learned about the various "sticky notes" that help model the system, the next question is: where should 
 we actually implement the business logic? Let’s start by framing the problem. At a high level, systems react to 
-**triggers** and produce **effects**. A system has a **state** that adheres to the rules and structures outlined by its 
+**triggers** and produce **effects**. A system has a **state** that follows the rules and structure defined by its 
 **model**. Scalable systems consist of multiple states and models, as in distributed environments, there cannot be a 
 single state.
+
+> In this section I decided to use a notation that is a mix of functional programming and mathematical notation, as I 
+> wanted to keep the content of this document technology- and programming-language-agnostic.
 
 Here, function *f* represents the logic that connects the *Trigger* and *State* to the *Effect*.
 
