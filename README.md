@@ -482,8 +482,8 @@ Triggers (messages) in the system can be classified as:
 
 ### State and Model
 
-A system has a **state** that adheres to the rules and structures outlined by its **model**. Scalable systems consist 
-of multiple states and models, as in distributed environments, there cannot be a single state.
+A system has a **state** that follows the rules and structure defined by its **model**. Scalable systems consist of 
+multiple states and models, as in distributed environments, there cannot be a single state.
 
 Sometimes, the current state of the (sub)system is required by the function that is implementing logic (e.g. for command 
 validation), and sometimes it is not (e.g. during event processing).
@@ -529,7 +529,7 @@ $$
 
 Returning to the business logic: it can be implemented by using three types of functions: 
 **Command Handlers**, **Event Handlers** & **Gatekeepers**. All other parts of the system primarily deal with wiring, 
-integration or visualization.
+integration or restructuring data.
 
 ![](pictures/6_8_business_logic.png)
 
@@ -570,9 +570,9 @@ $$
 
 **Event Handler**
 
-To meet scalability requirements, the model is often [decomposed](#decomposition) into smaller pieces. Interactions 
-between these pieces are defined in **event handlers**, which also contain business/domain logic. Event handlers 
-typically implement "if-this-then-that" -type of rules.
+To ensure future scalability and manage the sustainable cognitive load of implementation teams, large models need to be 
+[decomposed](#decomposition) into smaller ones. Interactions between these models are defined by **event handlers**, 
+which also contain business/domain logic. Event handlers typically implement simple "if-this-then-that" rules.
 
 $$
 f(\text{Event}) \to \text{Effect}
