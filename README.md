@@ -527,9 +527,12 @@ $$
 
 ### Business/Domain Logic
 
-Returning to the business logic: it can be implemented by using three types of functions: 
-**Command Handlers**, **Event Handlers** & **Gatekeepers**. All other parts of the system primarily deal with wiring, 
-integration or restructuring data.
+Returning to the business logic: it can be implemented by using three types of policies: 
+**Command Handlers**, **Event Handlers** & **Gatekeepers** - all functions. Other parts of the system primarily deal 
+with wiring, integration or restructuring data.
+
+Ideally, business logic is implemented within the **command model**, but due to the need for distribution
+and managing cognitive load, not all business logic can remain in the command models alone.
 
 ![](pictures/6_8_business_logic.png)
 
@@ -545,8 +548,8 @@ integration or restructuring data.
 
 **Command Handler**
 
-This is the core of the system where the "magic" happens. Commands are validated and applied against the model, causing 
-the state to evolve.
+This is the core of the system where the "magic" happens. Commands are validated and applied against the command model, 
+causing the state to evolve.
 
 $$
 f(\text{Command}, \text{State}) \to \text{Effect}
@@ -565,9 +568,6 @@ $$
 * Only **Reply** in case of invalid command.
 * **EventEmission** of one to many events in case command is approved and event sourcing is used.
 * **StateUpdate** in case command is approved and state storage is used.
-
-Ideally, business logic is implemented within the command model, but due to the need for distribution
-and managing cognitive load, not all business logic can remain in the command models alone.
 
 ---
 
