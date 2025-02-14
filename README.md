@@ -566,6 +566,9 @@ $$
 * **EventEmission** of one to many events in case command is approved and event sourcing is used.
 * **StateUpdate** in case command is approved and state storage is used.
 
+Ideally, business logic is implemented within the command model, but due to the need for distribution
+and managing cognitive load, not all business logic can remain in the command models alone.
+
 ---
 
 **Event Handler**
