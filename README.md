@@ -450,6 +450,7 @@ we actually implement the business logic? Let’s start by framing the problem. 
 single state.
 
 Here, function *f* represents the logic that connects the *Trigger* and *State* to the *Effect*.
+
 $$
 f(\text{Trigger}, \text{State}) \to \text{Effect}
 $$
