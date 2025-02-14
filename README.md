@@ -19,6 +19,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 
 <!-- TOC -->
 * [Table of Content](#table-of-content)
+* [Document Change Log](#document-change-log)
 * [High Level Overview](#high-level-overview)
   * [Three Opportunities](#three-opportunities)
   * [Software Engineering Flow](#software-engineering-flow)
@@ -70,6 +71,14 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
     * [The Trigger that Led to This](#the-trigger-that-led-to-this)
 * [License For Using the Pictures](#license-for-using-the-pictures)
 <!-- TOC -->
+
+# Document Change Log
+
+| Version | Date       | Changes Made                                            |
+|---------|------------|---------------------------------------------------------|
+| 0.1     | 2024-10-11 | Components of Distributed Systems Modeling (EDA & CQRS) |
+| 1.0     | 2024-11-01 | Scalable Modeling – An Event-centric Approach           |
+| 1.1     | 2025-01-24 | New section: [Implementing Logic](#implementing-logic)  |
 
 # High Level Overview
 
@@ -123,11 +132,11 @@ virtual environment (e.g. a server, container or cluster). Over time, services e
 decisions and produce outputs.
 
 **Events are anchored in time but act in space** – Events are fixed to the moment they are created, carrying an 
-immutable snapshot of information. As they traverse the system, they move between services and may even be replicated.
+immutable snapshot of information. As they traverse the system, they move between services and may also be replicated.
 
 {% include youtube.html id="eThvtU0S7kE" %}
 
-So, instead of focusing too much on the **space** between services, consider the **flow of events** and how they
+So, instead of focusing too much on the **space** between services, consider the **flow of events** and how services
 evolve over **time**.
 
 The **immutability of events** contributes significantly to scalability, particularly in event-driven architectures.
@@ -169,13 +178,17 @@ problem.
 > _**Melvin E. Conway**_
 
 Conceptual models derived from the domain often lead to software structures that should mirror the communication 
-patterns within the organization.
+structures within the organization.
 
 > "Civilization advances by extending the number of important operations which we can perform without thinking of them."
 > _**Alfred North Whitehead**_
 
-When we can focus solely on implementing conceptual models from the domain without worrying about the technical details 
-we can abstract away, we achieve the highest velocity.
+When we focus solely on implementing conceptual models from the domain and minimize concerns about technical details, 
+we achieve the highest velocity in problem-solving.
+
+It’s like how modern engineers don’t need to worry about manually managing memory in high-level languages or how 
+mathematicians use symbolic computation tools instead of solving everything by hand. Each layer of abstraction frees us 
+to think bigger and move faster.
 
 ## Scalability is Prerequisite of Success
 
@@ -184,10 +197,6 @@ we can abstract away, we achieve the highest velocity.
 Building a scalable foundation allows businesses to adapt to increasing demands and capitalize on opportunities without 
 being limited by technical constraints. As these influential leaders have noted, scalability is not an afterthought; it 
 is integral to achieve sustainable success.
-
-Without a scalable system from day one, even the best ideas can be slowed down by bottlenecks and inefficiencies as 
-they grow. Designing with scalability in mind ensures that as demand increases, systems can grow exponentially to meet 
-those demands without sacrificing performance or creating technical debt.
 
 > "The faster you scale, the more wealth you create."
 > _**Reid Hoffman** (Co-founder of LinkedIn)_
@@ -198,8 +207,12 @@ those demands without sacrificing performance or creating technical debt.
 > "The most scalable businesses in the world are software businesses."
 > _**Bill Gates** (Founder of Microsoft)_
 
-Success is not just about growing fast — it's about building the right infrastructure from the outset, so that growth 
-becomes an advantage, not a challenge.
+Without a scalable design from day one, even the best ideas can be slowed down by bottlenecks and inefficiencies as
+they grow. Designing with scalability in mind ensures that as demand increases, systems can grow exponentially to meet
+those demands without sacrificing performance or creating technical debt.
+
+Success isn’t just about growing fast — it’s about building the right foundation from the start, so that **growth 
+becomes an advantage rather than a challenge**.
 
 # Scalable Modeling
 
