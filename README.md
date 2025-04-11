@@ -1,14 +1,18 @@
 {% include mathjax.html %}
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
-**scalable systems**. Every new system should be designed with scalability in mind — **scalability is essential for 
-success**. With **Scalable Modeling**, you can embed 
+**scalable systems**. If system is expected to grow it should be designed with scalability in mind — **scalability is 
+often essential for success**. With **Scalable Modeling**, you can embed 
 scalability in your system design from the start. Influenced by [Clean Architecture](#robert-c-martin), 
 [Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
 [Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
 [CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and doesn't rigidly adhere to 
 any single methodology. That is why this **event-centric architectural approach** has different name: 
 [CEQS - Command-Event-Query Separation](#ceqs-command-event-query-separation).
+
+**It’s not necessary for the implementation to scale from the start.** But when the model is designed with scalability
+in mind, and it follows CEQS, the implementation can evolve — adapting to increasing demands in resilience and
+responsiveness — so that **growth becomes an advantage rather than a challenge**.
 
 ![](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
@@ -17,11 +21,12 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 
 # Change Log
 
-| Version | Date       | Changes Made                                                 |
-|---------|------------|--------------------------------------------------------------|
-| 0.1     | 2024-10-11 | Components of Distributed Systems Modeling (EDA & CQRS)      |
-| 1.0     | 2024-11-01 | Published: Scalable Modeling – An Event-centric Approach     |
-| 1.1     | 2025-01-24 | New section added: [Implementing Logic](#implementing-logic) |
+| Version | Date       | Changes Made                                                                           |
+|---------|------------|----------------------------------------------------------------------------------------|
+| 0.1     | 2024-10-11 | Components of Distributed Systems Modeling (EDA & CQRS)                                |
+| 1.0     | 2024-11-01 | Published: Scalable Modeling – An Event-centric Approach                               |
+| 1.1     | 2025-01-24 | New section added: [Implementing Logic](#implementing-logic)                           |
+| 1.2     | 2025-04-11 | New sub-section added: [Resilience and Responsiveness](#resilience-and-responsiveness) |
 
 # Table of Content
 
@@ -37,6 +42,7 @@ _Justification for the red arrows in sections: [Queries](#queries) & [Time Trave
 * [Why to Concentrate Domain Knowledge & Scalability](#why-to-concentrate-domain-knowledge--scalability)
   * [Domain Knowledge is the Most Underrated Key to High Development Velocity and Quality](#domain-knowledge-is-the-most-underrated-key-to-high-development-velocity-and-quality)
   * [Scalability is Prerequisite of Success](#scalability-is-prerequisite-of-success)
+    * [Resilience and Responsiveness](#resilience-and-responsiveness)
 * [Scalable Modeling](#scalable-modeling)
   * [Theory](#theory)
     * [Event Centrism](#event-centrism)
@@ -213,6 +219,35 @@ those demands without sacrificing performance or creating technical debt.
 
 Success isn’t just about growing fast — it’s about building the right foundation from the start, so that **growth 
 becomes an advantage rather than a challenge**.
+
+### Resilience and Responsiveness
+
+![](pictures/2_1_resilience_responsiveness.png)
+
+Success demands systems that are both **resilient to failures** and **responsive at all times**. Both of these 
+qualities depend on **scalability** — especially in systems expected to grow.
+
+- **Resilience** is the system’s ability to **recover from failures** and continue operating ideally without data loss 
+  or service downtime.
+- **Responsiveness** is about **how quickly a system reacts** to user actions or requests, maintaining consistent 
+  performance under varying load. While **availability** is part of this, it's not the whole story — a system can be 
+  “available” but still frustratingly slow. We’ve all stared at spinners. What we want isn’t just availability but 
+  responsiveness.
+
+A non-scalable system might perform well under low load but as usage grows, it can quickly become unresponsive or prone 
+to failure — directly undermining both resilience and responsiveness.
+
+- **Scalability supports resilience** by allowing systems to redistribute load, isolate failures and add resources to 
+  minimize the risk of total failure.
+- **Scalability supports responsiveness** because it enables **elasticity\*** — the ability to dynamically scale 
+  resources based on demand. When traffic spikes, an elastic (scalable) system can spin up additional application 
+  servers, database replicas and other resources. This prevents latency bottlenecks and helps maintain fast, consistent 
+  response times even under pressure.
+
+\*) **Elasticity** is the *runtime expression* of scalability — it’s the system’s ability to **automatically scale up 
+or down** in response to current demand.
+
+With Scalable Modeling, models enable systems that are **resilient** and **responsive** by design.
 
 # Scalable Modeling
 
