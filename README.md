@@ -1,18 +1,23 @@
 {% include mathjax.html %}
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing 
-**scalable systems**. If system is expected to grow it should be designed with scalability in mind — **scalability is 
-often essential for success**. With **Scalable Modeling**, you can embed 
-scalability in your system design from the start. Influenced by [Clean Architecture](#robert-c-martin), 
-[Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
-[Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
-[CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and doesn't rigidly adhere to 
-any single methodology. That is why this **event-centric architectural approach** has different name: 
-[CEQS - Command-Event-Query Separation](#ceqs-command-event-query-separation).
+**scalable systems**. Any system aiming for growth should be designed with scalability in mind — **early consideration 
+of scalability is often essential for long-term success**. The best practice is to design in a way that **enables 
+future growth**, even if you're not scaling yet.
 
-**It’s not necessary for the implementation to scale from the start.** But when the model is designed with scalability
-in mind, and it follows CEQS, the implementation can evolve — adapting to increasing demands in resilience and
-responsiveness — so that **growth becomes an advantage rather than a challenge**.
+With **Scalable Modeling**, you can embed scalability into your system design from the beginning. Influenced by 
+[Clean Architecture](#robert-c-martin), [Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
+[Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
+[CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and avoids rigid adherence to 
+any one methodology.
+
+That’s why this **event-centric architectural approach** has a distinct name: 
+[CEQS – Command-Event-Query Separation](#ceqs-command-event-query-separation).
+
+**Your implementation doesn’t need to scale from day one.** But when the model is designed with scalability in mind and 
+follows CEQS, the system can evolve — adapting to rising demands for resilience and responsiveness — so that **growth 
+becomes an advantage rather than a challenge**.
+
 
 ![](pictures/0_scalable_modeling_components.png)
 _Justification for the red arrows in sections: [Queries](#queries) & [Time Travel](#time-travel)._
