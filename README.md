@@ -9,9 +9,7 @@ With **Scalable Modeling**, you can embed scalability into your system design fr
 [Clean Architecture](#robert-c-martin), [Event-Driven Architecture](#event-driven-architecture-eda) (EDA), 
 [Domain-Driven Design](#eric-evans) (DDD), [EventStorming](#alberto-brandolini), and 
 [CQRS](#command-query-responsibility-segregation-cqrs), this approach remains flexible and avoids rigid adherence to 
-any one methodology.
-
-That’s why this **event-centric architectural approach** has a distinct name: 
+any one methodology. That’s why this **event-centric architectural approach** has a distinct name: 
 [CEQS – Command-Event-Query Separation](#ceqs-command-event-query-separation).
 
 **Your implementation doesn’t need to scale from day one.** But when the model is designed with scalability in mind and 
@@ -244,10 +242,9 @@ to failure — directly undermining both resilience and responsiveness.
 
 - **Scalability supports resilience** by allowing systems to redistribute load, isolate failures and add resources to 
   minimize the risk of total failure.
-- **Scalability supports responsiveness** because it enables **elasticity\*** — the ability to dynamically scale 
-  resources based on demand. When traffic spikes, an elastic (scalable) system can spin up additional application 
-  servers, database replicas and other resources. This prevents latency bottlenecks and helps maintain fast, consistent 
-  response times even under pressure.
+- **Scalability supports responsiveness** because it enables **elasticity***. When traffic spikes, an elastic system 
+  can spin up additional application servers, database replicas and other resources. This prevents latency bottlenecks 
+  and helps maintain fast, consistent response times even under pressure.
 
 \*) **Elasticity** is the *runtime expression* of scalability — it’s the system’s ability to **automatically scale up 
 or down** in response to current demand.
@@ -299,8 +296,8 @@ of complex, high-demand systems.
 
 [Scalable Modeling](https://roikonen.github.io/scalablemodeling/) does not go into purism in CQRS - 
 in [Scalable Modeling](https://roikonen.github.io/scalablemodeling/) queries can (when well justified) also query 
-command models for improved consistency where it does not jeopardise the scalability. Commands can also return simple 
-data like sequence number of the produced events.
+command models for improved consistency where it does not jeopardize the scalability. Command model may later fork to 
+query model(s), and commands can also return simple data like sequence number of the produced events.
 
 ### Vertical & Horizontal Scalability
 
