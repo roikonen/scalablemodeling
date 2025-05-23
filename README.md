@@ -475,8 +475,8 @@ Interestingly, even if this is done as a last step in the
 decisions**. For instance, while financial transactions demand strict consistency, less critical processes like 
 reporting can tolerate delays.
 
-Dynamic Consistency Boundaries (DCB) is an emerging term and as we leave defining the consistency boundaries as a last
-step we make Scalable Modeling compatible with DCBs.
+[Dynamic Consistency Boundaries (DCB)](https://dcb.events/) is an emerging term, and as we leave defining the 
+consistency boundaries as a last step we make Scalable Modeling compatible with DCBs.
 
 ## Implementing Logic
 
