@@ -1,0 +1,93 @@
+# Project information
+site_name: Scalable Modeling
+site_url: https://roikonen.github.io/scalablemodeling/
+site_author: Simo Roikonen
+site_description: >-
+  Modeling technique for designing scalable systems. Any system aiming for growth should 
+  be designed with scalability in mind, as early consideration of scalability is often 
+  essential for long-term success. Scalable Modeling helps to design in a way that enables 
+  future growth, even if you're not scaling yet.
+
+# Repository
+repo_name: roikonen/scalablemodeling
+repo_url: https://github.com/roikonen/scalablemodeling
+
+# Page tree
+nav:
+  - What?: index.md
+  - Why?:
+    - Domain Knowledge: domain-knowledge.md
+    - Scalability: scalability.md
+    - Resilience & Responsiveness: resilience.md
+    - Opportunities: opportunities.md
+  - How?:
+    - Theory: theory.md
+    - CEQS: ceqs.md
+    - Components: components.md
+    - Challenges: challenges.md
+    - Implementing Logic: implementing-logic.md
+  - Who?:
+    - Credits: credits.md
+    - Author: simo-roikonen.md
+  - When?: changelog.md
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  features:
+    - navigation.footer
+    - content.footnote.tooltips
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: white
+      accent: orange
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: black
+      accent: orange
+  
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/roikonen
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/roikonen.bsky.social
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/roikonen/
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - mkdocs-video
+  - glightbox:
+      auto_themed: true
+
+copyright: Copyright &copy; 2025 Simo Roikonen
