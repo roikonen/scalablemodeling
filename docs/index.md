@@ -1,4 +1,4 @@
-# What's Scalable Modeling?
+# ![](assets/logo.png){ width="50" } What's Scalable Modeling?
 
 This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing **scalable systems**. Any system aiming for growth should be designed with scalability in mind, as **early consideration of scalability is often essential for long-term success**. Scalable Modeling helps to design in a way that **enables future growth**, even if you're not scaling yet.
 
