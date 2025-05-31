@@ -19,9 +19,9 @@ nav:
     - Domain Knowledge: domain-knowledge.md
     - Scalability: scalability.md
     - Resilience & Responsiveness: resilience.md
-    - Opportunities: opportunities.md
   - How?:
     - Theory: theory.md
+    - Opportunities: opportunities.md
     - CEQS: ceqs.md
     - Components: components.md
     - Challenges: challenges.md

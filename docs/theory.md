@@ -22,11 +22,13 @@ between services, which allows for more scalable and resilient systems.
 ![](assets/images/eda.png#only-light)
 ![](assets/images/eda_dark.png#only-dark)
 
+## Command–Query Separation (CQS)
+
+Command–Query Separation (CQS) is a design principle introduced by Bertrand Meyer during his work on the Eiffel programming language. It defines a strict division between operations that mutate system state (commands) and operations that retrieve information (queries). Each method should be either a command or a query but not both. This separation improves program clarity by preventing hidden side-effects in queries and it supports testing and reasoning by preserving functional purity in information retrieval.
+
 ## Command Query Responsibility Segregation (CQRS)
 
-CQRS is a pattern that separates the responsibilities of updating data (commands) and reading data (queries). By
-dividing these operations, CQRS improves performance, scalability, and security, allowing for more efficient handling
-of complex, high-demand systems.
+CQRS is a pattern built on top of CQS that separates the responsibilities of updating data (commands) and reading data (queries). By dividing these operations, CQRS improves performance, scalability and security, enabling more efficient handling of complex or high-demand systems.
 
 ![](assets/images/cqrs.png#only-light)
 ![](assets/images/cqrs_dark.png#only-dark)

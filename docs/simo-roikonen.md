@@ -1,6 +1,7 @@
 # About Simo Roikonen
 
-![](assets/images/simo-roikonen.png)
+![](assets/images/simo_roikonen.png#only-light){ width="250" }
+![](assets/images/simo_roikonen_dark.png#only-dark){ width="250" }
 
 Simo is a seasoned software crafter, solution architect, communicator and learner, with a deep commitment to building 
 evolvable, long-lasting backends. With over a decade of experience in [Domain-Driven Design](../credits/#eric-evans), 
