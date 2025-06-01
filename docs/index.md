@@ -1,10 +1,10 @@
-# ![](assets/logo.png){ width="50" } What's Scalable Modeling?
+# ![](assets/logo_100x100.png){ width="30" } What's Scalable Modeling?
 
-This [repository](https://github.com/roikonen/scalablemodeling) offers a **modeling technique** for designing **scalable systems**. Any system aiming for growth should be designed with scalability in mind, as **early consideration of scalability is often essential for long-term success**. Scalable Modeling helps to design in a way that **enables future growth**, even if you're not scaling yet.
+This page introduces a **modeling technique** for designing **scalable systems**. Any system aiming for growth should be designed with scalability in mind, as **early consideration of scalability is often essential for long-term success**. Scalable Modeling helps to design in a way that **enables future growth**, even if you're not scaling yet.
 
 With **Scalable Modeling**, you can embed scalability into your system design from the beginning. Influenced by [Clean Architecture](credits/#robert-c-martin), [Event-Driven Architecture](theory/#event-driven-architecture-eda) (EDA), [Domain-Driven Design](credits/#eric-evans) (DDD), [EventStorming](credits/#alberto-brandolini), and [CQRS](theory/#command-query-responsibility-segregation-cqrs), this approach remains flexible and avoids rigid adherence to any one methodology. That’s why this **event-centric architectural approach** has a distinct name: [CEQS – Command-Event-Query Separation](ceqs/#ceqs-command-event-query-separation).
 
-**Your implementation doesn’t need to scale from day one.** But when the model is designed with scalability in mind and follows CEQS, the system can evolve, adapting to rising demands for resilience and responsiveness, so that **growth becomes an advantage rather than a challenge**.
+**Your implementation doesn’t need to scale from day one.** But when the model is designed with scalability in mind and follows [CEQS](ceqs/#ceqs-command-event-query-separation), the system can evolve, adapting to rising demands for resilience and responsiveness, so that **growth becomes an advantage rather than a challenge**.
 
 
 ![](assets/images/scalable_modeling_components.png#only-light)
@@ -43,38 +43,6 @@ In software engineering, three aspects are critical:
 
 Iteration is naturally much cheaper when it is done on the conceptual model rather than on the implementation level.
 
-#### Shift Left
-
-> "There is nothing so useless as doing efficiently that which should not be done at all."  
-> _**Peter Drucker**_
-
-![](assets/images/shift_left.png#only-light)
-![](assets/images/shift_left_dark.png#only-dark)
-
-[Scalable Modeling](https://roikonen.github.io/scalablemodeling/) is a method for shifting left in the software engineering process. It helps crystallize the **'why'** by focusing on the **'what,'** allowing the creation of a result (the model) that serves as an opinionated bridge to the **'how'**.
-
-#### Start Modeling From Events
-
-To design reliable scalable systems, we need to start from **temporal** thinking (the **flow of time** and how 
-things evolve) and gradually move into **spatial** thinking (the **arrangement** of things). In essence, we design 
-spatial systems to handle temporal matters – **events**.
-
-**Services are anchored in space but act in time** – At any given moment, a service's location is tied to a physical or 
-virtual environment (e.g. a server, container or cluster). Over time, services evolve as they process events, make 
-decisions and produce outputs.
-
-**Events are anchored in time but act in space** – Events are fixed to the moment they are created, carrying an 
-immutable snapshot of information. As they traverse the system, they move between services and may also be replicated.
-
-![type:video](https://www.youtube.com/embed/eThvtU0S7kE)
-
-So, instead of focusing too much on the **space** between services, consider the **flow of events** and how services
-evolve over **time**.
-
-The **immutability of events** contributes significantly to scalability, particularly in event-driven architectures.
-Additionally, **events** play a central role in uncovering domain insights and fostering a shared language.
-**Thus, we adopt an [event-centric](theory/#event-centrism) approach**.
-
 ### Three Challenges
 
 1. **[Deduplication](challenges/#deduplication)** - as exactly-once delivery is impossible in distributed systems
@@ -88,8 +56,8 @@ Additionally, **events** play a central role in uncovering domain insights and f
 
 ## License For Using the Pictures
 
-![](assets/images/copyright.png#only-light){ width="300" }
-![](assets/images/copyright_dark.png#only-dark){ width="300" }
+![](assets/images/copyright.png#only-light){ width="200" }
+![](assets/images/copyright_dark.png#only-dark){ width="200" }
 
 See [License](https://github.com/roikonen/scalablemodeling/blob/main/LICENSE.md).
 

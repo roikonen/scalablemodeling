@@ -16,10 +16,12 @@ repo_url: https://github.com/roikonen/scalablemodeling
 nav:
   - What?: index.md
   - Why?:
-    - Domain Knowledge: domain-knowledge.md
+    - Development Velocity & Quality: domain-knowledge.md
     - Scalability: scalability.md
     - Resilience & Responsiveness: resilience.md
   - How?:
+    - Shift Left: shift-left.md
+    - Start From Events: start-from-events.md
     - Theory: theory.md
     - Opportunities: opportunities.md
     - CEQS: ceqs.md
@@ -33,7 +35,7 @@ nav:
 
 theme:
   name: material
-  logo: assets/logo.png
+  logo: assets/logo_100x100.png
   favicon: assets/favicon.ico
   features:
     - navigation.footer
