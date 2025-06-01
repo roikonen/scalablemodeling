@@ -31,7 +31,7 @@ nav:
   - Who?:
     - Credits: credits.md
     - Author: simo-roikonen.md
-  - When?: changelog.md
+  - When?: when.md
 
 theme:
   name: material

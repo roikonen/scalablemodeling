@@ -11,8 +11,6 @@ With **Scalable Modeling**, you can embed scalability into your system design fr
 ![](assets/images/scalable_modeling_components_dark.png#only-dark)
 _Justification for the red arrows in sections: [Queries](components/#queries) & [Time Travel](challenges/#time-travel)._
 
-**Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
-
 ## High Level Overview
 
 There are **three opportunities** and **three challenges** in scalability and understanding them takes you far already. Combining the opportunities & challenges with an **upfront and iterative modeling technique** provides a solid foundations for modeling reliable and scalable systems.
@@ -27,7 +25,7 @@ There are **three opportunities** and **three challenges** in scalability and un
 
 ### Software Engineering Flow
 
-Software is ultimately a **model** — a conceptual solution that, while invisible, solves real-world challenges. 
+Software is ultimately a **model**, a conceptual solution that, while invisible, solves real-world challenges. 
 In software engineering, three aspects are critical:
 
 1. **Understanding**: **WHY** the software is needed and by who (understanding the **purpose** and the **problem**

@@ -1,4 +1,4 @@
-# Change Log
+## Change Log
 
 | Version | Date       | Changes Made                                                                           |
 |---------|------------|----------------------------------------------------------------------------------------|
@@ -6,4 +6,8 @@
 | 1.0     | 2024-11-01 | Published: Scalable Modeling – An Event-centric Approach                               |
 | 1.1     | 2025-01-24 | New section added: [Implementing Logic](../implementing-logic/)                           |
 | 1.2     | 2025-04-17 | New sub-section added: [Resilience and Responsiveness](../resilience/) |
-| 1.3     | 2025-05-30 | New look |
+| 1.3     | 2025-05-30 | New look and structure |
+
+## Past Events
+
+**Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
