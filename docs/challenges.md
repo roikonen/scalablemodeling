@@ -12,6 +12,13 @@ ensure duplicate messages don’t affect the outcome.
 
 ## Tailoring Consistency
 
+!!! quote
+
+    "Developers simply do not implement large scalable applications assuming distributed transactions...
+    Two-phase commit is the anti-availability protocol."
+
+    **_Pat Helland_**
+
 In distributed systems, **defining consistency boundaries** is crucial for balancing performance and correctness. These
 boundaries determine where strong consistency is enforced and where eventual consistency is acceptable. Interestingly,
 tailoring these boundaries often requires **business-driven decisions**. For instance, while financial transactions
@@ -49,3 +56,23 @@ As a result, combining data from these sources may yield conflicting or incohere
 inconsistency poses a challenge when trying to form a unified or accurate perspective of the current state. To mitigate 
 these issues, designers need to carefully consider the timing and aggregation of data to avoid misleading or 
 inconsistent results, especially in cases where decisions are being made based on these read models.
+
+!!! tip "Avoiding Loops to Prevent Time Travel"
+
+    One common source of time travel issues in distributed systems is the presence of loops in the architecture. Feedback loops between services can introduce subtle timing problems, cause race conditions and lead to eventual consistency violations. These loops make it difficult to reason about the state of the system at any given point and often result in unexpected behavior.
+
+    Loops can cause components to observe partial or out-of-date information or even see future state due to out-of-order event delivery. This breaks the mental model of cause and effect and undermines the reliability of event-driven workflows.
+
+    In general, it's best to design systems using simple acyclic data flows. Unidirectional flows are easier to understand, test and scale. If a feedback mechanism is absolutely necessary, it should be isolated, tightly controlled and made idempotent to avoid cascading inconsistencies.
+
+    **Example: Cross-Entity Uniqueness**
+
+    A typical example of a loop arises when implementing cross-entity uniqueness constraints. For instance, a user might have a unique user ID but also an email address that must be globally unique. Enforcing email uniqueness can easily introduce a loop:
+
+    - The email registry needs to know which user currently owns the address
+    - The user entity may need confirmation that the email is available
+    - Race conditions occur if two users try to claim the same address at the same time
+
+    To handle this safely, you need a clear protocol to reserve, update and release the email address. This should be done through a dedicated coordination service or component that serializes access to the shared constraint, avoiding circular dependencies between user entities.
+    
+    Avoiding loops is one of the simplest and most effective ways to reduce complexity and improve consistency in scalable systems.

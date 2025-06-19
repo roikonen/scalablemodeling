@@ -7,13 +7,13 @@
     _**Alberto Brandolini**_
 
 Without a proper understanding of the domain, it's impossible to implement a **conceptual model** that accurately 
-reflects it. Effective collaboration with domain experts is essential to bridge this gap. **Events** play a central 
-role in uncovering domain insights and fostering a shared language. Additionally, the **immutability of events** 
-contributes significantly to scalability, particularly in event-driven architectures.
+reflects it. Effective collaboration with domain experts is essential to bridge this gap. [**Events**](../events/) play a central 
+role in uncovering domain insights and fostering a shared language. **Events are the backbone of business reality**:
+they are observable, language-neutral, stable and behavior-driving elements that make it easier to understand, design and evolve complex systems. Additionally, the **immutability of events** contributes significantly to scalability, particularly in event-driven architectures.
+That’s why Scalable Modeling puts them front and center. 
 
 ![](assets/images/domain_knowledge_is_key.png#only-light)
 ![](assets/images/domain_knowledge_is_key_dark.png#only-dark)
-
 
 <div class="grid cards" markdown>
 
