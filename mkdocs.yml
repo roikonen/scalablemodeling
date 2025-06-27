@@ -9,8 +9,8 @@ site_description: >-
   future growth, even if you're not scaling yet.
 
 # Repository
-repo_name: roikonen/scalablemodeling
-repo_url: https://github.com/roikonen/scalablemodeling
+#repo_name: roikonen/scalablemodeling
+#repo_url: https://github.com/roikonen/scalablemodeling
 
 # Page tree
 nav:
@@ -30,8 +30,8 @@ nav:
     - Challenges: challenges.md
     - Implementing Logic: implementing-logic.md
   - Who?:
-    - Credits: credits.md
     - Author: simo-roikonen.md
+    - Credits: credits.md
   - When?: when.md
 
 theme:
@@ -76,6 +76,9 @@ markdown_extensions:
 
 # Additional configuration
 extra:
+  analytics:
+    provider: google
+    property: G-91BF7KFFP5
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/roikonen

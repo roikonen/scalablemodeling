@@ -12,3 +12,7 @@
 ## Past Events
 
 **Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
+
+## Schedule a Call
+
+[:material-calendar-clock: Schedule a Call](https://app.reclaim.ai/m/simo-roikonen/meeting){ .md-button }

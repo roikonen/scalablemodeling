@@ -58,21 +58,3 @@ Iteration is naturally much cheaper when it is done on the conceptual model rath
 ![](assets/images/copyright_dark.png#only-dark){ width="200" }
 
 See [License](https://github.com/roikonen/scalablemodeling/blob/main/LICENSE.md).
-
----
-
-<script src="https://giscus.app/client.js"
-        data-repo="roikonen/scalablemodeling"
-        data-repo-id="R_kgDOM8SonQ"
-        data-category="General"
-        data-category-id="DIC_kwDOM8Sonc4Cj6Rl"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
