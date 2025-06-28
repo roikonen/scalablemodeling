@@ -78,7 +78,7 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-91BF7KFFP5
+    property: G-5XSR0TN5K3
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/roikonen
