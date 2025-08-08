@@ -33,6 +33,8 @@ nav:
     - Author: simo-roikonen.md
     - Credits: credits.md
   - When?: when.md
+  - Blog:
+      - blog/index.md
 
 theme:
   name: material
@@ -40,6 +42,7 @@ theme:
   favicon: assets/favicon.ico
   features:
     - navigation.footer
+    - navigation.indexes
     - content.footnote.tooltips
   palette: 
     - scheme: default
@@ -73,6 +76,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.blocks.caption
 
 # Additional configuration
 extra:
@@ -92,6 +96,8 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
+  - search
+  - blog
   - mkdocs-video
   - glightbox:
       auto_themed: true
