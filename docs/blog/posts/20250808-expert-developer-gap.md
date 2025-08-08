@@ -102,6 +102,12 @@ Teams that invest in collaborative domain exploration:
 
 ## Final Word
 
+!!! quote
+
+    "It's developer (mis)understanding that's released in production, not the experts' knowledge."
+
+    _**Alberto Brandolini**_
+
 Software is translation. Every mistranslation costs money. **DDD** and **Event Storming** will not remove all project risk but they make misunderstandings expensive to ignore and cheap to fix.
 
 If you are tired of paying for features nobody uses bring your experts and engineers into the same room before the first sprint. The savings start before the code does.
