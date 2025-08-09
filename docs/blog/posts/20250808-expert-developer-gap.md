@@ -9,7 +9,7 @@ Every year companies spend millions building software that looks right in a demo
 
 This perspective draws on both global studies and recent Nordic research to show why teams ship features nobody uses and how to stop it.
 
-The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around **64% of features** in delivered software saw little or no use[^standish]. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.
+The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around **64% of features** in delivered software saw little or no use[^1]. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.
 
 The good news is that many of the most expensive misunderstandings can be addressed before the first line of code is written. Coding will still raise new questions but with a shared understanding in place those iterations are faster, cheaper and far less painful.
 
@@ -17,10 +17,10 @@ The good news is that many of the most expensive misunderstandings can be addres
 
 Misunderstood requirements create a chain reaction of cost overruns and missed value.
 
-- A requirements error in production can cost **1 500× more** to fix than if caught early[^nasa]
-- **30–50% of development time** is often spent on avoidable rework[^astadia]
-- In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^stray]
-- A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^bjarnason]
+- A requirements error in production can cost **1 500× more** to fix than if caught early[^2]
+- **30–50% of development time** is often spent on avoidable rework[^3]
+- In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^4]
+- A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^5]
 
 These are not just statistics. They are your budget leaking out of the project one misunderstanding at a time.
 
@@ -35,9 +35,9 @@ Domain experts focus on why the software is needed and who needs it. Engineers f
 
 Without a shared middle ground, intent is often lost. The result is software that works technically but fails to solve the real problem, leading to expensive rework and wasted features.
 
-In the Nordic study, many of those **16 hours per week** spent in meetings were used to realign teams after these gaps emerged. Instead of moving work forward, time was spent repairing shared understanding that should have been built before implementation began[^stray].
+In the Nordic study, many of those **16 hours per week** spent in meetings were used to realign teams after these gaps emerged. Instead of moving work forward, time was spent repairing shared understanding that should have been built before implementation began[^4].
 
-The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort[^bjarnason].
+The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort[^5].
 
 ## Closing the Gap
 
@@ -80,7 +80,7 @@ DDD is a way to embed the business language directly into the design and code.
 - **Bounded Contexts** prevent rules from bleeding across domains
 - **Collaborative modeling** ensures experts stay involved until the intent is clear
 
-These practices also address one of the Swedish study’s key findings that closer, earlier collaboration between requirements and testing roles improves alignment and reduces wasted effort[^bjarnason].
+These practices also address one of the Swedish study’s key findings that closer, earlier collaboration between requirements and testing roles improves alignment and reduces wasted effort[^5].
 
 ### Event Storming
 A fast, visual workshop where engineers, architects, designers and experts map business events together.
@@ -111,8 +111,8 @@ Software is translation. Every mistranslation costs money. **DDD** and **Event S
 
 If you are tired of paying for features nobody uses bring your experts and engineers into the same room before the first sprint. The savings start before the code does.
 
-[^nasa]: NASA (2010). *Cost of Fixing Defects*. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
-[^astadia]: Astadia (2023). *Project Failure Statistics*. [Link](https://www.astadia.com/blog/project-failure)  
-[^standish]: Standish Group (2014). *CHAOS Report*, as cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn)  
-[^stray]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
-[^bjarnason]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
+[^1]: Standish Group (2002). *CHAOS Report* figure cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn). This is an older data point used here as an illustration of the problem, not a current benchmark.  
+[^2]: NASA (2010). *Cost of Fixing Defects*. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
+[^3]: Astadia (2023). *Project Failure Statistics*. [Link](https://www.astadia.com/blog/project-failure)  
+[^4]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
+[^5]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
