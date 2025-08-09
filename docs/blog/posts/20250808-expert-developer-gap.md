@@ -17,7 +17,7 @@ The good news is that many of the most expensive misunderstandings can be addres
 
 Misunderstood requirements create a chain reaction of cost overruns and missed value.
 
-- A requirements error in production can cost **1 500× more** to fix than if caught early[^2]
+- A NASA study on defect cost escalation found that in large safety-critical projects, fixing a requirements error in production could cost **up to 1 500× more** than catching it early in the process[^2]
 - **30–50% of development time** is often spent on avoidable rework[^3]
 - In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^4]
 - A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^5]
