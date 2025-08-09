@@ -17,7 +17,7 @@ The good news is that many of the most expensive misunderstandings can be addres
 
 Misunderstood requirements create a chain reaction of cost overruns and missed value.
 
-- A NASA study on defect cost escalation found that in large safety-critical projects, fixing a requirements error in production could cost **up to 1 500× more** than catching it early in the process[^2]
+- NASA’s own analysis found that fixing a requirements error after deployment can cost **around 29× more** than fixing it during the requirements phase. Multiple independent studies report similar multipliers, ranging from **5×** in design to over **50×** in late testing[^2]
 - **30–50% of development time** is often spent on avoidable rework[^3]
 - In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^4]
 - A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^5]
@@ -112,7 +112,7 @@ Software is translation. Every mistranslation costs money. **DDD** and **Event S
 If you are tired of paying for features nobody uses bring your experts and engineers into the same room before the first sprint. The savings start before the code does.
 
 [^1]: Standish Group (2002). *CHAOS Report* figure cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn). This is an older data point used here as an illustration of the problem, not a current benchmark.  
-[^2]: NASA (2010). *Cost of Fixing Defects*. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
+[^2]: NASA (2010). *Cost of Fixing Defects*. Based on analysis of NASA software projects and multiple independent studies. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
 [^3]: Astadia (2023). *Project Failure Statistics*. [Link](https://www.astadia.com/blog/project-failure)  
 [^4]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
 [^5]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
