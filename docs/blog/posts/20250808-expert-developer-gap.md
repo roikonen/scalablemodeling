@@ -9,7 +9,7 @@ Every year companies spend millions building software that looks right in a demo
 
 This perspective draws on both global studies and recent Nordic research to show why teams ship features nobody uses and how to stop it.
 
-The result: bloated backlogs, features that miss the mark and a steady drain on budget. Studies show **64% of features** in delivered software are rarely or never used[^standish]. If you are funding those features you are paying for waste.
+The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around **64% of features** in delivered software saw little or no use[^standish]. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.
 
 The good news is that many of the most expensive misunderstandings can be addressed before the first line of code is written. Coding will still raise new questions but with a shared understanding in place those iterations are faster, cheaper and far less painful.
 
@@ -19,7 +19,6 @@ Misunderstood requirements create a chain reaction of cost overruns and missed v
 
 - A requirements error in production can cost **1 500× more** to fix than if caught early[^nasa]
 - **30–50% of development time** is often spent on avoidable rework[^astadia]
-- **64% of features** in shipped software are rarely or never used[^standish]
 - In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^stray]
 - A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^bjarnason]
 
