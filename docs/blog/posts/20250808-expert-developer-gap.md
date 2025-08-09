@@ -18,7 +18,7 @@ The good news is that many of the most expensive misunderstandings can be addres
 Misunderstood requirements create a chain reaction of cost overruns and missed value.
 
 - NASA’s own analysis shows that fixing a requirements defect during design can be **3× to 8×** more expensive than catching it in the requirements phase. In integration and test phases the cost jumps to **21× to 78×**, and in extreme cases (when found in production) it can exceed **1 500×**[^2]
-- **30–50% of development time** is often spent on avoidable rework[^3]
+- Research by Barry Boehm and others has shown that **30–50% of development effort** is often spent on avoidable rework, much of it caused by misunderstood or incomplete requirements[^3]
 - In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^4]
 - A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^5]
 
@@ -113,6 +113,6 @@ If you are tired of paying for features nobody uses bring your experts and engin
 
 [^1]: Standish Group (2002). *CHAOS Report* figure cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn). This is an older data point used here as an illustration of the problem, not a current benchmark.  
 [^2]: NASA (2010). *Cost of Fixing Defects*. Based on analysis of NASA software projects and multiple independent studies. Relative cost multipliers: 3×–8× in design, 7×–16× in build, 21×–78× in integration/test, and up to 1 500× in extreme post-deployment cases. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
-[^3]: Astadia (2023). *Project Failure Statistics*. [Link](https://www.astadia.com/blog/project-failure)  
+[^3]: Boehm, B., & Papaccio, P. N. (1988). *Understanding and Controlling Software Costs*. IEEE Transactions on Software Engineering, 14(10), 1462–1477. doi:[10.1109/32.6191](https://doi.org/10.1109/32.6191)  
 [^4]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
 [^5]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
