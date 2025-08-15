@@ -8,6 +8,7 @@
 | 1.2     | 2025-04-17 | New sub-section added: [Resilience and Responsiveness](../resilience/)                                                     |
 | 1.3     | 2025-05-30 | New look and structure                                                                                                     |
 | 1.4     | 2025-06-19 | [Why Events?](../events/), Updated [CEQS](../ceqs/), ["Avoiding Loops to Prevent Time Travel"](../challenges/#time-travel) |
+| 1.5     | 2025-08-15 | Improved [front page](../) and a new [blog](../blog/)                                                                      |
 
 ## Past Events
 
