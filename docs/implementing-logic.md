@@ -115,6 +115,7 @@ $$
 $$
 
 **Function returns:**
+
 * Only **Reply** in case of invalid command.
 * **EventEmission** of one to many events in case command is approved and event sourcing is used.
 * **StateUpdate** in case command is approved and state storage is used.
