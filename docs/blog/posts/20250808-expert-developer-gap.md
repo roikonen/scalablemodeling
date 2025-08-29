@@ -1,9 +1,10 @@
 ---
 date:
   created: 2025-08-08
+slug: how-to-stop-paying-for-features-nobody-uses
 ---
 
-# How to Stop Paying for Features Nobody Uses
+# Software’s Real Cost Is Building the Wrong Things
 
 Every year companies spend millions building software that looks right in a demo but collects dust in production. The issue is not lazy engineers or indecisive stakeholders. It is a gap in understanding between the people who know the problem and the people who write the code.
 
@@ -40,6 +41,12 @@ In the Nordic study, many of those **16 hours per week** spent in meetings were 
 The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort[^5].
 
 ## Closing the Gap
+
+!!! quote
+
+    "There is nothing so useless as doing efficiently that which should not be done at all."
+
+    _**Peter F. Drucker**_
 
 ![20250808-2.png](images/20250808-2.png#only-light)  
 ![20250808-2-dark.png](images/20250808-2-dark.png#only-dark)
