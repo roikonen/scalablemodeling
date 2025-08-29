@@ -118,6 +118,8 @@ Software is translation. Every mistranslation costs money. **DDD** and **Event S
 
 If you are tired of paying for features nobody uses bring your experts and engineers into the same room before the first sprint. The savings start before the code does.
 
+And remember: increasing developers’ domain understanding is necessary, but not sufficient. Sustainable success also depends on an **iterative, user-centric approach** where real usage feedback shapes the product continuously. Without that loop, even well-understood domains risk delivering features that miss the mark.
+
 [^1]: Standish Group (2002). *CHAOS Report* figure cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn). This is an older data point used here as an illustration of the problem, not a current benchmark.  
 [^2]: NASA (2010). *Cost of Fixing Defects*. Based on analysis of NASA software projects and multiple independent studies. Relative cost multipliers: 3×–8× in design, 7×–16× in build, 21×–78× in integration/test, and up to 1 500× in extreme post-deployment cases. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
 [^3]: Boehm, B., & Papaccio, P. N. (1988). *Understanding and Controlling Software Costs*. IEEE Transactions on Software Engineering, 14(10), 1462–1477. doi:[10.1109/32.6191](https://doi.org/10.1109/32.6191)  
