@@ -4,7 +4,7 @@ date:
 slug: how-to-stop-paying-for-features-nobody-uses
 ---
 
-# Software’s Real Cost Is Building the Wrong Things
+# Software’s Real Cost Is Building Wrong Features
 
 Every year companies spend millions building software that looks right in a demo but collects dust in production. The issue is not lazy engineers or indecisive stakeholders. It is a gap in understanding between the people who know the problem and the people who write the code.
 
