@@ -10,7 +10,7 @@ Every year companies spend millions building software that looks right in a demo
 
 This perspective draws on both global studies and recent Nordic research to show why teams ship features nobody uses and how to stop it.
 
-The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around **64% of features** in delivered software saw little or no use[^1]. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.
+The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around **64% of features** in delivered software saw little or no use[^1]. More recent large-scale product analytics paint an even starker picture: Pendo’s 2019 Feature Adoption Report, based on usage data from over 600 companies, found that about **80% of features** were rarely or never used[^2]. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.
 
 The good news is that many of the most expensive misunderstandings can be addressed before the first line of code is written. Coding will still raise new questions but with a shared understanding in place those iterations are faster, cheaper and far less painful.
 
@@ -18,10 +18,10 @@ The good news is that many of the most expensive misunderstandings can be addres
 
 Misunderstood requirements create a chain reaction of cost overruns and missed value.
 
-- NASA’s own analysis shows that fixing a requirements defect during design can be **3× to 8×** more expensive than catching it in the requirements phase. In integration and test phases the cost jumps to **21× to 78×**, and in extreme cases (when found in production) it can exceed **1 500×**[^2]
-- Research by Barry Boehm and others has shown that **30–50% of development effort** is often spent on avoidable rework, much of it caused by misunderstood or incomplete requirements[^3]
-- In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^4]
-- A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^5]
+- NASA’s own analysis shows that fixing a requirements defect during design can be **3× to 8×** more expensive than catching it in the requirements phase. In integration and test phases the cost jumps to **21× to 78×**, and in extreme cases (when found in production) it can exceed **1 500×**[^3]
+- Research by Barry Boehm and others has shown that **30–50% of development effort** is often spent on avoidable rework, much of it caused by misunderstood or incomplete requirements[^4]
+- In a Nordic study, engineers spent over **16 hours per week** in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding[^5]
+- A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding[^6]
 
 These are not just statistics. They are your budget leaking out of the project one misunderstanding at a time.
 
@@ -36,9 +36,9 @@ Domain experts focus on why the software is needed and who needs it. Engineers f
 
 Without a shared middle ground, intent is often lost. The result is software that works technically but fails to solve the real problem, leading to expensive rework and wasted features.
 
-In the Nordic study, many of those **16 hours per week** spent in meetings were used to realign teams after these gaps emerged. Instead of moving work forward, time was spent repairing shared understanding that should have been built before implementation began[^4].
+In the Nordic study, many of those **16 hours per week** spent in meetings were used to realign teams after these gaps emerged. Instead of moving work forward, time was spent repairing shared understanding that should have been built before implementation began[^5].
 
-The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort[^5].
+The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort[^6].
 
 ## Closing the Gap
 
@@ -87,7 +87,7 @@ DDD is a way to embed the business language directly into the design and code.
 - **Bounded Contexts** prevent rules from bleeding across domains
 - **Collaborative modeling** ensures experts stay involved until the intent is clear
 
-These practices also address one of the Swedish study’s key findings that closer, earlier collaboration between requirements and testing roles improves alignment and reduces wasted effort[^5].
+These practices also address one of the Swedish study’s key findings that closer, earlier collaboration between requirements and testing roles improves alignment and reduces wasted effort[^6].
 
 ### Event Storming
 A fast, visual workshop where engineers, architects, designers and experts map business events together.
@@ -121,7 +121,8 @@ If you are tired of paying for features nobody uses bring your experts and engin
 And remember: increasing developers’ domain understanding is necessary, but not sufficient. Sustainable success also depends on an **iterative, user-centric approach** where real usage feedback shapes the product continuously. Without that loop, even well-understood domains risk delivering features that miss the mark.
 
 [^1]: Standish Group (2002). *CHAOS Report* figure cited by Mike Cohn in [LinkedIn article](https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn). This is an older data point used here as an illustration of the problem, not a current benchmark.  
-[^2]: NASA (2010). *Cost of Fixing Defects*. Based on analysis of NASA software projects and multiple independent studies. Relative cost multipliers: 3×–8× in design, 7×–16× in build, 21×–78× in integration/test, and up to 1 500× in extreme post-deployment cases. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
-[^3]: Boehm, B., & Papaccio, P. N. (1988). *Understanding and Controlling Software Costs*. IEEE Transactions on Software Engineering, 14(10), 1462–1477. doi:[10.1109/32.6191](https://doi.org/10.1109/32.6191)  
-[^4]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
-[^5]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
+[^2]: Pendo (2019). *Feature Adoption Report*. Based on usage data from 615 companies, showing that about 80% of features are rarely or never used. [Report PDF](https://go.pendo.io/rs/185-LQW-370/images/2019%20Feature%20Adoption%20Report%20Digital.pdf)  
+[^3]: NASA (2010). *Cost of Fixing Defects*. Based on analysis of NASA software projects and multiple independent studies. Relative cost multipliers: 3×–8× in design, 7×–16× in build, 21×–78× in integration/test, and up to 1 500× in extreme post-deployment cases. [PDF](https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf)  
+[^4]: Boehm, B., & Papaccio, P. N. (1988). *Understanding and Controlling Software Costs*. IEEE Transactions on Software Engineering, 14(10), 1462–1477. doi:[10.1109/32.6191](https://doi.org/10.1109/32.6191)  
+[^5]: Stray, V. G., & Moe, N. B. (2020). *Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack*. arXiv:2007.02328. [PDF](https://arxiv.org/pdf/2007.02328.pdf)  
+[^6]: Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., & Gorschek, T. (2023). *Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies*. arXiv:2307.12489. [PDF](https://arxiv.org/pdf/2307.12489.pdf)  
