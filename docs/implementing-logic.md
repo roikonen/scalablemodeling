@@ -154,12 +154,11 @@ boundaries before executing a command. The term *Gatekeeper* reflects its intend
 introduces risks in its application. A *Gatekeeper* should be used strictly to verify logical conditions.
 
 $$
-f(\text{Command}) \to \text{QueryInvocation} \to \text{CommandDispatch}
+f(\text{Command}) \to \{\text{QueryInvocation}\}^* \to \text{CommandDispatch}
 $$
 
-For example, if a product has been introduced in the product management context, the *Gatekeeper* ensures it can be 
-added to an order within the order management context. However, if a product can be removed from the product management 
-context, there must be a process in place to handle open orders that include the removed product.
+For example, the *Gatekeeper* ensures the product has been introduced before it can be added to an order. However, if 
+a product can be removed, there must be a process in place to handle open orders that include the removed product.
 
 To ensure data integrity, **Event Handlers** should be used alongside **Gatekeepers**, forming a cohesive process that 
 prevents gaps in the eventually consistent system.

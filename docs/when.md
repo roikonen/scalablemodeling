@@ -10,9 +10,12 @@
 | 1.4     | 2025-06-19 | [Why Events?](../events/), Updated [CEQS](../ceqs/), ["Avoiding Loops to Prevent Time Travel"](../challenges/#time-travel) |
 | 1.5     | 2025-08-15 | Improved [front page](../) and a new [blog](../blog/)                                                                      |
 
-## Past Events
+## Related
 
-**Webinar recording: [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) (November 26, 2024).**
+| Time    | Description                                                                                                                                                                                                                            |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025-08 | :fontawesome-solid-university: **Master's Thesis, Jose O Hidalgo:** [Command Event Query Separation: A Framework for Modeling Scalable Services](https://www.theseus.fi/handle/10024/897310)                                                         |
+| 2024-11 | :material-video: **Webinar recording:** [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) |
 
 ## Schedule a Call
 
