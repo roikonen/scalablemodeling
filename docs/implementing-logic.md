@@ -64,6 +64,7 @@ $$
 $$
 
 The system can produce the following effects:
+
 - **Command dispatch**: Issuing a command to the system.
 - **Event emission**: Publishing one or more events.
 - **Query invocation**: Executing one or more queries on the system.
@@ -154,7 +155,7 @@ boundaries before executing a command. The term *Gatekeeper* reflects its intend
 introduces risks in its application. A *Gatekeeper* should be used strictly to verify logical conditions.
 
 $$
-f(\text{Command}) \to \{\text{QueryInvocation}\}^* \to \text{CommandDispatch}
+f(\text{Command}) \to \text{QueryInvocation} \to \text{CommandDispatch}
 $$
 
 For example, the *Gatekeeper* ensures the product has been introduced before it can be added to an order. However, if 
