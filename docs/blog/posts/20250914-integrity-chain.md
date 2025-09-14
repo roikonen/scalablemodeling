@@ -99,8 +99,8 @@ The key is to recognize that compensation, consistency and coupling are all leve
 
 In a globally distributed system, models such as products, customers and orders exist in multiple places. Their read copies may lag behind one another. The Integrity Chain embraces this reality:
 
-![Distributed Models](images/20250914-3.png#only-light){ width="300" align=left }  
-![Distributed Models](images/20250914-3-dark.png#only-dark){ width="300" align=left }
+![Distributed Models](images/20250914-3.png#only-light){ width="300" }  
+![Distributed Models](images/20250914-3-dark.png#only-dark){ width="300" }
 
 - **Prevention** at the edge with Gatekeepers
 - **Enforcement** within consistency boundaries via Command Handlers
