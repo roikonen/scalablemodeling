@@ -35,6 +35,9 @@ The chain works as follows:
 
 ## Example: Ordering and Archiving a Product
 
+![Ordering vs Archiving Conflict](images/20250914-2.png#only-light)  
+![Ordering vs Archiving Conflict](images/20250914-2-dark.png#only-dark)
+
 Consider a system where customers can order products, but products can also be archived (removed from sale):
 
 - A customer issues a command to *Order Product X*
@@ -53,9 +56,6 @@ This demonstrates how the Integrity Chain works:
 - **Gatekeeper** prevents many invalid commands but cannot guarantee global freshness
 - **Command Handler** enforces invariants locally and emits authoritative events
 - **Event Handler** detects cross-boundary conflicts and reconciles asynchronously
-
-![Ordering vs Archiving Conflict](images/20250914-2.png#only-light)  
-![Ordering vs Archiving Conflict](images/20250914-2-dark.png#only-dark)
 
 ## Compensating Actions as First-Class Features
 
