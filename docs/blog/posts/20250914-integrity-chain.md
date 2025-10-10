@@ -31,7 +31,7 @@ The chain works as follows:
 
 !!! note
 
-    In addition to the Three Guardians, Scalable Modeling also describes the **Query Handler** and the **Data Processor**. A Query Handler serves read requests by consulting a single view. A Data Processor, on the other hand, combines data from multiple sources or views to maintain derived models. These roles are important but relatively straightforward, so I have not explored them in detail in this post.
+    In addition to the Three Guardians, Scalable Modeling also describes the **Query Handler** and the **Data Aggregator**. A Query Handler serves read requests by consulting a single view. A Data Aggregator, on the other hand, combines data from multiple sources or views to maintain derived models. These roles are important but relatively straightforward, so I have not explored them in detail in this post.
 
 ## Example: Ordering and Archiving a Product
 

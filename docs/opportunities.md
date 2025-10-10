@@ -20,7 +20,7 @@ If these are not familiar to you, please refer to [theory](../theory/) section.
 ![](assets/images/decomposition.png#only-light)
 ![](assets/images/decomposition_dark.png#only-dark)
 
-Decomposition means creating smaller, independently deployable services that together form a system. This involves identifying clear business boundaries where each service owns its commands, events and read models.
+Decomposition means creating smaller, independently deployable services that together form a system. This involves identifying clear business boundaries where each service owns its commands, events and state projections.
 
 - **Clear ownership and isolation**: Services and their development teams operate independently, reducing coordination and integration bottlenecks.
 - **Parallel development**: Features can be built in parallel without contention over shared code or data.
@@ -34,9 +34,9 @@ Decomposition is about slicing systems along domain boundaries to create indepen
 ![](assets/images/duplication.png#only-light)
 ![](assets/images/duplication_dark.png#only-dark)
 
-Duplication in Scalable Modeling context means maintaining multiple read models that subscribe to events from the write model.
+Duplication in Scalable Modeling context means maintaining multiple query models that subscribe to events from the write (command) model.
 
-- **Performance**: Queries target optimized read models without affecting writes.
+- **Performance**: Queries target optimized query models without affecting writes.
 - **Resilience**: Failures in one projection do not impact others.
 - **Recoverability**: Lost projections can be rebuilt by replaying events.
 

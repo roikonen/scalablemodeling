@@ -87,13 +87,13 @@ queries only when there is a clear, well-justified benefit.
 ![](assets/images/policies_timeline.png#only-light)
 ![](assets/images/policies_timeline_dark.png#only-dark)
 
-| Component          | Purpose                                | Key Responsibility                                          | Sync/Async | Consistency Level         |
-| ------------------ | -------------------------------------- | ---------------------------------------------------------- | ---------- | ------------------------- |
-| [**Gatekeeper**](#gatekeeper)     | Validates commands before dispatch     | Enforces business rules with best available state across consistency boundaries | Sync | Best effort, may be stale |
+| Component                               | Purpose                                | Key Responsibility                                          | Sync/Async | Consistency Level         |
+|-----------------------------------------| -------------------------------------- | ---------------------------------------------------------- | ---------- | ------------------------- |
+| [**Gatekeeper**](#gatekeeper)           | Validates commands before dispatch     | Enforces business rules with best available state across consistency boundaries | Sync | Best effort, may be stale |
 | [**Command Handler**](#command-handler) | Executes commands against models       | Applies state changes safely within consistency boundaries | Sync       | Strong, authoritative      |
-| [**Event Handler**](#event-handler)   | Reacts to domain events asynchronously | Updates models, triggers workflows, reconciles             | Async      | Eventual                   |
-| [**Query Handler**](#query-handler)   | Serves read requests efficiently       | Provides data from a single, read-optimized view           | Sync       | Eventually consistent       |
-| [**Data Processor**](#data-processor) | Maintains derived or aggregated models | Combines multiple sources into query-friendly views        | Sync       | Eventually consistent       |
+| [**Event Handler**](#event-handler)     | Reacts to domain events asynchronously | Updates models, triggers workflows, reconciles             | Async      | Eventual                   |
+| [**Query Handler**](#query-handler)     | Serves read requests efficiently       | Provides data from a single, read-optimized view           | Sync       | Eventually consistent       |
+| [**Data Aggregator**](#data-aggregator) | Maintains derived or aggregated models | Combines multiple sources into query-friendly views        | Sync       | Eventually consistent       |
 
 ### Gatekeeper
 
@@ -322,12 +322,12 @@ How can the system efficiently serve read requests without introducing inconsist
 
 **Solution**
 
-Introduce a **Query Handler** that serves queries from a *single, read-optimized view*.  
-The view is maintained asynchronously and may lag slightly behind the write model but guarantees fast, consistent access within its scope.
+Introduce a **Query Handler** that serves queries from a *single, read-optimized state projection*.  
+The state projection may be maintained asynchronously and may lag slightly behind but guarantees fast, consistent access within its scope.
 
 **Implementation**
 
-- Maintain **read-optimized views** (materialized views, read replicas, denormalized tables)
+- Maintain **read-optimized state projections**
 - Apply **caching** where appropriate
 - Ensure each query retrieves data from **one view only**
 - Optionally expose version or timestamp metadata to indicate view staleness
@@ -353,13 +353,13 @@ The view is maintained asynchronously and may lag slightly behind the write mode
 
 **Related Patterns**
 
-- **Data Processor**: Maintains derived models or multi-source projections
+- **Data Aggregator**: Maintains derived models or multi-source projections
 - **Event Handler**: Updates the single view consumed by the Query Handler
 
-### Data Processor
+### Data Aggregator
 
-![](assets/images/policies_data_processor.png#only-light)
-![](assets/images/policies_data_processor_dark.png#only-dark)
+![](assets/images/policies_data_aggregator.png#only-light)
+![](assets/images/policies_data_aggregator_dark.png#only-dark)
 
 **Context**
 
@@ -380,7 +380,7 @@ How can derived models be kept correct and reasonably fresh when they depend on 
 
 **Solution**
 
-Introduce a **Data Processor** that:
+Introduce a **Data Aggregator** that:
 
 - Performs more than one query against two or more sources or views
 - Joins or merges the results and computes derived fields as needed
@@ -405,7 +405,7 @@ Introduce a **Data Processor** that:
 
 - Applications can issue one logical request instead of managing multiple queries themselves
 - Cross-source data can be combined into a single, coherent response
-- Query complexity is centralized in the Data Processor, not spread across clients
+- Query complexity is centralized in the Data Aggregator, not spread across clients
 - Overall system remains simpler because consumers depend on one result rather than many sources
 
 
@@ -420,7 +420,7 @@ Introduce a **Data Processor** that:
 
 **Related Patterns**
 
-- **Query Handler**: Reads from derived views maintained by the Data Processor
+- **Query Handler**: Reads from derived views maintained by the Data Aggregator
 
 ## Hotspots and Descriptions
 

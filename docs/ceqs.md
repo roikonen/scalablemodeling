@@ -16,9 +16,9 @@ scalability. Their asynchronous nature enables loose coupling between services, 
 to be queried or streamed as an accurate record of what has occurred within the system.
 
 Immutability ensures that events are append-only, enabling distributed systems to replicate and process data 
-consistently across services without conflicts. **Immutable streams of private events allow new query models to be 
+consistently across services without conflicts. **Immutable streams of private events allow new state projections to be 
 projected at any point in a system's lifespan.** In CEQS, model separation (command vs. query) is not strictly enforced 
-from day one. When increased complexity, scalability, or usability demands arise, query models can be introduced as 
+from day one. When increased complexity, scalability, or usability demands arise, new state projections can be introduced as 
 needed. This flexibility means that, unlike in CQRS, in CEQS **model separation is not always necessary upfront**.
 
 Commands, Events and Queries each serve as distinct interfaces to a service:
@@ -90,8 +90,8 @@ Unlike in CQRS:
   Events are treated as core domain concepts, not just side effects or integration tools. They are on equal footing with commands and queries.
 
 - **Gradual query model evolution**  
-  The query model is structurally the same as the command model but without command handlers (i.e. business validation). This allows teams to start with a unified model and separate it only when needed.  
-  For example, you might start with a `User` aggregate used in both commands and queries. Later, if your query load grows or you need specialized views (e.g. user lists), you can evolve the query model independently, by projecting events to form a separate model.
+  The query model is structurally the similar state projection as the command model but without command handlers (i.e. business validation). This allows teams to start with a unified model and separate it only when needed.  
+  For example, you might start with an `User` projection used in both commands and queries. Later, if your query load grows or you need specialized views (e.g. user lists), you can evolve the projection independently, by projecting events to form a separate projection.
 
 - **More focus on evolvability**  
   Events help systems adapt and grow over time without requiring major rewrites or early rigid structures.

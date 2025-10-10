@@ -83,7 +83,7 @@ Returning to the business logic: it can be implemented by using three types of p
 **Command Handlers**, **Event Handlers** & **Gatekeepers** - all functions. Other parts of the system primarily deal 
 with wiring, integration or restructuring data.
 
-Ideally, business logic is implemented within the **command model**, but due to the need for distribution
+Ideally, business logic is implemented within the **command model** which consist of command handler and state or state projection, but due to the need for distribution
 and managing cognitive load, not all business logic can remain in the command models alone.
 
 ![](assets/images/business_logic.png#only-light)
@@ -99,7 +99,7 @@ and managing cognitive load, not all business logic can remain in the command mo
 
 ### Command Handler
 
-This is the core of the system where the "magic" happens. Commands are validated and applied against the command model, 
+This is the core of the system where the "magic" happens. Commands are validated and applied against the stat or state projection, 
 causing the state to evolve.
 
 $$

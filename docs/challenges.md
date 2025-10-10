@@ -42,9 +42,9 @@ strict consistency boundaries are not critical.
 ![](assets/images/time_travel.png#only-light)
 ![](assets/images/time_travel_dark.png#only-dark)
 
-When using **CQRS** with eventually consistent read models, the system's read models may reflect different points in 
+When using **CQRS** with eventually consistent read models or state projections in CEQS, the system's state projections may reflect different points in 
 time due to the delay in propagating updates. This allows for a form of "time travel," where users can observe data at 
-various stages of consistency. As new events are processed, the read model gradually "catches up" with the latest state. 
+various stages of consistency. As new events are processed, the state projection gradually "catches up" with the latest state. 
 However, during this period, the system might expose outdated or future-looking states, effectively letting users or 
 systems "travel" between these states.
 
@@ -55,7 +55,7 @@ most recent state.
 As a result, combining data from these sources may yield conflicting or incoherent views of the overall system. This 
 inconsistency poses a challenge when trying to form a unified or accurate perspective of the current state. To mitigate 
 these issues, designers need to carefully consider the timing and aggregation of data to avoid misleading or 
-inconsistent results, especially in cases where decisions are being made based on these read models.
+inconsistent results, especially in cases where decisions are being made based on these state projections.
 
 !!! tip "Avoiding Loops to Prevent Time Travel"
 
