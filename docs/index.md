@@ -87,8 +87,6 @@ This methodology isn't about upfront complexity or building features you don't n
 
 Whether you're starting a new project or looking to refactor an existing system, Scalable Modeling provides the conceptual tools to make evolution easier. When your system needs to handle more load or complexity, you'll have an architecture that can adapt rather than one that must be rebuilt.
 
-Whether you're starting a new project or looking to refactor an existing system, Scalable Modeling provides the conceptual tools to design for growth. The following sections will guide you through the practical application of these principles, helping you build systems where growth becomes an advantage rather than an obstacle.
-
 ## License For Using the Pictures
 
 ![](assets/images/copyright.png#only-light){ width="200" }

@@ -99,7 +99,7 @@ and managing cognitive load, not all business logic can remain in the command mo
 
 ### Command Handler
 
-This is the core of the system where the "magic" happens. Commands are validated and applied against the stat or state projection, 
+This is the core of the system where the "magic" happens. Commands are validated and applied against the state or state projection, 
 causing the state to evolve.
 
 $$

@@ -31,7 +31,7 @@ That’s why Scalable Modeling puts them front and center.
 
         "Doing the wrong thing right is not nearly as good as doing the right thing wrong."
 
-        _**Russel L. Ackoff**_
+        _**Russell L. Ackoff**_
 
 -   !!! tip
 

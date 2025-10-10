@@ -11,7 +11,7 @@ Let’s face it, some folks are just easy to work with, and it doesn’t always 
 
 ## Why do I believe being easy to work with is especially important in software engineering?
 
-Software is ultimately a **model**, a conceptual solution that, while invisible, solves real-world challenges. In software engineering, two things matter: the **conceptual solution** (designing the _what_) and how it is **implemented** (developing the _how_). End users usually care much less about the technical details than about how well the solution solves their problems, so **conceptual solution** needs to be rock solid. This is where things like **Domain-Driven Design**, **Systems Thinking** & **Residuality Theory** for example, can help.
+Software is ultimately a **model**, a conceptual solution that, while invisible, solves real-world challenges. In software engineering, two things matter: the **conceptual solution** (designing the _what_) and how it is **implemented** (developing the _how_). End users usually care much less about the technical details than about how well the solution solves their problems, so **conceptual solution** needs to be rock solid. This is where things like **Domain-Driven Design**, **Systems Thinking** & **Residuality Theory**, for example, can help.
 
 ![20241001-1.png](images/20241001-1.png)
 

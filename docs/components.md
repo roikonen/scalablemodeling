@@ -9,6 +9,11 @@ Scalable Modeling uses the following components to model scalable systems.
   - [Commands and State](#commands-and-state)
   - [Queries](#queries)
   - [Policies](#policies)
+    - [Gatekeeper](#gatekeeper)
+    - [Command Handler](#command-handler)
+    - [Event Handler](#event-handler)
+    - [Query Handler](#query-handler)
+    - [Data Aggregator](#data-aggregator)
   - [Hotspots and Descriptions](#hotspots-and-descriptions)
   - [Consistency Boundaries](#consistency-boundaries)
 
@@ -316,7 +321,7 @@ How can the system efficiently serve read requests without introducing inconsist
 | Force           | Description                                                                   |
 | --------------- | ----------------------------------------------------------------------------- |
 | **Freshness**   | Queries require reasonably current data but strict consistency may be relaxed |
-| **Performance** | Reads must be fast, joins across many sources slow responses                  |
+| **Performance** | Reads must be fast, joins across many sources slow down responses             |
 | **Scalability** | The view must handle large volumes of queries efficiently                     |
 | **Isolation**   | Query workload should not interfere with write workload                       |
 

@@ -22,7 +22,7 @@ To spice up the scenario, let’s add a second boundary in addition to technolog
 
 ![20240312-2.png](images/20240312-2.png)
 
-When speaking the same (technological or other) ubiquitous language, the communication is much more efficient. Same thing when communicating face to face - it just is more effortless than communication via technical communication channels.
+When speaking the same (technological or other) ubiquitous language, the communication is much more efficient. Same thing when communicating face to face, it is just more effortless than communication via technical communication channels.
 
 ## Communication follows the path of least resistance
 
@@ -63,7 +63,7 @@ Conclusions from the article “How Do Committees Invent?” by Melvin Conway
 
 While Conway’s Law is a conceptual framework rather than a law in the scientific sense, there is empirical evidence and anecdotal support that suggests its validity in various contexts. Several case studies and observations in the field of software development and organizational behavior provide evidence that aligns with Conway’s Law.
 
-Understanding Conway’s Law provides a roadmap for intentional and positive architectural design and raises the question: **Should you design your organization with the awareness that how your teams are structured will inevitably shape the software they create?** Answer is, yes.
+Understanding Conway’s Law provides a roadmap for intentional and positive architectural design and raises the question: **Should you design your organization with the awareness that how your teams are structured will inevitably shape the software they create?** The answer is yes.
 
 ## Guiding force for positive change
 
@@ -80,4 +80,4 @@ By intentionally incorporating these principles into your organizational structu
 
 ## Conclusions
 
-As communication follows the path of least resistance and as building a larger scale solution is all about communication it is natural that the architecture starts to resemble the natural communication flows within the organization building it. We can leverage this by encouraging cross-functional collaboration, making team structures flexible, opening communication restrictions and putting effort into sharing vision and goals. The software architecture and communication structures go hand in hand and therefore software architecture is sociotechnical discipline.
+As communication follows the path of least resistance and as building a larger scale solution is all about communication it is natural that the architecture starts to resemble the natural communication flows within the organization building it. We can leverage this by encouraging cross-functional collaboration, making team structures flexible, opening communication restrictions and putting effort into sharing vision and goals. The software architecture and communication structures go hand in hand and therefore software architecture is a sociotechnical discipline.
