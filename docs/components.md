@@ -93,9 +93,9 @@ queries only when there is a clear, well-justified benefit.
 ![](assets/images/policies_timeline_dark.png#only-dark)
 
 | Component                               | Purpose                                | Key Responsibility                                          | Sync/Async | Consistency Level         |
-|-----------------------------------------| -------------------------------------- | ---------------------------------------------------------- | ---------- | ------------------------- |
+|-----------------------------------------|----------------------------------------| ---------------------------------------------------------- | ---------- | ------------------------- |
 | [**Gatekeeper**](#gatekeeper)           | Validates commands before dispatch     | Enforces business rules with best available state across consistency boundaries | Sync | Best effort, may be stale |
-| [**Command Handler**](#command-handler) | Executes commands against models       | Applies state changes safely within consistency boundaries | Sync       | Strong, authoritative      |
+| [**Command Handler**](#command-handler) | Executes commands against state        | Applies state changes safely within consistency boundaries | Sync       | Strong, authoritative      |
 | [**Event Handler**](#event-handler)     | Reacts to domain events asynchronously | Updates models, triggers workflows, reconciles             | Async      | Eventual                   |
 | [**Query Handler**](#query-handler)     | Serves read requests efficiently       | Provides data from a single, read-optimized view           | Sync       | Eventually consistent       |
 | [**Data Aggregator**](#data-aggregator) | Maintains derived or aggregated models | Combines multiple sources into query-friendly views        | Sync       | Eventually consistent       |
