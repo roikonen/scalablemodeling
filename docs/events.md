@@ -8,7 +8,7 @@ Events are **things that have happened** in the domain (e.g. `OrderPlaced`, `Pay
 
 - ✅ "OrderPlaced" happened  
 - ✅ "EmailSent" happened  
-- ❌ "ShouldSendEmail" is not a fact, it’s an intent  
+- ❌ "SendEmail" is not a fact, it’s an intent  
 
 Events are also **immutable**: once they occur, they cannot be changed. This immutability makes them a reliable record of what actually happened, supporting **auditing**, **debugging** and **replayable workflows**.
 
