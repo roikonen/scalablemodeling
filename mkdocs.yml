@@ -14,25 +14,26 @@ site_description: >-
 
 # Page tree
 nav:
-  - What?: index.md
-  - Why?:
-    - Events: events.md
-    - Development Velocity & Quality: velocity-quality.md
-    - Scalability: scalability.md
-    - Resilience & Responsiveness: resilience.md
-  - How?:
-    - Shift Left: shift-left.md
-    - Start From Events: start-from-events.md
-    - Theory: theory.md
-    - Opportunities: opportunities.md
-    - CEQS: ceqs.md
-    - Components: components.md
-    - Challenges: challenges.md
-    - Implementing Logic: implementing-logic.md
-  - Who?:
-    - Author: simo-roikonen.md
-    - Credits: credits.md
-  - When?: when.md
+  - Introduction: index.md
+  - Benefits:
+      - Development Velocity & Quality: velocity-quality.md
+      - Scalability: scalability.md
+      - Resilience & Responsiveness: resilience.md
+  - Core Principles:
+      - Event Modeling & Business Truth: events.md
+      - Shift Left & Feedback Loops: shift-left.md
+      - Core Theory & Patterns: theory.md
+  - Modeling Methodology:
+      - Event-Driven Modeling: start-from-events.md
+      - Opportunities: opportunities.md
+      - CEQS Pattern: ceqs.md
+      - Components: components.md
+      - Implementing Business Logic: implementing-logic.md
+      - Challenges: challenges.md
+  - About:
+      - Author: simo-roikonen.md
+      - Credits: credits.md
+      - Version History: when.md
   - Blog:
       - blog/index.md
 
