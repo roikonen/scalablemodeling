@@ -12,7 +12,7 @@ decisions and produce outputs.
 immutable snapshot of information. Often, events are related to space in addition to time, but due to their 
 immutability, their replicated 'echoes' move between services.
 
-![type:video](https://www.youtube.com/watch?v=QXCLfQrqbiI)
+![type:video](https://www.youtube.com/embed/QXCLfQrqbiI)
 
 So, instead of focusing too much on the **space** between services, consider the **flow of events** and how services
 evolve over **time**.
