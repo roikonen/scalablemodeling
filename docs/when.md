@@ -15,9 +15,15 @@
 
 | Time    | Description                                                                                                                                                                                                                            |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025-12 | :material-youtube: **Webinar:** [Scalable Modeling: Why & What?](https://youtu.be/gLB4ghyie24)       
 | 2025-08 | :fontawesome-solid-university: **Master's Thesis, Jose O Hidalgo:** [Command Event Query Separation: A Framework for Modeling Scalable Services](https://www.theseus.fi/handle/10024/897310)                                                         |
 | 2024-11 | :material-video: **Webinar recording:** [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) |
 
 ## Schedule a Call
 
 [:material-calendar-clock: Schedule a Call](https://app.reclaim.ai/m/simo-roikonen/meeting){ .md-button }
+
+## Follow
+
+* [:material-youtube: Scalable Modeling Youtube Channel](https://www.youtube.com/channel/UC9fdPMb212MQvrxaYuSKqBA)
+* [:material-linkedin: Scalable Modeling Public Group](https://www.linkedin.com/groups/16190050/)
