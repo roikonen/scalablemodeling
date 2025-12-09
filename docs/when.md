@@ -15,8 +15,9 @@
 
 | Time    | Description                                                                                                                                                                                                                            |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2025-12 | :material-youtube: **Webinar:** [Scalable Modeling: Why & What?](https://youtu.be/gLB4ghyie24)       
-| 2025-08 | :fontawesome-solid-university: **Master's Thesis, Jose O Hidalgo:** [Command Event Query Separation: A Framework for Modeling Scalable Services](https://www.theseus.fi/handle/10024/897310)                                                         |
+| 2025-12 | :material-youtube: **Podcast - Episode 2:** [Scalable Modeling: How to do temporal modeling?](https://youtu.be/kC0KmjRq0yk)                                                                                                                             |
+| 2025-12 | :material-youtube: **Podcast - Episode 1:** [Scalable Modeling: Why & What?](https://youtu.be/gLB4ghyie24)                                                                                                                             |
+| 2025-08 | :fontawesome-solid-university: **Master's Thesis, Jose O Hidalgo:** [Command Event Query Separation: A Framework for Modeling Scalable Services](https://www.theseus.fi/handle/10024/897310)                                           |
 | 2024-11 | :material-video: **Webinar recording:** [Software engineering for the future: Fast, scalable and built to last](https://www.twoday.fi/en/content/webinars/webinar-software-engineering-for-the-future-fast-scalable-and-built-to-last) |
 
 ## Schedule a Call
