@@ -15,6 +15,8 @@
 
 | Time    | Description                                                                                                                                                                                                                            |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025-12 | :material-youtube: **Podcast - Episode 4:** [Scalable Modeling: Implementing Growth-ready Systems](https://youtu.be/EhCwwz6EAyI)   
+| 2025-12 | :material-youtube: **Podcast - Episode 3:** [Scalable Modeling: How to do spatial modeling?](https://youtu.be/bRsY08pnb6U)   
 | 2025-12 | :material-youtube: **Podcast - Episode 2:** [Scalable Modeling: How to do temporal modeling?](https://youtu.be/kC0KmjRq0yk)                                                                                                                             |
 | 2025-12 | :material-youtube: **Podcast - Episode 1:** [Scalable Modeling: Why & What?](https://youtu.be/gLB4ghyie24)                                                                                                                             |
 | 2025-08 | :fontawesome-solid-university: **Master's Thesis, Jose O Hidalgo:** [Command Event Query Separation: A Framework for Modeling Scalable Services](https://www.theseus.fi/handle/10024/897310)                                           |
