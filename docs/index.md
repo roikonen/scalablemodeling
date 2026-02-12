@@ -1,12 +1,12 @@
 # What is Scalable Modeling?
 
-## The Problem: When Growth Becomes Your Enemy
+## The Problem
 
 Most software systems start small and simple. A single server, a straightforward database, perhaps a monolithic application that handles everything. This works beautifully until it doesn't. As user demand grows, what once was your advantage (rapid development, simple deployment) becomes your constraint. Database queries slow down, servers crash under load, and making changes feels like performing surgery on a patient that can't be anesthetized.
 
 The traditional response? _"We'll scale when we need to."_ But by then, you're redesigning fundamental architecture under pressure, with users waiting and revenue at stake. It's like trying to widen a highway during rush hour.
 
-## The Solution: Design Patterns That Scale Naturally
+## Design Patterns That Scale Naturally
 
 ![](assets/images/scalable_modeling_components.png#only-light)
 ![](assets/images/scalable_modeling_components_dark.png#only-dark)
@@ -80,12 +80,6 @@ Software engineering involves three critical phases:
 ![](assets/images/why_what_how_dark.png#only-dark)
 
 Scalable Modeling serves as an opinionated bridge from WHY to HOW, with primary focus on the WHAT. By investing in conceptual modeling before implementation, you iterate faster and cheaper. Changing a diagram is typically orders of magnitude easier than refactoring production code. CEQS provides guardrails for the HOW, ensuring your implementation choices support scalability.
-
-## Your Journey Ahead
-
-This methodology isn't about upfront complexity or building features you don't need yet. It's about choosing patterns and structures that naturally accommodate growth. You can start with a simple implementation and evolve it incrementally as your requirements change.
-
-Whether you're starting a new project or looking to refactor an existing system, Scalable Modeling provides the conceptual tools to make evolution easier. When your system needs to handle more load or complexity, you'll have an architecture that can adapt rather than one that must be rebuilt.
 
 ## License For Using the Pictures
 
