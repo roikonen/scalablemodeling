@@ -1,0 +1,1754 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Modeling technique for designing scalable systems. Any system aiming for growth should  be designed with scalability in mind, as early consideration of scalability is often  essential for long-term success. Scalable Modeling helps to design in a way that enables  future growth, even if you're not scaling yet.">
+      
+      
+        <meta name="author" content="Simo Roikonen">
+      
+      
+        <link rel="canonical" href="https://roikonen.github.io/scalablemodeling/blog/">
+      
+      
+        <link rel="prev" href="../when/">
+      
+      
+        <link rel="next" href="archive/2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Blog - Scalable Modeling</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-5XSR0TN5K3"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-5XSR0TN5K3",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-5XSR0TN5K3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Scalable Modeling" class="md-header__button md-logo" aria-label="Scalable Modeling" data-md-component="logo">
+      
+  <img src="../assets/logo_100x100.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scalable Modeling
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange" aria-label="Light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange" aria-label="Dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Scalable Modeling" class="md-nav__button md-logo" aria-label="Scalable Modeling" data-md-component="logo">
+      
+  <img src="../assets/logo_100x100.png" alt="logo">
+
+    </a>
+    Scalable Modeling
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benefits
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benefits
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../velocity-quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development Velocity &amp; Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scalability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scalability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resilience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resilience &amp; Responsiveness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Principles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Modeling &amp; Business Truth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift Left &amp; Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Theory &amp; Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modeling Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-from-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event-Driven Modeling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opportunities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Opportunities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ceqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CEQS Pattern
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementing-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementing Business Logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simo-roikonen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Author
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version History
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="blog">Blog</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-09-14 00:00:00+00:00">September 14, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-integrity-chain-guardians-of-distributed-systems"><a class="toclink" href="2025/09/14/integrity-chain/">The Integrity Chain: Guardians of Distributed Systems</a></h2>
+<p>Distributed systems cannot escape their fundamental limits:</p>
+<ul>
+<li>Communication across nodes, services or geographies is never instantaneous</li>
+<li>Network latency, partitions and the speed of light guarantee that <strong>eventual consistency</strong> is the default state</li>
+</ul>
+<p>Yet systems must still process requests, enforce business rules and maintain integrity. To cope with these realities, I use a set of recurring patterns in <strong><a href="https://roikonen.github.io/scalablemodeling">Scalable Modeling</a></strong> that form the foundation for growth-ready scalable systems.</p>
+<p>I call them the <strong>Three Guardians</strong>, and together they form the <strong>Integrity Chain</strong>:</p>
+<ul>
+<li><strong><a href="https://roikonen.github.io/scalablemodeling/components/#gatekeeper">Gatekeeper</a></strong>: the front-line validator that filters commands <strong>across consistency boundaries</strong> before they reach execution</li>
+<li><strong><a href="https://roikonen.github.io/scalablemodeling/components/#command-handler">Command Handler</a></strong>: the authoritative validator and executor of state changes <strong>inside a single consistency boundary</strong></li>
+<li><strong><a href="https://roikonen.github.io/scalablemodeling/components/#event-handler">Event Handler</a></strong>: the <strong>asynchronous reactor</strong> that makes sure all parts of the system catch up after domain facts are published</li>
+</ul>
+<p>The chain works as follows:</p>
+<ol>
+<li>A command is checked by a Gatekeeper across consistency boundaries</li>
+<li>If accepted, it is passed to a Command Handler, which validates it synchronously within its own consistency boundary and either executes it or rejects it</li>
+<li>The Command Handler produces events as facts when state changes occur</li>
+<li>Event Handlers consume these events and drive reactions across the system</li>
+</ol>
+<p><img alt="Integrity Chain Overview" src="images/20250914-1.png#only-light"><br>
+<img alt="Integrity Chain Overview" src="images/20250914-1-dark.png#only-dark"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In addition to the Three Guardians, Scalable Modeling also describes the <strong>Query Handler</strong> and the <strong>Data Aggregator</strong>. A Query Handler serves read requests by consulting a single view. A Data Aggregator, on the other hand, combines data from multiple sources or views to maintain derived models. These roles are important but relatively straightforward, so I have not explored them in detail in this post.</p>
+</div>
+<h3 id="example-ordering-and-archiving-a-product"><a class="toclink" href="2025/09/14/integrity-chain/#example-ordering-and-archiving-a-product">Example: Ordering and Archiving a Product</a></h3>
+<p><img alt="Ordering vs Archiving Conflict" src="images/20250914-2.png#only-light"><br>
+<img alt="Ordering vs Archiving Conflict" src="images/20250914-2-dark.png#only-dark"></p>
+<p>Consider a system where customers can order products, but products can also be archived (removed from sale):</p>
+<ul>
+<li>A customer issues a command to <em>Order Product X</em></li>
+<li>The <strong>Gatekeeper</strong> checks that Product X exists and forwards the command</li>
+<li>The <strong>Command Handler</strong> for the order validates the customer account and records the order if valid</li>
+<li>The <strong>Event Handler</strong> later reacts to the <em>OrderPlaced</em> event and updates projections</li>
+</ul>
+<p>At the same time, an administrator issues a command to <em>Archive Product X</em>:</p>
+<ul>
+<li>The <strong>Gatekeeper</strong> for product archiving checks for open orders, but due to distribution it may see stale state and allow the archive request to pass</li>
+<li>The <strong>Command Handler</strong> archives Product X inside its consistency boundary and emits <em>ProductArchived</em></li>
+<li>The <strong>Event Handler</strong> consumes this event, queries for open orders of Product X and issues compensating actions such as canceling those orders and refunding customers. It waits long enough for the open orders view to catch up so it reflects all orders for Product X after the product was archived.</li>
+</ul>
+<p>This demonstrates how the Integrity Chain works:</p>
+<ul>
+<li><strong>Gatekeeper</strong> prevents many invalid commands but cannot guarantee global freshness</li>
+<li><strong>Command Handler</strong> enforces invariants locally and emits authoritative events</li>
+<li><strong>Event Handler</strong> detects cross-boundary conflicts and reconciles asynchronously</li>
+</ul>
+<h3 id="compensating-actions-as-first-class-features"><a class="toclink" href="2025/09/14/integrity-chain/#compensating-actions-as-first-class-features">Compensating Actions as First-Class Features</a></h3>
+<p>In distributed systems <strong>compensating actions</strong> are not merely technical cleanups. They are <strong>first-class business features</strong> and just as important as the original actions that triggered the need for correction.</p>
+<p>It is rarely enough to simply <em>delete</em> or <em>undo</em> an operation. In complex domains such as logistics or finance values and states are constantly changing. An order may affect billing, a shipment may alter routing, an invoice may trigger tax reports. If a mistake occurs after one of these actions a dedicated correction process must be triggered. These processes must be explicitly modeled as part of the business domain.</p>
+<p>Examples include:</p>
+<ul>
+<li><strong>Billing and payments</strong>: A correction flow issues refunds or credit notes rather than silently rolling back the invoice</li>
+<li><strong>Logistics</strong>: A compensating flow reroutes trucks, updates manifests or notifies partners</li>
+<li><strong>Regulation</strong>: A correction flow files a new report rather than erasing the old one</li>
+</ul>
+<p>These compensation and correction flows handle the inevitable <strong>gaps between feasibility checks and actual execution</strong> in distributed systems. They ensure not only technical consistency but also <strong>real-world accountability</strong> especially in domains where financial or regulatory stakeholders are involved. Ignoring them leads to messy downstream edits and fragile workarounds.</p>
+<p>In the Integrity Chain <strong>Event Handlers</strong> are the natural home for modeling such flows since they react asynchronously to established facts and can drive corrective action across boundaries.</p>
+<h3 id="tradeoffs-in-handling-the-archive-order-race"><a class="toclink" href="2025/09/14/integrity-chain/#tradeoffs-in-handling-the-archive-order-race">Tradeoffs in Handling the Archive-Order Race</a></h3>
+<p>When a product is archived at the same time as new orders are placed, the system must reconcile the conflict. There are several ways to do this, each with different tradeoffs:</p>
+<ul>
+<li><strong>Rely on views and compensate later</strong>: Archive first, then let an Event Handler query an eventually consistent view of open orders. Once the view has caught up, compensating actions cancel or refund invalid orders. This keeps product and order flows loosely coupled, but reconciliation is delayed and customers may briefly see invalid orders.</li>
+</ul>
+<p><img alt="Delayed compensation through Event Handler" src="images/20250914-2.png#only-light" width="800"><br>
+<img alt="Delayed compensation through Event Handler" src="images/20250914-2-dark.png#only-dark" width="800"></p>
+<ul>
+<li><strong>Compensate immediately</strong>: When a product is archived, there is a short window where new orders may still slip in. If an order attempts to register to a product that has already been archived, the product rejects the registration. When the Event Handler sees this rejection, it issues a compensating action such as canceling the order.</li>
+</ul>
+<p><img alt="Immediate compensation during archival" src="images/20250914-4.png#only-light" width="600"><br>
+<img alt="Immediate compensation during archival" src="images/20250914-4-dark.png#only-dark" width="600"></p>
+<p>No single option is universally correct. The choice depends on the domain:</p>
+<ul>
+<li>Finance may favor immediate compensation to protect against invalid transactions</li>
+<li>E-commerce may accept delayed reconciliation for looser coupling and higher throughput</li>
+<li>Logistics may mix strategies, blocking for some operations while reconciling asynchronously for others</li>
+</ul>
+<p>The key is to recognize that compensation, consistency and coupling are all levers. Each domain must strike its own balance.</p>
+<h3 id="why-this-matters"><a class="toclink" href="2025/09/14/integrity-chain/#why-this-matters">Why This Matters</a></h3>
+<p>In a globally distributed system, models such as products, customers and orders exist in multiple places. Their read copies may lag behind one another. The Integrity Chain embraces this reality:</p>
+<p><img alt="Distributed Models" src="images/20250914-3.png#only-light" width="300"><br>
+<img alt="Distributed Models" src="images/20250914-3-dark.png#only-dark" width="300"></p>
+<ul>
+<li><strong>Prevention</strong> at the edge with Gatekeepers</li>
+<li><strong>Enforcement</strong> within consistency boundaries via Command Handlers</li>
+<li><strong>Reconciliation</strong> across the system through Event Handlers</li>
+</ul>
+<p>The result is integrity without requiring impossible global synchrony.</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-08-08 00:00:00+00:00">August 8, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              6 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="softwares-real-cost-is-building-wrong-features"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/">Software’s Real Cost Is Building Wrong Features</a></h2>
+<p>Every year companies spend millions building software that looks right in a demo but collects dust in production. The issue is not lazy engineers or indecisive stakeholders. It is a gap in understanding between the people who know the problem and the people who write the code.</p>
+<p>This perspective draws on both global studies and recent Nordic research to show why teams ship features nobody uses and how to stop it.</p>
+<p>The result: bloated backlogs, features that miss the mark and a steady drain on budget. An often-cited figure from an early 2000s Standish Group report suggests that around <strong>64% of features</strong> in delivered software saw little or no use<sup id="fnref:1"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:1">1</a></sup>. More recent large-scale product analytics paint an even starker picture: Pendo’s 2019 Feature Adoption Report, based on usage data from over 600 companies, found that about <strong>80% of features</strong> were rarely or never used<sup id="fnref:2"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:2">2</a></sup>. While the exact percentage varies between studies, the underlying pattern that many features go unused remains widely observed. If you are funding those features you are paying for waste.</p>
+<p>The good news is that many of the most expensive misunderstandings can be addressed before the first line of code is written. Coding will still raise new questions but with a shared understanding in place those iterations are faster, cheaper and far less painful.</p>
+<h3 id="why-this-problem-hurts-the-bottom-line"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#why-this-problem-hurts-the-bottom-line">Why This Problem Hurts the Bottom Line</a></h3>
+<p>Misunderstood requirements create a chain reaction of cost overruns and missed value.</p>
+<ul>
+<li>NASA’s own analysis shows that fixing a requirements defect during design can be <strong>3× to 8×</strong> more expensive than catching it in the requirements phase. In integration and test phases the cost jumps to <strong>21× to 78×</strong>, and in extreme cases (when found in production) it can exceed <strong>1 500×</strong><sup id="fnref:3"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:3">3</a></sup></li>
+<li>Research by Barry Boehm and others has shown that <strong>30–50% of development effort</strong> is often spent on avoidable rework, much of it caused by misunderstood or incomplete requirements<sup id="fnref:4"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:4">4</a></sup></li>
+<li>In a Nordic study, engineers spent over <strong>16 hours per week</strong> in meetings, much of it dealing with misunderstandings that could have been avoided through earlier shared understanding<sup id="fnref2:5"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:5">5</a></sup></li>
+<li>A Swedish multi-company study found that weak alignment between requirements work and testing leads to rework, quality defects and delivery delays even when stakeholders believe they have a shared understanding<sup id="fnref3:6"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:6">6</a></sup></li>
+</ul>
+<p>These are not just statistics. They are your budget leaking out of the project one misunderstanding at a time.</p>
+<h3 id="how-the-gap-opens"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#how-the-gap-opens">How the Gap Opens</a></h3>
+<p><img alt="20250808-1.png" src="images/20250808-1.png#only-light"><br>
+<img alt="20250808-1-dark.png" src="images/20250808-1-dark.png#only-dark"></p>
+<p>When a project jumps from <strong>Purpose &amp; Problem</strong> (<em>Why</em>) straight to <strong>Implementation</strong> (<em>How</em>), there is no shared bridge between the two.</p>
+<p>Domain experts focus on why the software is needed and who needs it. Engineers focus on how it will be implemented.</p>
+<p>Without a shared middle ground, intent is often lost. The result is software that works technically but fails to solve the real problem, leading to expensive rework and wasted features.</p>
+<p>In the Nordic study, many of those <strong>16 hours per week</strong> spent in meetings were used to realign teams after these gaps emerged. Instead of moving work forward, time was spent repairing shared understanding that should have been built before implementation began<sup id="fnref:5"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:5">5</a></sup>.</p>
+<p>The Swedish study showed a similar pattern. Requirements and testing teams often worked from different assumptions, lacked traceability between specifications and verification steps and coordinated too late. This fragmented approach slowed delivery and created duplicate effort<sup id="fnref:6"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:6">6</a></sup>.</p>
+<h3 id="closing-the-gap"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#closing-the-gap">Closing the Gap</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"There is nothing so useless as doing efficiently that which should not be done at all."</p>
+<p><em><strong>Peter F. Drucker</strong></em></p>
+</div>
+<p><img alt="20250808-2.png" src="images/20250808-2.png#only-light"><br>
+<img alt="20250808-2-dark.png" src="images/20250808-2-dark.png#only-dark"></p>
+<p>The missing link is the <strong>Conceptual Model</strong> (<em>What</em>).</p>
+<p>This is the shared understanding of how the solution will address the purpose and problem. It is built collaboratively between domain experts, engineers, architects and designers before implementation begins.</p>
+<p>By making the <strong>Conceptual Model</strong> explicit, teams ensure:</p>
+<ul>
+<li>The purpose is understood</li>
+<li>The scope is clear</li>
+<li>The transition from concept to implementation is smooth</li>
+</ul>
+<h3 id="why-early-alignment-saves-money"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#why-early-alignment-saves-money">Why Early Alignment Saves Money</a></h3>
+<p><img alt="20250808-3.png" src="images/20250808-3.png#only-light"><br>
+<img alt="20250808-3-dark.png" src="images/20250808-3-dark.png#only-dark"></p>
+<p>Iteration cost is low when teams adjust at the <strong>Conceptual Model</strong> stage. Feedback at this level is fast, inexpensive and easy to act on.</p>
+<p>Once a project moves into <strong>Implementation</strong>, changes become far more expensive and slow to deliver.</p>
+<p>Early alignment does not remove the need for iteration. It ensures that when new questions or discoveries come up during coding they can be addressed faster, with fewer side effects and at a much lower cost.</p>
+<p>Validating the <strong>Purpose &amp; Problem</strong> and the <strong>Conceptual Model</strong> early gives teams:</p>
+<ul>
+<li>Cheaper changes</li>
+<li>Faster learning cycles</li>
+<li>Fewer costly surprises in delivery</li>
+</ul>
+<h3 id="tools-that-close-the-gap"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#tools-that-close-the-gap">Tools That Close the Gap</a></h3>
+<h4 id="domain-driven-design-ddd"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#domain-driven-design-ddd">Domain-Driven Design (DDD)</a></h4>
+<p>DDD is a way to embed the business language directly into the design and code.</p>
+<ul>
+<li><strong>Ubiquitous Language</strong> locks meaning to agreed terms</li>
+<li><strong>Bounded Contexts</strong> prevent rules from bleeding across domains</li>
+<li><strong>Collaborative modeling</strong> ensures experts stay involved until the intent is clear</li>
+</ul>
+<p>These practices also address one of the Swedish study’s key findings that closer, earlier collaboration between requirements and testing roles improves alignment and reduces wasted effort<sup id="fnref2:6"><a class="footnote-ref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fn:6">6</a></sup>.</p>
+<h4 id="event-storming"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#event-storming">Event Storming</a></h4>
+<p>A fast, visual workshop where engineers, architects, designers and experts map business events together.</p>
+<ul>
+<li>Reveals hidden complexity in hours</li>
+<li>Surfaces misunderstandings before coding begins</li>
+<li>Creates shared ownership of the solution</li>
+</ul>
+<h3 id="the-payoff"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#the-payoff">The Payoff</a></h3>
+<p>Addressing the expert–engineer gap is not a nice-to-have. It is a cost-control measure.</p>
+<p>Teams that invest in collaborative domain exploration:</p>
+<ul>
+<li>Deliver features that get used</li>
+<li>Reduce rework and budget overruns</li>
+<li>Build systems that align with the real business</li>
+</ul>
+<h3 id="final-word"><a class="toclink" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#final-word">Final Word</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"It's developer (mis)understanding that's released in production, not the experts' knowledge."</p>
+<p><em><strong>Alberto Brandolini</strong></em></p>
+</div>
+<p>Software is translation. Every mistranslation costs money. <strong>DDD</strong> and <strong>Event Storming</strong> will not remove all project risk but they make misunderstandings expensive to ignore and cheap to fix.</p>
+<p>If you are tired of paying for features nobody uses bring your experts and engineers into the same room before the first sprint. The savings start before the code does.</p>
+<p>And remember: increasing developers’ domain understanding is necessary, but not sufficient. Sustainable success also depends on an <strong>iterative, user-centric approach</strong> where real usage feedback shapes the product continuously. Without that loop, even well-understood domains risk delivering features that miss the mark.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Standish Group (2002). <em>CHAOS Report</em> figure cited by Mike Cohn in <a href="https://www.linkedin.com/pulse/64-features-really-rarely-never-used-mike-cohn">LinkedIn article</a>. This is an older data point used here as an illustration of the problem, not a current benchmark.&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Pendo (2019). <em>Feature Adoption Report</em>. Based on usage data from 615 companies, showing that about 80% of features are rarely or never used. <a href="https://go.pendo.io/rs/185-LQW-370/images/2019%20Feature%20Adoption%20Report%20Digital.pdf">Report PDF</a>&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>NASA (2010). <em>Cost of Fixing Defects</em>. Based on analysis of NASA software projects and multiple independent studies. Relative cost multipliers: 3×–8× in design, 7×–16× in build, 21×–78× in integration/test, and up to 1 500× in extreme post-deployment cases. <a href="https://ntrs.nasa.gov/api/citations/20100036670/downloads/20100036670.pdf">PDF</a>&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>Boehm, B., &amp; Papaccio, P. N. (1988). <em>Understanding and Controlling Software Costs</em>. IEEE Transactions on Software Engineering, 14(10), 1462–1477. doi:<a href="https://doi.org/10.1109/32.6191">10.1109/32.6191</a>&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>Stray, V. G., &amp; Moe, N. B. (2020). <em>Understanding Coordination in Global Software Engineering: A Mixed-Methods Study on the Use of Meetings and Slack</em>. arXiv:2007.02328. <a href="https://arxiv.org/pdf/2007.02328.pdf">PDF</a>&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref2:5" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p>Bjarnason, E., Rasmusson, A., Unterkalmsteiner, M., Engström, E., &amp; Gorschek, T. (2023). <em>Challenges and Practices in Aligning Requirements with Verification and Validation: A Case Study of Six Companies</em>. arXiv:2307.12489. <a href="https://arxiv.org/pdf/2307.12489.pdf">PDF</a>&nbsp;<a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref:6" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref2:6" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="2025/08/08/how-to-stop-paying-for-features-nobody-uses/#fnref3:6" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-01-07 00:00:00+00:00">January 7, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="from-crud-to-real-time-analytics-why-business-events-matter"><a class="toclink" href="2025/01/07/from-crud-to-real-time-analytics-why-business-events-matter/">From CRUD to Real-Time Analytics: Why Business Events Matter</a></h2>
+<p><img alt="20250107-0.png" src="images/20250107-0.png"></p>
+<p>Many <strong>operational systems</strong> (e.g. SaaS platforms and transactional systems) are built around <strong>CRUD operations</strong> and <strong>batch processing</strong>, but these approaches often fall short when businesses demand <strong>real-time insights</strong>.</p>
+<p>A common intermediate step is <strong>Change Data Capture (CDC)</strong>, which reflects changes at the database level in near-real time. However, CDC primarily captures <strong>raw data changes</strong> (e.g., inserts, updates, deletes) and doesn’t provide the context of what those changes mean in the real world. For example, CDC might log an update to a database row, but it doesn’t tell you that the event was actually an <em>“Order Shipped”</em>.</p>
+<p><img alt="20250107-1.png" src="images/20250107-1.png"></p>
+<p>This is where <strong>business events</strong> come in. Business events are <strong>high-quality</strong>, <strong>domain-specific data</strong>: they describe meaningful occurrences like <em>“Payment Processed”</em> or <em>“Customer Registered”.</em> Unlike raw data changes, these events provide the context and structure needed to power <strong>real-time analytics</strong> and unlock the full potential of <strong>AI and machine learning</strong>. These events, often called <strong>domain events</strong>, form the backbone of event-driven systems.</p>
+<h3 id="businessdomain-events-in-practice"><a class="toclink" href="2025/01/07/from-crud-to-real-time-analytics-why-business-events-matter/#businessdomain-events-in-practice">Business/Domain Events in Practice</a></h3>
+<p>For reliably generating, publishing and consuming these domain events, patterns like the <strong>transactional outbox</strong>, <strong>subscription</strong>, and <strong>event sourcing</strong> play crucial roles:</p>
+<ul>
+<li>
+<p><strong>Transactional outbox</strong> ensures that events are published consistently as part of the same database transaction that writes the underlying data, providing robustness even during failures.
+<img alt="20250107-2.png" src="images/20250107-2.png"></p>
+</li>
+<li>
+<p><strong>Subscription pattern</strong> enables systems to listen for and react to specific events in near real-time, enabling event-driven workflows and processes.
+<img alt="20250107-3.png" src="images/20250107-3.png"></p>
+</li>
+<li>
+<p><strong>Event sourcing</strong> goes further by making events the source of truth, storing all changes as an immutable sequence of events — empowering systems with a full audit history and the ability to reprocess or replay events at any time.
+<img alt="20250107-4.png" src="images/20250107-4.png"></p>
+</li>
+</ul>
+<p>By adopting <strong>event-driven architectures</strong> and producing <strong>event streams</strong>, organizations can move beyond traditional paradigms. This approach enables:</p>
+<p><strong>Timely, actionable insights</strong> through real-time analytics.
+<strong>A foundation of rich, contextual data</strong> for AI and ML applications.
+<strong>Real-time notifications</strong> to trigger actions and inform stakeholders instantly.
+Better system design with <strong>domain-driven thinking</strong> at the core.</p>
+<p><strong>Conclusion:</strong> Core domains in modern scalable operational systems should embrace business/domain events over Change Data Capture (CDC). Domain-driven design and event-driven architecture pave the way for creating future-proof systems.</p>
+<p><strong><a href="../">Scalable modeling</a> as an event-centric approach provides a strong foundation for building long-lasting operational systems that deliver low latency and enable real-time analytics at any scale.</strong></p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-10-01 00:00:00+00:00">October 1, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="sw-skills-underrated-being-easy-to-work-with"><a class="toclink" href="2024/10/01/sw-skills-underrated-being-easy-to-work-with/">SW Skills Underrated: Being Easy to Work With</a></h2>
+<p>What are some ways you’ve worked on <strong>becoming easy to work with</strong>? Asking for a friend… 👀</p>
+<p>Let’s face it, some folks are just easy to work with, and it doesn’t always have anything to do with having the same goals or interests. From my experience, those who are easy to work with tend also to be successful in their careers. I believe <strong>being easy to work with</strong> is essential for success in any field, but it’s <strong>especially important in software engineering</strong>.</p>
+<h3 id="why-do-i-believe-being-easy-to-work-with-is-especially-important-in-software-engineering"><a class="toclink" href="2024/10/01/sw-skills-underrated-being-easy-to-work-with/#why-do-i-believe-being-easy-to-work-with-is-especially-important-in-software-engineering">Why do I believe being easy to work with is especially important in software engineering?</a></h3>
+<p>Software is ultimately a <strong>model</strong>, a conceptual solution that, while invisible, solves real-world challenges. In software engineering, two things matter: the <strong>conceptual solution</strong> (designing the <em>what</em>) and how it is <strong>implemented</strong> (developing the <em>how</em>). End users usually care much less about the technical details than about how well the solution solves their problems, so <strong>conceptual solution</strong> needs to be rock solid. This is where things like <strong>Domain-Driven Design</strong>, <strong>Systems Thinking</strong> &amp; <strong>Residuality Theory</strong>, for example, can help.</p>
+<p><img alt="20241001-1.png" src="images/20241001-1.png"></p>
+<p>Great software design happens through iterative teamwork where people from diverse backgrounds come together to tackle complex, abstract problems and shape this conceptual solution. The challenge isn’t just technical: because of our diverse mental models, <strong>people often speak the same language but mean different things</strong>. For software success, teams need to create a <strong>shared language</strong> through <strong>conversations</strong> that ensure alignment on key terms and ideas. One efficient technique to use here is <strong>EventStorming</strong>, a collaborative workshop method that helps teams map out complex processes.</p>
+<p><img alt="20241001-2.png" src="images/20241001-2.png"></p>
+<p>This is where <strong>being easy to work with</strong> becomes critical. In an industry that often focuses on technical skills, the ability to foster productive, clear, and empathetic communication can be the 𝘳𝘦𝘢𝘭 difference between project success and failure. When you’re easy to work with, you make those conversations productive and create the shared understanding that drives success.</p>
+<h3 id="heres-how-ive-tried-to-practice-it"><a class="toclink" href="2024/10/01/sw-skills-underrated-being-easy-to-work-with/#heres-how-ive-tried-to-practice-it">Here’s how I’ve tried to practice it:</a></h3>
+<ol>
+<li><strong>Be clear and concise</strong> in communication to reduce misunderstandings (you get extra points for adding an agenda to meeting invitations).</li>
+<li><strong>Listen actively</strong> to understand others’ perspectives before jumping to conclusions (you know, instead of nodding while thinking about the next thing you want to say).</li>
+<li><strong>Stay open to feedback</strong> and adjust your approach when needed. Maintain a positive attitude, especially when facing challenges or disagreements (a smile during tough moments goes a long way).</li>
+<li><strong>Foster trust and empathy</strong> by showing genuine care for others’ perspectives and creating a supportive environment. Trust grows when people feel understood and valued, making collaboration smoother and more effective.</li>
+</ol>
+<p><img alt="20241001-3.png" src="images/20241001-3.png"></p>
+<p>I truly believe that <strong>being easy to work with</strong> is the most underrated skill in the tech-focused software industry, and it just might be the key to your success. So, how do you ensure you’re easy to work with on your team?</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-03-12 00:00:00+00:00">March 12, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="beyond-the-stack-how-organizational-structure-shapes-software-architecture"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/">Beyond the Stack: How Organizational Structure Shapes Software Architecture</a></h2>
+<p>The work of a software architect is highly technical, and that is also how the role is commonly perceived. However, what often gets overlooked is the <strong>sociological aspect</strong> of this discipline. No matter how well the architecture is described, the success of putting it into practice ultimately depends on the collaboration and understanding among the people involved.</p>
+<h3 id="software-architecture-reflects-social-dispersion"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#software-architecture-reflects-social-dispersion">Software architecture reflects social dispersion</a></h3>
+<p>It’s common sense that if we restrict communication channels between teams building a solution, the resulting software architecture is likely to mirror this fragmentation.</p>
+<figure>
+<p><img alt="20240312-1.png" src="images/20240312-1.png"></p>
+<figcaption>
+<p>Restricting communication can lead to a push towards siloing</p>
+</figcaption>
+</figure>
+<p>Let’s also consider a bit more complicated scenario where different teams are responsible for various layers of the software stack. Layers could include, for example, frontend, backend and database. Each team, focusing on its specialized layer, may unintentionally create a system that lacks cohesion and seamless integration. Technological boundaries are just one example among many other boundaries like business domains, availability, or location.</p>
+<p>To spice up the scenario, let’s add a second boundary in addition to technology: location. Physical separation, be it due to geographical distances or departmental divisions, can also leave its imprint on the architecture. If your development group is split across two different locations, with local subgroups communicating face-to-face daily, expect the architecture to reflect this physical dispersion.</p>
+<p><img alt="20240312-2.png" src="images/20240312-2.png"></p>
+<p>When speaking the same (technological or other) ubiquitous language, the communication is much more efficient. Same thing when communicating face to face, it is just more effortless than communication via technical communication channels.</p>
+<h3 id="communication-follows-the-path-of-least-resistance"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#communication-follows-the-path-of-least-resistance">Communication follows the path of least resistance</a></h3>
+<p>Communication tends to naturally follow the path of least resistance, favoring the most effortless channels.</p>
+<figure>
+<p><img alt="20240312-3.png" src="images/20240312-3.png"></p>
+<figcaption>
+<p>Natural communication flows</p>
+</figcaption>
+</figure>
+<p>In the example organization shown above, it makes sense that the resulting system structure would naturally start to resemble the picture below due to the least resistance principle.</p>
+<p><img alt="20240312-4.png" src="images/20240312-4.png"></p>
+<h3 id="underlying-forces-at-play"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#underlying-forces-at-play">Underlying forces at play</a></h3>
+<p>As we consider reshaping the architecture, it’s crucial to acknowledge and understand the strong underlying forces that may attempt to revert it to its original form.</p>
+<figure>
+<p><img alt="20240312-5.png" src="images/20240312-5.png"></p>
+<figcaption>
+<p>Underlying forces trying to fragment the architectural attempts</p>
+</figcaption>
+</figure>
+<p>To address these challenges, we need to make thoughtful changes in how our organization communicates. This involves adjusting the way teams interact, tackling the issues also raised by <strong>Conway’s Law</strong>, as outlined by <em>Melvin Conway</em> in his 1968 article <a href="https://www.melconway.com/Home/pdf/committees.pdf">“How Do Committees Invent?”</a>.</p>
+<h3 id="conways-law"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#conways-law">Conway's Law</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Melvin E. Conway, How Do Committees Invent?</p>
+<p>Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.</p>
+</div>
+<p>Conway’s Law challenges the traditional notion of architecture as a purely technical discipline. It emphasizes the social fabric within an organization, asserting that the patterns of communication, collaboration, and cooperation are integral to shaping the software architecture.</p>
+<figure>
+<p><img alt="20240312-6.png" src="images/20240312-6.png"></p>
+<figcaption>
+<p>Conclusions from the article “How Do Committees Invent?” by Melvin Conway</p>
+</figcaption>
+</figure>
+<p>While Conway’s Law is a conceptual framework rather than a law in the scientific sense, there is empirical evidence and anecdotal support that suggests its validity in various contexts. Several case studies and observations in the field of software development and organizational behavior provide evidence that aligns with Conway’s Law.</p>
+<p>Understanding Conway’s Law provides a roadmap for intentional and positive architectural design and raises the question: <strong>Should you design your organization with the awareness that how your teams are structured will inevitably shape the software they create?</strong> The answer is yes.</p>
+<h3 id="guiding-force-for-positive-change"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#guiding-force-for-positive-change">Guiding force for positive change</a></h3>
+<p>The exciting prospect lies in transforming Conway’s Law from a constraint into an asset through the implementation of the Inverse Conway Maneuver. This proactive strategy empowers teams to deliberately shape communication and collaboration structures within an organization, leading to a positive impact on and enhancement of the resulting software architecture. <strong>Instead of simply adapting to existing communication patterns, teams take charge by intentionally designing the organizational structure to align with their desired outcomes in software development.</strong></p>
+<p>Implementing the following principles can help ensure that your organization’s structure fosters a conducive environment for positive software development outcomes:</p>
+<ol>
+<li><strong>Cross-functional Collaboration:</strong> Encourage collaboration across different disciplines. Break down the barriers that lead to siloed thinking and foster a culture of shared goals.</li>
+<li><strong>Flexible Team Structures:</strong> Design teams with flexibility in mind. Adapt to the evolving needs of the project rather than sticking rigidly to predefined roles.</li>
+<li><strong>Open Communication Channels:</strong> Emphasize open and transparent communication. This not only includes formal channels but also informal ones, encouraging spontaneous exchanges of ideas and information.</li>
+<li><strong>Shared Vision and Goals:</strong> Ensure that teams share a common vision and goals. Aligning everyone towards a unified objective helps create a cohesive software architecture that reflects the organization’s overarching mission.</li>
+</ol>
+<p>By intentionally incorporating these principles into your organizational structure, you leverage Conway’s Law as a guiding force for positive change. Your software architecture becomes a reflection of a well-aligned and collaborative team, resulting in more robust and effective solutions.</p>
+<h3 id="conclusions"><a class="toclink" href="2024/03/12/beyond-the-stack-how-organizational-structure-shapes-software-architecture/#conclusions">Conclusions</a></h3>
+<p>As communication follows the path of least resistance and as building a larger scale solution is all about communication it is natural that the architecture starts to resemble the natural communication flows within the organization building it. We can leverage this by encouraging cross-functional collaboration, making team structures flexible, opening communication restrictions and putting effort into sharing vision and goals. The software architecture and communication structures go hand in hand and therefore software architecture is a sociotechnical discipline.</p>
+    
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../when/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Version History">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Version History
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="archive/2025/" class="md-footer__link md-footer__link--next" aria-label="Next: 2025">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2025
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Simo Roikonen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/roikonen" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/profile/roikonen.bsky.social" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/roikonen/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer", "navigation.indexes", "content.footnote.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
