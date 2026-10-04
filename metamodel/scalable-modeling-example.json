@@ -1,0 +1,328 @@
+{
+  "schemaVersion": "0.1",
+  "id": "ordering-inventory-example",
+  "name": "Ordering and Inventory",
+  "elements": [
+    {
+      "id": "ctx-ordering",
+      "type": "bounded_context",
+      "name": "Ordering"
+    },
+    {
+      "id": "ctx-inventory",
+      "type": "bounded_context",
+      "name": "Inventory"
+    },
+    {
+      "id": "cmd-place-order",
+      "type": "command",
+      "name": "PlaceOrder"
+    },
+    {
+      "id": "evt-order-placed",
+      "type": "event",
+      "name": "OrderPlaced",
+      "visibility": "public"
+    },
+    {
+      "id": "cmd-reserve-items",
+      "type": "command",
+      "name": "ReserveItems"
+    },
+    {
+      "id": "evt-items-reserved",
+      "type": "event",
+      "name": "ItemsReserved",
+      "visibility": "public"
+    },
+    {
+      "id": "evt-reservation-failed",
+      "type": "event",
+      "name": "ItemsReservationFailed",
+      "visibility": "public"
+    },
+    {
+      "id": "model-order",
+      "type": "model",
+      "name": "Order",
+      "roles": [
+        "command",
+        "query"
+      ],
+      "authority": "authoritative",
+      "stateSource": "event_projection",
+      "partitionKeys": [
+        "OrderId"
+      ]
+    },
+    {
+      "id": "model-inventory",
+      "type": "model",
+      "name": "Inventory",
+      "roles": [
+        "command"
+      ],
+      "authority": "authoritative",
+      "stateSource": "stored",
+      "partitionKeys": [
+        "Sku"
+      ]
+    },
+    {
+      "id": "handler-place-order",
+      "type": "command_handler",
+      "name": "PlaceOrderHandler"
+    },
+    {
+      "id": "handler-reserve-after-order",
+      "type": "event_handler",
+      "name": "ReserveItemsAfterOrderPlaced"
+    },
+    {
+      "id": "handler-reserve-items",
+      "type": "command_handler",
+      "name": "ReserveItemsHandler"
+    },
+    {
+      "id": "cb-order",
+      "type": "consistency_boundary",
+      "name": "Order consistency"
+    },
+    {
+      "id": "cb-inventory",
+      "type": "consistency_boundary",
+      "name": "Inventory consistency"
+    },
+    {
+      "id": "term-order",
+      "type": "glossary_term",
+      "term": "Order",
+      "definition": "A customer's confirmed request to purchase one or more products."
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r1",
+      "type": "handles",
+      "sourceId": "handler-place-order",
+      "targetId": "cmd-place-order"
+    },
+    {
+      "id": "r2",
+      "type": "reads",
+      "sourceId": "handler-place-order",
+      "targetId": "model-order"
+    },
+    {
+      "id": "r3",
+      "type": "updates",
+      "sourceId": "handler-place-order",
+      "targetId": "model-order"
+    },
+    {
+      "id": "r4",
+      "type": "emits",
+      "sourceId": "handler-place-order",
+      "targetId": "evt-order-placed"
+    },
+    {
+      "id": "r5",
+      "type": "handles",
+      "sourceId": "handler-reserve-after-order",
+      "targetId": "evt-order-placed"
+    },
+    {
+      "id": "r6",
+      "type": "dispatches",
+      "sourceId": "handler-reserve-after-order",
+      "targetId": "cmd-reserve-items"
+    },
+    {
+      "id": "r7",
+      "type": "handles",
+      "sourceId": "handler-reserve-items",
+      "targetId": "cmd-reserve-items"
+    },
+    {
+      "id": "r8",
+      "type": "reads",
+      "sourceId": "handler-reserve-items",
+      "targetId": "model-inventory"
+    },
+    {
+      "id": "r9",
+      "type": "updates",
+      "sourceId": "handler-reserve-items",
+      "targetId": "model-inventory"
+    },
+    {
+      "id": "r10",
+      "type": "emits",
+      "sourceId": "handler-reserve-items",
+      "targetId": "evt-items-reserved"
+    },
+    {
+      "id": "r11",
+      "type": "emits",
+      "sourceId": "handler-reserve-items",
+      "targetId": "evt-reservation-failed"
+    },
+    {
+      "id": "r12",
+      "type": "belongs_to",
+      "sourceId": "cmd-place-order",
+      "targetId": "ctx-ordering"
+    },
+    {
+      "id": "r13",
+      "type": "belongs_to",
+      "sourceId": "evt-order-placed",
+      "targetId": "ctx-ordering"
+    },
+    {
+      "id": "r14",
+      "type": "belongs_to",
+      "sourceId": "model-order",
+      "targetId": "ctx-ordering"
+    },
+    {
+      "id": "r15",
+      "type": "belongs_to",
+      "sourceId": "handler-place-order",
+      "targetId": "ctx-ordering"
+    },
+    {
+      "id": "r16",
+      "type": "belongs_to",
+      "sourceId": "cmd-reserve-items",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r17",
+      "type": "belongs_to",
+      "sourceId": "evt-items-reserved",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r18",
+      "type": "belongs_to",
+      "sourceId": "evt-reservation-failed",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r19",
+      "type": "belongs_to",
+      "sourceId": "model-inventory",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r20",
+      "type": "belongs_to",
+      "sourceId": "handler-reserve-after-order",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r21",
+      "type": "belongs_to",
+      "sourceId": "handler-reserve-items",
+      "targetId": "ctx-inventory"
+    },
+    {
+      "id": "r22",
+      "type": "within_boundary",
+      "sourceId": "model-order",
+      "targetId": "cb-order"
+    },
+    {
+      "id": "r23",
+      "type": "within_boundary",
+      "sourceId": "handler-place-order",
+      "targetId": "cb-order"
+    },
+    {
+      "id": "r24",
+      "type": "within_boundary",
+      "sourceId": "model-inventory",
+      "targetId": "cb-inventory"
+    },
+    {
+      "id": "r25",
+      "type": "within_boundary",
+      "sourceId": "handler-reserve-items",
+      "targetId": "cb-inventory"
+    },
+    {
+      "id": "r26",
+      "type": "defines",
+      "sourceId": "term-order",
+      "targetId": "model-order"
+    },
+    {
+      "id": "r27",
+      "type": "belongs_to",
+      "sourceId": "term-order",
+      "targetId": "ctx-ordering"
+    }
+  ],
+  "views": [
+    {
+      "id": "view-temporal",
+      "name": "Order flow",
+      "type": "temporal",
+      "elements": [
+        {
+          "id": "ve1",
+          "elementId": "cmd-place-order",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 160,
+            "height": 60
+          }
+        },
+        {
+          "id": "ve2",
+          "elementId": "evt-order-placed",
+          "bounds": {
+            "x": 220,
+            "y": 0,
+            "width": 160,
+            "height": 60
+          }
+        },
+        {
+          "id": "ve3",
+          "elementId": "cmd-reserve-items",
+          "bounds": {
+            "x": 440,
+            "y": 0,
+            "width": 160,
+            "height": 60
+          }
+        },
+        {
+          "id": "ve4",
+          "elementId": "evt-items-reserved",
+          "bounds": {
+            "x": 660,
+            "y": -50,
+            "width": 170,
+            "height": 60
+          }
+        },
+        {
+          "id": "ve5",
+          "elementId": "evt-reservation-failed",
+          "bounds": {
+            "x": 660,
+            "y": 70,
+            "width": 190,
+            "height": 60
+          }
+        }
+      ],
+      "relationships": [],
+      "freeform": []
+    }
+  ]
+}
